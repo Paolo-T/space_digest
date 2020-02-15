@@ -1,22 +1,21 @@
-import React, { Component }  from 'react';
+import React, { Component } from "react";
 
 class ClassComponent extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       count: 0
-    }
-    this.handleClick = this.handleClick.bind(this)
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState(prevState => {
       return {
-        count: prevState.count + 1,
-      }
-    })
+        count: prevState.count + 1
+      };
+    });
   }
-
 
   render() {
     return (
@@ -24,7 +23,7 @@ class ClassComponent extends Component {
         <h1>{this.state.count}</h1>
         <button onClick={this.handleClick}>Change!</button>
       </div>
-    )
+    );
   }
 }
 

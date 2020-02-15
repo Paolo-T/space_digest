@@ -3,42 +3,26 @@ import img from "../img/space.jpg";
 
 function MainContent() {
   return (
-    <div className="bg-white text-white">
-      <section className="container mx-auto relative bg-gray-800 bg-auto bg-center">
-        <div className="pl-20 pt-32 pb-40 w-1/2">
-          <h1 className="text-6xl font-semibold leading-none mb-5">
-            The header goes here
-          </h1>
-          <h3 className="text-2xl font-light leading-tight">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            sed sequi quaerat.
-          </h3>
-        </div>
-      </section>
+    <div>
+      <h1 className="text-6xl text-white bg-black font-semibold leading-none pl-64">
+        Photo of the day
+      </h1>
+      <div className="bg-black pb-32 pt-6">
+        <div className="bg-white pl-20 pt-64 pb-64 container mx-auto rounded-lg"></div>
+      </div>
 
-      <section className="bg-gray-100 mt-32">
-        <div className="pl-20 pt-32 pb-40 w-1/2">
-          <h1 className="text-6xl font-semibold leading-none mb-5">
-            The header goes here
-          </h1>
-          <h3 className="text-2xl font-light leading-tight">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            sed sequi quaerat.
-          </h3>
-        </div>
-      </section>
+      <h1 className="text-6xl text-w font-semibold leading-none mb-5 w-3/4">
+        The header
+      </h1>
 
-      <section className="bg-gray-800 mt-32 mb-40">
-        <div className="pl-20 pt-32 pb-40 w-1/2">
-          <h1 className="text-6xl font-semibold leading-none mb-5">
-            The header goes here
-          </h1>
+      <div className="bg-white py-32">
+        <div className="bg-black text-white pl-20 pt-32 pb-40 container mx-auto rounded-lg">
           <h3 className="text-2xl font-light leading-tight">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
             sed sequi quaerat.
           </h3>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
