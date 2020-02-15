@@ -6,17 +6,14 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.4.0",
         "@testing-library/user-event": "^7.2.1",
-        "express": "^4.17.1",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-scripts": "3.3.0"
     },
     "scripts": {
-        "apistart": "node app.js",
-        "server": "nodemon server",
-        "format": "prettier \"src/**/*.{js, html}\" --write",
-        "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
-        "build:style": "postcss src/css/tailwind.css -o src/css/styles.css",
+        "format": "prettier \"./src/**/*.{js, html}\" --write",
+        "lint": "eslint \"./src/**/*.{js, jsx}\" --quiet",
+        "build:style": "postcss ./src/css/tailwind.css -o ./src/css/styles.css",
         "start": "npm run build:style && react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -44,7 +41,6 @@
         "cssnano": "^4.1.10",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.10.0",
-        "nodemon": "^2.0.2",
         "postcss-cli": "^7.1.0",
         "prettier": "^1.19.1",
         "tailwindcss": "^1.1.4"

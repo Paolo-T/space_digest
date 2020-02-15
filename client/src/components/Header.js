@@ -14,7 +14,7 @@ function Header() {
 
             <div className="inline-block w-1/2 ml-64 mt-32">
                 <h1 className="text-7xl font-semibold leading-none my-10">
-                    Welcome to Space digest.
+                    Welcome to Space vomit.
                 </h1>
                 <h3 className="text-2xl font-light leading-snug mb-8">
                     A magnificent window to the universe. Discover images,{" "}
