@@ -51,16 +51,21 @@ class Image extends Component {
             );
         } else {
             return (
-                <div className="container mx-auto">
-                    <div className="">
-                        <h3 className="text-3xl mb-4">{imageData.title}</h3>
-                        <img
-                            className="rounded-lg"
-                            src={imageData.hdurl}
-                            alt="Some thing"
-                        />
-                        <p>{imageData.explanation}</p>
-                    </div>
+                <div className="container mx-auto text-center">
+                    <h2 className="text-2xl mb-4 font-bold uppercase">
+                        Photo of the the day
+                    </h2>
+                    <img
+                        className="rounded-lg mb-12"
+                        src={imageData.hdurl}
+                        alt="Some thing"
+                    />
+                    <h3 className="text-2xl mb-4 font-bold">
+                        {imageData.title}
+                    </h3>
+                    <p className="w-4/5  text-2xl font-light">
+                        {imageData.explanation}
+                    </p>
                 </div>
             );
         }
