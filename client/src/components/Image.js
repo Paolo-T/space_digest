@@ -53,10 +53,7 @@ class Image extends Component {
             return (
                 <div className="container mx-auto">
                     <div className="">
-                        <h1 className="text-6xl font-semibold leading-none">
-                            Photo of the day
-                        </h1>
-                        <h3>{imageData.title}</h3>
+                        <h3 className="text-3xl mb-4">{imageData.title}</h3>
                         <img
                             className="rounded-lg"
                             src={imageData.hdurl}

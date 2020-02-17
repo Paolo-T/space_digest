@@ -3,11 +3,14 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "concurrently": "^5.1.0",
         "express": "^4.17.1"
     },
     "scripts": {
-        "apistart": "node app.js",
-        "server": "nodemon server"
+        "client-install": "cd client && npm install",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client --open",
+        "start": "concurrently \"npm run server\" \"npm run client\""
     },
     "eslintConfig": {
         "extends": "react-app"

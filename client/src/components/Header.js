@@ -12,8 +12,8 @@ function Header() {
                 <h3>Digest</h3>
             </div>
 
-            <div className="inline-block w-2/3 ">
-                <h1 className="text-7xl font-semibold leading-none my-10">
+            <div className="">
+                <h1 className="w-100 text-7xl font-semibold leading-none mt-16 mb-6">
                     Space digest.
                 </h1>
                 <h3 className="text-2xl font-light leading-snug mb-8">
