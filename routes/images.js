@@ -10,7 +10,7 @@ router.get("/", (req, res, next) => {
 
 const img = router.get("/:id", (req, res) => {
     request(
-        "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+        "https://api.nasa.gov/planetary/apod?api_key=24TE7EgNfmXIvdb6vNNZGBWx8s54XbZzCCi2oAdN",
         { json: true },
         (error, response, body) => {
             console.log(req);
