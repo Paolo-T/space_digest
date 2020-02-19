@@ -52,20 +52,24 @@ class Image extends Component {
         } else {
             return (
                 <div className="container mx-auto text-center">
-                    <h2 className="text-2xl mb-4 font-bold uppercase">
-                        Photo of the the day
-                    </h2>
+                    <div className="flex justify-center">
+                        <h2 className="text-2xl mb-2 uppercase">
+                            <strong>Daily image:</strong> {imageData.title}
+                        </h2>
+                    </div>
                     <img
-                        className="rounded-lg mb-12"
-                        src={imageData.hdurl}
+                        className="w-full mx-auto rounded-lg mb-12 "
+                        src={imageData.url}
                         alt="Some thing"
                     />
-                    <h3 className="text-2xl mb-4 font-bold">
-                        {imageData.title}
-                    </h3>
-                    <p className="w-4/5  text-2xl font-light">
-                        {imageData.explanation}
-                    </p>
+                    <div className="container mx-auto flex pr-48 py-10 text-left">
+                        <p className="w-1/3 inline-block flex-1 bg-orange-300 text-2xl font-bold pl-5 pt-5">
+                            {imageData.title}
+                        </p>
+                        <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5 ">
+                            {imageData.explanation}
+                        </p>
+                    </div>
                 </div>
             );
         }
