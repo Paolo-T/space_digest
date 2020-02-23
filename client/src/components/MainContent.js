@@ -1,12 +1,14 @@
 import React from "react";
-import Image from "./Image";
-import MarsWeather from "./MarsWeather";
+import Media from "./Media";
+// import MarsWeather from "./MarsWeather";
+import RoverPhotos from "./RoverPhotos";
 
 function MainContent() {
     return (
         <div>
-            <Image />
+            <Media />
             {/* <MarsWeather /> */}
+            <RoverPhotos />
         </div>
     );
 }

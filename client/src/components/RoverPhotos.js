@@ -21,7 +21,7 @@ class Image extends Component {
                 error
             });
         };
-        await fetch("/api/images/image")
+        await fetch("api/marsRover/rover-images")
             .then(res => res.json(), onerror)
             .then(imageData => {
                 this.setState(
@@ -35,7 +35,7 @@ class Image extends Component {
                             hdurl: imageData.hdurl
                         }
                     },
-                    () => console.log("Image fetched! >>>", imageData)
+                    () => console.log("Rover Photos fetched! >>>", imageData)
                 );
             }, onerror);
     }
@@ -53,7 +53,9 @@ class Image extends Component {
             return (
                 <div className="container mx-auto text-center">
                     <div className="flex justify-center">
-                        <h2 className="text-2xl mb-2 uppercase">Daily image</h2>
+                        <h2 className="text-2xl mb-2 uppercase">
+                            Rover Photos
+                        </h2>
                     </div>
                     <img
                         className="w-full mx-auto rounded-lg mb-12 "

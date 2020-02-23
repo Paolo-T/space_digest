@@ -8,9 +8,12 @@ function Header() {
                     Space digest.
                 </h1>
                 <h2 className="w-3/4 mx-auto text-3xl leading-snug ">
-                    information from space. Explore images, videos, and articles
-                    of space related news. keep curious.
+                    "Space is for everybody. It's not just for a few people in
+                    science or math, or for a select group of astronauts. That's
+                    our new frontier out there, and it's everybody's business to
+                    know about space."
                 </h2>
+                <p className="pt-3">CHRISTA MCAULIFFE, December 6, 1985</p>
             </div>
         </header>
     );
