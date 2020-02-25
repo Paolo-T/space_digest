@@ -5,14 +5,7 @@ class Media extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            mediaData: {
-                date: null,
-                title: null,
-                explenation: null,
-                url: null,
-                hdurl: null,
-                media_type: null
-            }
+            mediaData: null
         };
     }
     async componentDidMount() {
@@ -56,7 +49,7 @@ class Media extends Component {
                     <img
                         className="w-full mx-auto rounded-lg mb-12 "
                         src={mediaData.url}
-                        alt="Image from space"
+                        alt="Media from space"
                     />
                     <div className="container mx-auto flex pr-48 py-10 text-left">
                         <p className="w-1/3 inline-block flex-1 bg-gray-100 text-2xl font-bold pl-5 pt-5">
@@ -83,13 +76,14 @@ class Media extends Component {
                         autoPlay
                         muted
                     /> */}
+
                     <video
                         src={mediaData.url}
                         className="w-full container mx-auto"
                         controls
-                        autoplay
+                        autoPlay
                         muted
-                    ></video>
+                    />
                     <div className="container mx-auto flex pr-48 py-10 text-left">
                         <p className="w-1/3 inline-block flex-1 bg-gray-100 text-2xl font-bold pl-5 pt-5">
                             {mediaData.title}
