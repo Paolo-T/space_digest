@@ -9,7 +9,7 @@ class RoverPhotos extends Component {
         };
     }
     async componentDidMount() {
-        await fetch("/rover/curiosity/photos")
+        await fetch("api/marsRover/curiosity/manifest")
             .then(res => res.json())
             .then(sols_with_photos => {
                 const random_index = Math.floor(
@@ -18,20 +18,23 @@ class RoverPhotos extends Component {
                 return sols_with_photos[random_index].sol;
             })
             .then(random_sol => {
-                fetch(`/rover/curiosity/photo/${random_sol}`)
+                fetch(`api/marsRover/curiosity/photos/${random_sol}`)
                     .then(res => res.json())
                     .then(photos => {
-                        this.setState({
-                            isLoaded: true,
-                            photo: photos[0]
-                        });
+                        this.setState(
+                            {
+                                isLoaded: true,
+                                photos
+                            },
+                            () => console.log("Photos fetched! --->>>", photos)
+                        );
                     });
             })
             .catch(error => console.error("Error:", error));
     }
 
     render() {
-        const { error, isLoaded, roverImage } = this.state;
+        const { error, isLoaded, photos } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -42,10 +45,10 @@ class RoverPhotos extends Component {
             );
         } else {
             return (
-                <div className="container mx-auto text-center mt-7">
-                    <div className="w-full">
+                <div className="container mx-auto text-left mt-7">
+                    <div className="w-full py-6">
                         <h2 className="text-5xl mb-2 font-bold uppercase">
-                            {/* {roverImage.name} */}
+                            Rover image
                         </h2>
                         <p className="w-2/3 inline-block text-2xl pt-5 mb-7">
                             Spirit and Opportunity landed on Mars January 3 and
@@ -64,17 +67,26 @@ class RoverPhotos extends Component {
                             supported microbial life.
                         </p>
                     </div>
-                    {/* {this.state.roverImages.map(image => {
-                        return (
-                            <div className="container mx-auto flex pr-48 py-10 text-left">
+
+                    {/* <div className="container mx-auto">
+                        <img
+                            className="w-1/3 rounded-lg mb-12"
+                            src={photos.img_src}
+                            alt="Mars Rover shot"
+                        />
+                    </div> */}
+                    <div className="container grid gap-5 grid-cols-3">
+                        {photos.map(photo => {
+                            return (
                                 <img
-                                    className="w-1/3 rounded-lg mb-12 "
-                                    src={roverImage.img_src}
+                                    className="w-full rounded-lg mb-12"
+                                    src={photo.img_src}
+                                    key={photo.id}
                                     alt="Mars Rover photo"
                                 />
-                            </div>
-                        );
-                    })} */}
+                            );
+                        })}
+                    </div>
                 </div>
             );
         }
