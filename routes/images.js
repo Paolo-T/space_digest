@@ -8,14 +8,15 @@ router.get("/", (req, res, next) => {
     });
 });
 
-const API_KEY = 'api_key=24TE7EgNfmXIvdb6vNNZGBWx8s54XbZzCCi2oAdN';
+const API_BASE_URL = 'https://api.nasa.gov/planetary/apod?';
+const API_KEY  = 'api_key=24TE7EgNfmXIvdb6vNNZGBWx8s54XbZzCCi2oAdN';
 
 const mediaRequest = router.get("/:image", (req, res) => {
     request(
-        `https://api.nasa.gov/planetary/apod?${API_KEY}`,
+        `${API_BASE_URL}${API_KEY}`,
         { json: true },
         (error, response, body) => {
-            console.log(req);
+            // console.log(req);
             console.log("error:", error); // Print the error if one occurred
             console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
             // console.log('body:', body); // Print the HTML.

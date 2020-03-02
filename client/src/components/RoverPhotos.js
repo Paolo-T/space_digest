@@ -9,34 +9,29 @@ class RoverPhotos extends Component {
         };
     }
     async componentDidMount() {
-        await fetch("api/marsRover/rover-images")
+        await fetch("/rover/curiosity/photos")
             .then(res => res.json())
-            .then(roverImages => {
-                this.setState(
-                    {
-                        isLoaded: true,
-                        img_src: roverImages.photo.img_src,
-                        earth_date: roverImages.photo.earth_date,
-                        rover: {
-                            name: roverImages.photo.rover.name,
-                            status: roverImages.photo.rover.status,
-                            launch_date: roverImages.photo.rover.launch_date,
-                            landing_date: roverImages.photo.rover.landing_date,
-                            max_sol: roverImages.photo.rover.max_sol
-                        }
-                    },
-                    () =>
-                        console.log(
-                            "Rover photos fetched! --->>>",
-                            roverImages.photo.rover.status
-                        )
+            .then(sols_with_photos => {
+                const random_index = Math.floor(
+                    Math.random() * sols_with_photos.length
                 );
+                return sols_with_photos[random_index].sol;
+            })
+            .then(random_sol => {
+                fetch(`/rover/curiosity/photo/${random_sol}`)
+                    .then(res => res.json())
+                    .then(photos => {
+                        this.setState({
+                            isLoaded: true,
+                            photo: photos[0]
+                        });
+                    });
             })
             .catch(error => console.error("Error:", error));
     }
 
     render() {
-        const { error, isLoaded, roverImages } = this.state;
+        const { error, isLoaded, roverImage } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -50,7 +45,7 @@ class RoverPhotos extends Component {
                 <div className="container mx-auto text-center mt-7">
                     <div className="w-full">
                         <h2 className="text-5xl mb-2 font-bold uppercase">
-                            The Adventure Twins
+                            {/* {roverImage.name} */}
                         </h2>
                         <p className="w-2/3 inline-block text-2xl pt-5 mb-7">
                             Spirit and Opportunity landed on Mars January 3 and
@@ -69,14 +64,16 @@ class RoverPhotos extends Component {
                             supported microbial life.
                         </p>
                     </div>
-                    {/* {roverImages.map(image => {
-                        <div className="container mx-auto flex pr-48 py-10 text-left">
-                            <img
-                                className="w-1/3 rounded-lg mb-12 "
-                                src={roverImages.img_src}
-                                alt="Mars Rover photo"
-                            />
-                        </div>;
+                    {/* {this.state.roverImages.map(image => {
+                        return (
+                            <div className="container mx-auto flex pr-48 py-10 text-left">
+                                <img
+                                    className="w-1/3 rounded-lg mb-12 "
+                                    src={roverImage.img_src}
+                                    alt="Mars Rover photo"
+                                />
+                            </div>
+                        );
                     })} */}
                 </div>
             );
