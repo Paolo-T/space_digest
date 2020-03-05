@@ -47,7 +47,7 @@ class Media extends Component {
                         <h2 className="text-2xl mb-2 uppercase">Daily image</h2>
                     </div>
                     <img
-                        className="w-full mx-auto rounded-lg mb-12 "
+                        className="w-full mx-auto rounded-md mb-12 "
                         src={mediaData.url}
                         alt="Media from space"
                     />
@@ -71,7 +71,7 @@ class Media extends Component {
                     </div>
                     {/* <video
                         style={{ width: "100%" }}
-                        src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"
+                        src="https://s3.amazonaws.com/codecademy-content/courses/React/react_video-slow.mp4"
                         controls
                         autoPlay
                         muted

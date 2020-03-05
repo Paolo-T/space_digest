@@ -49,7 +49,21 @@ class MarsWeather extends Component {
         const values = Object.values(marsData);
         console.log(values); // [28, 17, 54]
 
-        return <div className="marsWeather container">Something</div>;
+        return (
+            <div className="container mx-auto text-center py-8 my-8">
+                <h2 className="text-5xl mb-2 font-bold uppercase">
+                    Weather on Mars
+                </h2>
+                <iframe
+                    className="inline-block rounded-md"
+                    src="https://mars.nasa.gov/layout/embed/image/insightweather/"
+                    width="800"
+                    height="530"
+                    scrolling="no"
+                    frameborder="0"
+                ></iframe>
+            </div>
+        );
     }
 }
 

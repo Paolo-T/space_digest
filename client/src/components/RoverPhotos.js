@@ -45,12 +45,13 @@ class RoverPhotos extends Component {
             );
         } else {
             return (
-                <div className="container mx-auto text-left mt-7">
+                <div className="container mx-auto text-center my-8 mx-auto">
                     <div className="w-full py-6">
                         <h2 className="text-5xl mb-2 font-bold uppercase">
-                            Rover image
+                            Rover images
                         </h2>
-                        <p className="w-2/3 inline-block text-2xl pt-5 mb-7">
+
+                        <p className="w-2/3 inline-block text-2xl pt-5">
                             Spirit and Opportunity landed on Mars January 3 and
                             January 24, 2004 PST (Jan. 4 and Jan. 25 UTC). Both
                             rovers lived well beyond their planned 90-day
@@ -75,11 +76,11 @@ class RoverPhotos extends Component {
                             alt="Mars Rover shot"
                         />
                     </div> */}
-                    <div className="container grid gap-5 grid-cols-3">
+                    <div className="container grid gap-6 grid-cols-4">
                         {photos.map(photo => {
                             return (
                                 <img
-                                    className="w-full rounded-lg mb-12"
+                                    className="w-full rounded-md"
                                     src={photo.img_src}
                                     key={photo.id}
                                     alt="Mars Rover photo"
