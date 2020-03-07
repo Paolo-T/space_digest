@@ -5,65 +5,61 @@ class MarsWeather extends Component {
         super(props);
         this.state = {
             error: null,
-            isLoaded: true,
-            marsData: [
-                {
-                    sol: {
-                        at: null,
-                        pre: null,
-                        hws: null
-                    }
-                }
-            ]
+            isLoaded: false,
+            solData: null
         };
     }
 
     async componentDidMount() {
-        const JSO = await fetch("/api/marsWeather/weather")
+        await fetch("/api/marsWeather/weather")
             .then(res => res.json())
-            .then(marsData => {
+            .then(solData => {
                 this.setState(
                     {
                         error: null,
                         isLoaded: true,
-                        marsData: [
-                            {
-                                sol_key: {
-                                    at: marsData.sol_key[0].AT.av,
-                                    pre: marsData.sol_key[0].PRE.av,
-                                    hws: marsData.sol_key[0].HWS.av
-                                }
-                            }
-                        ]
+                        solData
                     },
-                    () => console.log("Weather fetched! --->>>", marsData)
+                    () => console.log("Weather fetched! --->>>", solData)
                 );
             })
             .catch(error => console.error(error));
     }
 
     render() {
-        const { marsData } = this.state;
-        // console.log(marsData);
-
-        const values = Object.values(marsData);
-        console.log(values); // [28, 17, 54]
-
-        return (
-            <div className="container mx-auto text-center py-8 my-8">
-                <h2 className="text-5xl mb-2 font-bold uppercase">
-                    Weather on Mars
-                </h2>
-                <iframe
-                    className="inline-block rounded-md"
-                    src="https://mars.nasa.gov/layout/embed/image/insightweather/"
-                    width="800"
-                    height="530"
-                    scrolling="no"
-                    frameborder="0"
-                ></iframe>
-            </div>
-        );
+        const { error, isLoaded, solData } = this.state;
+        // console.log({ solData });
+        if (error) {
+            return <div>Error: {error.message}</div>;
+        } else if (!isLoaded) {
+            return (
+                <div className="container mx-auto">
+                    <h3>Loading...</h3>
+                </div>
+            );
+        } else {
+            return (
+                <div className="container mx-auto">
+                    <h1>Mars weather</h1>
+                    <p>Season {solData.season}</p>
+                    <div className="container flex mx-auto content-between">
+                        {solData.map(data => {
+                            return (
+                                <div>
+                                    <div className="flex-1 bg-gray-400 ">
+                                        <h1 className="">
+                                            Sol: {data.marsSol}
+                                        </h1>
+                                        <h3>high: {data.temperature.max}° F</h3>
+                                        <h3>low: {data.temperature.min}° F</h3>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        }
     }
 }
 
