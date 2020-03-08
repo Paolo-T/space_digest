@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loader from "./Loader";
 class Media extends Component {
     constructor(props) {
         super(props);
@@ -36,15 +37,15 @@ class Media extends Component {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
             return (
-                <div className="container mx-auto">
-                    <h3>Loading...</h3>
+                <div className="container mx-auto text-center">
+                    <Loader className="inline-block" />
                 </div>
             );
         } else if (mediaData.media_type !== "video") {
             return (
-                <div className="container w-2/3 mx-auto text-center">
-                    <div className="flex justify-center">
-                        <h2 className="text-2xl mb-2 uppercase">Daily image</h2>
+                <div className="container w-2/3 mx-auto text-left">
+                    <div className="flex text-left">
+                        <h2 className="text-2xl mb-2">Daily image</h2>
                     </div>
                     <img
                         className="w-full mx-auto rounded-md mb-12 "
@@ -52,10 +53,10 @@ class Media extends Component {
                         alt="Media from space"
                     />
                     <div className="container mx-auto flex pr-30 py-10 text-left">
-                        <p className="w-1/3 inline-block flex-1 bg-gray-100 text-2xl font-bold pl-5 pt-5">
+                        <p className="w-1/3 inline-block flex-1 bg-gray-100 text-5xl font-bold pl-5 pt-5">
                             {mediaData.title}
                         </p>
-                        <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5 ">
+                        <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5">
                             {mediaData.explanation}
                         </p>
                     </div>

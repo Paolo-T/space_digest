@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loader from "./Loader";
 class RoverPhotos extends Component {
     constructor(props) {
         super(props);
@@ -39,19 +40,19 @@ class RoverPhotos extends Component {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
             return (
-                <div className="container mx-auto">
-                    <h3>Loading...</h3>
+                <div className="container mx-auto text-center">
+                    <Loader className="inline-block" />
                 </div>
             );
         } else {
             return (
-                <div className="container mx-auto text-center my-8 mx-auto">
-                    <div className="w-full py-6">
-                        <h2 className="text-5xl mb-2 font-bold uppercase">
-                            Rover images
+                <div className="container w-3/4 mx-auto text-left my-8">
+                    <div className="container mx-auto flex pr-30 py-10 text-left">
+                        <h2 className="w-1/3 inline-block flex-1 bg-gray-100 text-5xl font-bold pl-5 pt-5">
+                            Mars Rover
                         </h2>
 
-                        <p className="w-2/3 inline-block text-2xl pt-5">
+                        <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5">
                             Spirit and Opportunity landed on Mars January 3 and
                             January 24, 2004 PST (Jan. 4 and Jan. 25 UTC). Both
                             rovers lived well beyond their planned 90-day
@@ -83,7 +84,7 @@ class RoverPhotos extends Component {
                                     className="w-full rounded-md"
                                     src={photo.img_src}
                                     key={photo.id}
-                                    alt="Mars Rover photo"
+                                    alt="Scene from Mars Rover"
                                 />
                             );
                         })}
