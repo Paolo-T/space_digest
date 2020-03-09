@@ -11,7 +11,7 @@
     },
     "scripts": {
         "client-install": "cd client && npm install",
-        "server": "nodemon server.js",
+        "server": "nodemon api/server.js",
         "client": "npm start --prefix client --open",
         "start": "concurrently \"npm run server\" \"npm run client\""
     },

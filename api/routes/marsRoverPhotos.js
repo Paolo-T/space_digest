@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router  = express.Router();
 const request = require("request");
 
 const API_BASE_URL = 'https://api.nasa.gov/mars-photos/api/v1/';

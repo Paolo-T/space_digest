@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 
 const spin = keyframes`
@@ -11,11 +10,11 @@ const spin = keyframes`
 `;
 
 export const Loader = styled.div`
-    border: 20px solid rgba(rgba(129, 230, 217, 1));
-    border-top: 9px solid #81e6d9;
+    border: 10px solid rgba(rgba(129, 230, 217, 1));
+    border-top: 3px solid #81e6d9;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     animation: ${spin} 0.6s linear infinite;
 `;
 

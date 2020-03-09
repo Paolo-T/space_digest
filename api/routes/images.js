@@ -9,7 +9,7 @@ router.get("/", (req, res, next) => {
 });
 
 const API_BASE_URL = 'https://api.nasa.gov/planetary/apod?';
-const API_KEY  = 'api_key=24TE7EgNfmXIvdb6vNNZGBWx8s54XbZzCCi2oAdN';
+const API_KEY      = 'api_key=24TE7EgNfmXIvdb6vNNZGBWx8s54XbZzCCi2oAdN';
 
 const mediaRequest = router.get("/:image", (req, res) => {
     request(

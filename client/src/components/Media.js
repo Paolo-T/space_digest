@@ -48,7 +48,7 @@ class Media extends Component {
                         <h2 className="text-2xl mb-2">Daily image</h2>
                     </div>
                     <img
-                        className="w-full mx-auto rounded-md mb-12 "
+                        className="w-full mx-auto rounded-md mb-12"
                         src={mediaData.url}
                         alt="Media from space"
                     />

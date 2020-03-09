@@ -1,5 +1,5 @@
 import React from "react";
-
+import bannerImg from "../img/main-banner.png";
 function Header() {
     return (
         <header className="container mx-auto text-black text-center">
@@ -15,6 +15,7 @@ function Header() {
                 </h2>
                 <p className="pt-3">CHRISTA MCAULIFFE, December 6, 1985</p>
             </div>
+            <img className="w-full mb-12" src={bannerImg} alt="space-banner" />
         </header>
     );
 }
