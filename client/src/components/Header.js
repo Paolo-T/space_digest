@@ -1,10 +1,10 @@
 import React from "react";
-import bannerImg from "../img/main-banner.png";
+import bannerImg from "../img/main-banner.svg";
 function Header() {
     return (
         <header className="container mx-auto text-black text-center">
-            <div className="mb-20">
-                <h1 className="inline-block w-7/12 mx-auto bg-teal-300 text-7xl font-semibold leading-none mt-20 mb-10 text-left">
+            <div className="mb-12">
+                <h1 className="inline-block w-7/12 mx-auto text-7xl font-semibold leading-none tracking-tight  mt-20 mb-10 text-left">
                     Space digest.
                 </h1>
                 <h2 className="w-3/4 mx-auto text-3xl leading-snug ">

@@ -28,7 +28,6 @@ class MarsWeather extends Component {
 
     render() {
         const { error, isLoaded, solData } = this.state;
-        // console.log({ solData });
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -40,7 +39,6 @@ class MarsWeather extends Component {
         } else {
             return (
                 <div className="container mx-auto bg-gray-100 my-30 py-8 pl-8">
-                    {console.log(solData)}
                     <h1 className=" text-5xl mb-2 font-bold">
                         Latest Weather at Elysium Planitia
                     </h1>

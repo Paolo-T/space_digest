@@ -15,8 +15,7 @@ const roverManifests = router.get("/:roverName/manifest/", (req, res) => {
         (error, response, body) => {
             // console.log(req);
             console.log("error:", error);
-            console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
-            // console.log('body:', body);
+            console.log("statusCode:", response && response.statusCode);
             if (error) { return console.log(error); }
             console.log("Success!!");
             res.json(processManifest(body));
@@ -33,11 +32,10 @@ const roverImgs = router.get("/:roverName/photos/:sol/", (req, res) => {
         (error, response, body) => {
             // console.log(req);
             console.log("error:", error);
-            console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
+            console.log("statusCode:", response && response.statusCode);
             // console.log('body:', body);
             console.log("Success!!");
             res.json(processPhotos(body));
-            // res.json(body);
         }
     );
 });
