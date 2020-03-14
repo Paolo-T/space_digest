@@ -8,6 +8,14 @@ router.get("/", (req, res, next) => {
 	});
 });
 
+// let current_datetime = new Date();
+// let formatted_date =
+// 	`${current_datetime.getFullYear()}-${(current_datetime.getMonth() + 1)}-${current_datetime.getDate()}`;
+
+
+// let startDate = formatted_date;
+// let endDate   = formatted_date;
+
 let startDate = '2020-03-01';
 let endDate   = '2020-03-01';
 
@@ -39,8 +47,9 @@ function processedResponse({near_earth_objects}) {
 			name: aDate.name,
 			diameter: parseFloat(aDate.estimated_diameter.meters.estimated_diameter_max).toFixed(2),
 			hazardous: aDate.is_potentially_hazardous_asteroid,
-			speed: parseFloat(aDate.close_approach_data[0].relative_velocity.kilometers_per_hour).toFixed(2),
-			miss_distance: parseFloat(aDate.close_approach_data[0].miss_distance.kilometers).toFixed(2)
+			speed: parseFloat(aDate.close_approach_data[0].relative_velocity.kilometers_per_second).toFixed(2),
+			approach_date: aDate.close_approach_data[0].close_approach_date_full,
+			miss_distance: Math.round(aDate.close_approach_data[0].miss_distance.kilometers)
 		}
 	});
 	return days

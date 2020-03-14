@@ -15,7 +15,7 @@ function Header() {
             </h2>
             <p className="pt-3">CHRISTA MCAULIFFE, December 6, 1985</p>
          </div>
-         <img className="w-full mb-12" src={bannerImg} alt="space-banner" />
+         <img className="w-full mb-10" src={bannerImg} alt="space-banner" />
       </header>
    );
 }

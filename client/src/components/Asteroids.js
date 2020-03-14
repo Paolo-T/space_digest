@@ -38,50 +38,78 @@ class Asteroids extends Component {
          );
       } else {
          return (
-            <div className="container w-3/4 mx-auto text-left my-8">
+            <div className="container w-full mx-auto text-left my-8">
                <div className="container mx-auto flex pr-30 pt-5 text-left">
-                  <h2 className="w-1/3 inline-block flex-1 bg-gray-100 text-5xl leading-snug font-bold pl-5 py-5">
+                  <h2 className="w-1/3 inline-block flex-1 bg-gray-100 text-5xl leading-snug font-bold pl-5 py-5 mb-5">
                      Space Rocks. Near Earth Asteroids
                   </h2>
 
-                  <p className="w-2/3 text-2xl font-light mx-auto px-16">
-                     NeoWs (Near Earth Object Web Service) is a RESTful web
-                     service for near earth Asteroid information.
+                  <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-10">
+                     NeoWs (Near Earth Object Web Service) is a web service for
+                     near earth Asteroid information.
                      <br></br>
                      With NeoWs we can display Asteroids based on their closest
                      approach date to Earth.
+                     <span className="block pt-8 text-base font-light">
+                        <a
+                           className=""
+                           target="_blank"
+                           href="https://cneos.jpl.nasa.gov/"
+                        >
+                           CNEOS - Center for Near Earth Object Studies
+                        </a>
+                     </span>
                   </p>
                </div>
-               <div className="container mx-auto flex pr-30 pb-10 text-left">
-                  <div className="w-1/3 inline-block flex-1 text-5xl font-bold pl-5"></div>
-                  <div className="w-2/3">
-                     <h2 className="inline-block text-5xl font-bold pl-16">
-                        Asteroid name
-                     </h2>
-                     <div className="mx-auto px-16 pt-5text-2xl font-light ">
+               <div className="container mx-auto flex pr-30 pb-10 mt-32 text-left">
+                  <div className="w-4/5 mx-auto">
+                     <h3 className="inline-block text-3xl font-bold mb-10 pl-4">
+                        Near Miss! Asteroids passing close to Earth this month
+                     </h3>
+                     <div className="flex pt-4 pl-4">
+                        <span className="w-1/4 font-bold">Name</span>
+                        <span className="w-1/4 font-bold">Approach Date</span>
+                        <span className="w-1/4 font-bold">
+                           Diameter (Meter)
+                        </span>
+                        <span className="w-1/4 font-bold">
+                           Speed (Km/second)
+                        </span>
+                        <span className="w-1/4 font-bold">
+                           Distance from Earth (km)
+                        </span>
+                     </div>
+
+                     <div className="mx-auto pt-5 text-1xl font-light ">
                         {processedResponse.map(response => {
                            return (
-                              <ul class="flex mb-4">
+                              <ul className="flex mb-3">
                                  <li
-                                    class="w-1/4 bg-gray-500 h-12 pl-2 pt-2"
+                                    className="w-1/5 bg-gray-200 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.name}
                                  </li>
                                  <li
-                                    class="w-1/4 bg-gray-400 h-12 pl-2 pt-2"
+                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
+                                    key={response.id}
+                                 >
+                                    {response.approach_date}
+                                 </li>
+                                 <li
+                                    className="w-1/5 bg-gray-200 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.diameter}
                                  </li>
                                  <li
-                                    class="w-1/4 bg-gray-500 h-12 pl-2 pt-2"
+                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.speed}
                                  </li>
                                  <li
-                                    class="w-1/4 bg-gray-400 h-12 pl-2 pt-2"
+                                    className="w-1/5 bg-gray-200 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.miss_distance}

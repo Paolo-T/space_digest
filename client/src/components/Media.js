@@ -43,7 +43,7 @@ class Media extends Component {
          );
       } else if (mediaData.media_type !== "video") {
          return (
-            <div className="container w-1/2 mx-auto text-left">
+            <div className="container w-full mx-auto text-left">
                <div className="flex text-left">
                   <h2 className="text-2xl mb-2">
                      Astronomy picture of the day
@@ -88,7 +88,7 @@ class Media extends Component {
                   muted
                />
                <div className="container mx-auto flex pr-48 py-10 text-left">
-                  <p className="w-1/3 inline-block flex-1 bg-gray-100 text-2xl font-bold pl-5 pt-5">
+                  <p className="w-1/3 inline-block flex-1 bg-gray-100 text-2xl font-bold pl-5 pr-5 pt-5">
                      {mediaData.title}
                   </p>
                   <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5 ">
