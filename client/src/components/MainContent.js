@@ -6,15 +6,15 @@ import Asteroids from "./Asteroids";
 // import Slider from "./Slider";
 
 function MainContent() {
-    return (
-        <div>
-            <Asteroids />
-            {/* <Media />
+   return (
+      <div>
+         <Asteroids />
+         {/* <Media />
             <MarsWeather />
             <RoverPhotos /> */}
-            {/* <Slider /> */}
-        </div>
-    );
+         {/* <Slider /> */}
+      </div>
+   );
 }
 
 export default MainContent;

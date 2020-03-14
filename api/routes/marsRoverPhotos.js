@@ -61,7 +61,7 @@ function processPhotos(body) {
     let photos = body.photos
         .map(photo => {
 			return {
-                id:photo.id,
+                id: photo.id,
 				img_src: photo.img_src,
                 earth_date: photo.earth_date,
                 name: photo.rover.name,
