@@ -3,16 +3,14 @@ import Asteroids from "./Asteroids";
 import Media from "./Media";
 import MarsWeather from "./MarsWeather";
 import RoverPhotos from "./RoverPhotos";
-// import Slider from "./Slider";
 
 function MainContent() {
    return (
       <div>
          {/* <Asteroids /> */}
-         <Media />
+         {/* <Media /> */}
          {/* <MarsWeather /> */}
-         {/* <RoverPhotos /> */}
-            {/* <Slider /> */}
+         <RoverPhotos />
       </div>
    );
 }

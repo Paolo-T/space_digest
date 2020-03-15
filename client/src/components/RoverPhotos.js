@@ -46,7 +46,7 @@ class RoverPhotos extends Component {
          );
       } else {
          return (
-            <div className="container w-3/4 mx-auto text-left my-8">
+            <div className="container w-full mx-auto text-left my-8">
                <div className="container mx-auto flex pr-30 py-10 text-left">
                   <h2 className="w-1/3 inline-block flex-1 bg-gray-100 text-5xl font-bold pl-5 pt-5">
                      Mars Rover
@@ -76,7 +76,7 @@ class RoverPhotos extends Component {
                             alt="Mars Rover shot"
                         />
                     </div> */}
-               <div className="container grid gap-6 grid-cols-4">
+               <div className="container grid gap-6 grid-cols-5">
                   {photos.map(photo => {
                      return (
                         <img

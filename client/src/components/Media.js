@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import VideoFeatured from "./VideoFeatured";
 import Loader from "./Loader";
 class Media extends Component {
    constructor(props) {
@@ -45,19 +46,17 @@ class Media extends Component {
          return (
             <div className="container w-full mx-auto text-left">
                <div className="flex text-left">
-                  <h2 className="text-2xl mb-2">
-                     Astronomy picture of the day
-                  </h2>
+                  <h2 className="h2 mx-auto">Astronomy picture of today</h2>
                </div>
                <img
-                  className="w-full mx-auto mb-12 rounded-lg"
+                  className="w-full mx-auto mb-12 rounded-md"
                   src={mediaData.url}
                   alt="Media from space"
                />
                <div className="container mx-auto flex pr-30 py-10 text-left">
-                  <p className="w-1/3 inline-block flex-1 bg-gray-100 text-5xl font-bold pl-5 pt-5">
+                  <h2 className="h2 w-1/3 inline-block flex-1 bg-gray-100 rounded-md pl-5 pt-5 pr-5">
                      {mediaData.title}
-                  </p>
+                  </h2>
                   <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5">
                      {mediaData.explanation}
                   </p>
@@ -68,27 +67,11 @@ class Media extends Component {
          return (
             <div className="container mx-auto text-center">
                <div className="flex justify-center">
-                  <h2 className="text-2xl mb-2 uppercase">
-                     Daily image {mediaData.date}
-                  </h2>
+                  <h2 className="text-2xl mb-2 uppercase">Daily image</h2>
                </div>
-               {/* <video
-                        style={{ width: "100%" }}
-                        src="https://s3.amazonaws.com/codecademy-content/courses/React/react_video-slow.mp4"
-                        controls
-                        autoPlay
-                        muted
-                    /> */}
-
-               <video
-                  src={mediaData.url}
-                  className="w-full container mx-auto"
-                  controls
-                  autoPlay
-                  muted
-               />
+               <VideoFeatured url={mediaData.url} />
                <div className="container mx-auto flex pr-48 py-10 text-left">
-                  <p className="w-1/3 inline-block flex-1 bg-gray-100 text-2xl font-bold pl-5 pr-5 pt-5">
+                  <p className="w-1/3 inline-block flex-1 bg-gray-100 rounded-md text-2xl font-bold pl-5 pr-5 pt-5">
                      {mediaData.title}
                   </p>
                   <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5 ">

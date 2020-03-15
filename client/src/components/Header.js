@@ -1,21 +1,25 @@
 import React from "react";
 import bannerImg from "../img/main-banner.svg";
+import VideoFeatured from "./VideoFeatured";
 function Header() {
    return (
-      <header className="container mx-auto text-black text-center">
+      <header className="container mx-auto text-center">
          <div className="mb-12">
-            <h1 className="inline-block w-7/12 mx-auto text-7xl font-semibold leading-none tracking-tight  mt-20 mb-10 text-left">
-               Space digest.
-            </h1>
-            <h2 className="w-3/4 mx-auto text-3xl leading-snug ">
+            <h1 className="h1">Space digest.</h1>
+            <h3 className="w-3/4 mx-auto ">
                "Space is for everybody. It's not just for a few people in
-               science or math, or for a select group of astronauts. That's our
-               new frontier out there, and it's everybody's business to know
-               about space."
-            </h2>
-            <p className="pt-3">CHRISTA MCAULIFFE, December 6, 1985</p>
+               science or math, or for a select group of astronauts.<br></br>
+               That's our new frontier out there, and it's everybody's business
+               to know about space."
+            </h3>
+            <span className="span">CHRISTA MCAULIFFE, December 6, 1985</span>
+            {/* <img
+               className="w-full mt-20 mb-10"
+               src={bannerImg}
+               alt="space-banner"
+            /> */}
          </div>
-         <img className="w-full mb-10" src={bannerImg} alt="space-banner" />
+         <VideoFeatured url="https://www.youtube.com/watch?v=Ilifg26TZrI" />
       </header>
    );
 }

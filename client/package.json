@@ -1,48 +1,48 @@
 {
-    "name": "react_app",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.4.0",
-        "@testing-library/user-event": "^7.2.1",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-scripts": "3.3.0"
-    },
-    "scripts": {
-        "format": "prettier \"./src/**/*.{js, html}\" --write",
-        "lint": "eslint \"./src/**/*.{js, jsx}\" --quiet",
-        "build:style": "postcss ./src/css/tailwind.css -o ./src/css/styles.css",
-        "start": "npm run build:style && react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
-    "proxy": "http://localhost:5000",
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^2.0.6",
-        "autoprefixer": "^9.7.3",
-        "cssnano": "^4.1.10",
-        "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.10.0",
-        "postcss-cli": "^7.1.0",
-        "prettier": "^1.19.1",
-        "tailwindcss": "^1.1.4"
-    }
+   "name": "react_app",
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.4.0",
+      "@testing-library/user-event": "^7.2.1",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+      "react-scripts": "3.3.0"
+   },
+   "scripts": {
+      "format": "prettier \"./src/**/*.{js, html}\" --write",
+      "lint": "eslint \"./src/**/*.{js, jsx}\" --quiet",
+      "build:style": "postcss ./src/css/tailwind.pcss -o ./src/css/styles.css",
+      "start": "npm run build:style && react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+   },
+   "proxy": "http://localhost:5000",
+   "eslintConfig": {
+      "extends": "react-app"
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "devDependencies": {
+      "@fullhuman/postcss-purgecss": "^2.0.6",
+      "autoprefixer": "^9.7.3",
+      "cssnano": "^4.1.10",
+      "eslint": "^6.8.0",
+      "eslint-config-prettier": "^6.10.0",
+      "postcss-cli": "^7.1.0",
+      "prettier": "^1.19.1",
+      "tailwindcss": "^1.1.4"
+   }
 }
