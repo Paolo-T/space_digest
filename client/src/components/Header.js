@@ -13,11 +13,11 @@ function Header() {
                to know about space."
             </h3>
             <span className="span">CHRISTA MCAULIFFE, December 6, 1985</span>
-            {/* <img
+            <img
                className="w-full mt-20 mb-10"
                src={bannerImg}
                alt="space-banner"
-            /> */}
+            />
          </div>
          <VideoFeatured url="https://www.youtube.com/watch?v=Ilifg26TZrI" />
       </header>

@@ -7,9 +7,9 @@ import RoverPhotos from "./RoverPhotos";
 function MainContent() {
    return (
       <div>
-         {/* <Asteroids /> */}
-         {/* <Media /> */}
-         {/* <MarsWeather /> */}
+         <Asteroids />
+         <Media />
+         <MarsWeather />
          <RoverPhotos />
       </div>
    );
