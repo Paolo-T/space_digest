@@ -44,20 +44,20 @@ class Media extends Component {
          );
       } else if (mediaData.media_type !== "video") {
          return (
-            <div className="container w-full mx-auto text-left">
+            <div className="container w-full mx-auto text-left mt-20 mb-10">
                <div className="flex text-left">
-                  <h2 className="h2 mx-auto">Astronomy picture of today</h2>
+                  <h2 className="mx-auto mb-10">Astronomy picture of today</h2>
                </div>
                <img
-                  className="w-full mx-auto mb-12 rounded-md"
+                  className="w-full mx-auto mb-12 rounded-sm"
                   src={mediaData.url}
                   alt="Media from space"
                />
-               <div className="container mx-auto flex pr-30 py-10 text-left">
-                  <h2 className="h2 w-1/3 inline-block flex-1 bg-gray-100 rounded-md pl-5 pt-5 pr-5">
+               <div className="container mx-auto flex pr-30 mb-10 mt-10 text-left">
+                  <h2 className="w-1/3 inline-block flex-1 bg-teal-300 rounded-sm py-5 px-5">
                      {mediaData.title}
                   </h2>
-                  <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5">
+                  <p className="w-2/3 text-2xl font-light mx-auto px-16">
                      {mediaData.explanation}
                   </p>
                </div>

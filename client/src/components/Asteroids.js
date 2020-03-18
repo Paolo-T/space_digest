@@ -39,33 +39,11 @@ class Asteroids extends Component {
       } else {
          return (
             <div className="container w-full mx-auto text-left my-8">
-               <div className="container mx-auto flex pr-30 pt-5 text-left">
-                  <h2 className="w-1/3 inline-block flex-1 bg-gray-100 pl-5 py-5 rounded-md">
-                     Space Rocks. Near Earth Asteroids
-                  </h2>
-
-                  <p className="p">
-                     NeoWs (Near Earth Object Web Service) is a web service for
-                     near earth Asteroid information.
-                     <br></br>
-                     With NeoWs we can display Asteroids based on their closest
-                     approach date to Earth.
-                     <span className="pt-8">
-                        <a
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           href="https://cneos.jpl.nasa.gov/"
-                        >
-                           CNEOS - Center for Near Earth Object Studies
-                        </a>
-                     </span>
-                  </p>
-               </div>
-               <div className="container mx-auto flex pr-30 pb-10 mt-32 text-left">
+               <h2 className="w-2/3 mx-auto text-center mb-10 mt-20">
+                  Near Miss! Asteroids passing close to Earth this month
+               </h2>
+               <div className="container mx-auto flex pr-30 pb-10 mt-10 text-left">
                   <div className="w-4/5 mx-auto">
-                     <h3 className="mb-10 pl-4">
-                        Near Miss! Asteroids passing close to Earth this month
-                     </h3>
                      <div className="flex pt-4 pl-4">
                         <span className="w-1/4 font-bold">Name</span>
                         <span className="w-1/4 font-bold">Approach Date</span>
@@ -119,6 +97,27 @@ class Asteroids extends Component {
                         })}
                      </div>
                   </div>
+               </div>
+               <div className="container mx-auto flex pr-30 pt-5 text-left">
+                  <h2 className="w-1/3 inline-block flex-1 bg-teal-300 pl-5 py-5 rounded-sm">
+                     NeoWs
+                  </h2>
+                  <p className="p px-16 pt-0">
+                     NeoWs (Near Earth Object Web Service) is a web service for
+                     near earth Asteroid information.
+                     <br></br>
+                     With NeoWs we can display Asteroids based on their closest
+                     approach date to Earth.
+                     <span className="inline-block pt-12">
+                        <a
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           href="https://cneos.jpl.nasa.gov/"
+                        >
+                           CNEOS - Center for Near Earth Object Studies
+                        </a>
+                     </span>
+                  </p>
                </div>
             </div>
          );
