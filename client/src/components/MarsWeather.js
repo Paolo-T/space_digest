@@ -38,36 +38,41 @@ class MarsWeather extends Component {
          );
       } else {
          return (
-            <div className="container mx-auto bg-gray-100 my-30 py-8 pl-8">
-               <h2 className="mb-2">Latest Weather at Elysium Planitia</h2>
-               <p className="p inline-block">
-                  InSight is taking daily weather measurements (temperature,
-                  wind, pressure) on the surface of Mars at Elysium Planitia, a
-                  flat, smooth plain near Mars’ equator.
-               </p>
-               <p className="mt-4">
-                  <strong>Season: </strong>
-                  {solData.marsSol}
-               </p>
-               <div className="container w-full flex mx-auto">
-                  {solData.map(data => {
-                     return (
-                        <div className="flex-1 py-4" key={data.marsSol}>
-                           <p>
-                              <strong>Sol: </strong>
-                              {data.marsSol}
-                           </p>
-                           <p>
-                              <strong>high: </strong>
-                              {data.temperature.max}° F
-                           </p>
-                           <p>
-                              <strong>low: </strong>
-                              {data.temperature.min}° F
-                           </p>
-                        </div>
-                     );
-                  })}
+            <div>
+               <h2 className="w-2/3 mx-auto text-center mb-10 mt-20">
+                  News from Mars
+               </h2>
+               <div className="container mx-auto bg-gray-100 my-30 py-8 pl-8">
+                  <h3 className="mb-2">Latest Weather at Elysium Planitia</h3>
+                  <p className="p inline-block">
+                     InSight is taking daily weather measurements (temperature,
+                     wind, pressure) on the surface of Mars at Elysium Planitia,
+                     a flat, smooth plain near Mars’ equator.
+                  </p>
+                  <p className="mt-4">
+                     <strong>Season: </strong>
+                     {solData.marsSol}
+                  </p>
+                  <div className="container w-full flex mx-auto">
+                     {solData.map(data => {
+                        return (
+                           <div className="flex-1 py-4" key={data.marsSol}>
+                              <p>
+                                 <strong>Sol: </strong>
+                                 {data.marsSol}
+                              </p>
+                              <p>
+                                 <strong>high: </strong>
+                                 {data.temperature.max}° F
+                              </p>
+                              <p>
+                                 <strong>low: </strong>
+                                 {data.temperature.min}° F
+                              </p>
+                           </div>
+                        );
+                     })}
+                  </div>
                </div>
             </div>
          );

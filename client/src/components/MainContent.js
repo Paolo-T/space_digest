@@ -9,8 +9,8 @@ function MainContent() {
       <div>
          <Asteroids />
          <Media />
-         {/* <MarsWeather />
-         <RoverPhotos /> */}
+         <MarsWeather />
+         {/* <RoverPhotos /> */}
       </div>
    );
 }
