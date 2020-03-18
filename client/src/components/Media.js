@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import VideoFeatured from "./VideoFeatured";
 import Loader from "./Loader";
+import { SRLWrapper } from "simple-react-lightbox";
 class Media extends Component {
    constructor(props) {
       super(props);
@@ -48,11 +49,16 @@ class Media extends Component {
                <div className="flex text-left">
                   <h2 className="mx-auto mb-10">Astronomy picture of today</h2>
                </div>
-               <img
-                  className="w-full mx-auto mb-12 rounded-sm"
-                  src={mediaData.url}
-                  alt="Media from space"
-               />
+               <SRLWrapper>
+                  <a href={mediaData.url} data-attribute="SRL">
+                     <img
+                        className="w-full mx-auto mb-12 rounded-sm"
+                        src={mediaData.url}
+                        alt="Media from space"
+                     />
+                  </a>
+               </SRLWrapper>
+
                <div className="container mx-auto flex pr-30 mb-10 mt-10 text-left">
                   <h2 className="w-1/3 inline-block flex-1 bg-teal-300 rounded-sm py-5 px-5">
                      {mediaData.title}
