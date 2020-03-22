@@ -4,7 +4,7 @@ import VideoFeatured from "./VideoFeatured";
 function Header() {
    return (
       <header className="container mx-auto text-center">
-         <div className="mb-12">
+         <div className="mb-12 pt-16">
             <h1 className="bg-teal-300">Space digest.</h1>
             <h3 className="w-3/4 mx-auto ">
                "Space is for everybody. It's not just for a few people in

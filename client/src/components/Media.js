@@ -50,15 +50,14 @@ class Media extends Component {
                   <h2 className="mx-auto mb-10">Astronomy picture of today</h2>
                </div>
                <SRLWrapper>
-                  <a href={mediaData.url} data-attribute="SRL">
+                  <a href={mediaData.hdurl} data-attribute="SRL">
                      <img
-                        className="w-full mx-auto mb-12 rounded-sm"
+                        className="w-full mx-auto mb-12 rounded-sm cursor-pointer"
                         src={mediaData.url}
-                        alt="Media from space"
+                        alt="Astronomy picture of today"
                      />
                   </a>
                </SRLWrapper>
-
                <div className="container mx-auto flex pr-30 mb-10 mt-10 text-left">
                   <h2 className="w-1/3 inline-block flex-1 bg-teal-300 rounded-sm py-5 px-5">
                      {mediaData.title}
@@ -71,9 +70,9 @@ class Media extends Component {
          );
       } else {
          return (
-            <div className="container mx-auto text-center">
+            <div className="container mx-auto text-center mt-10">
                <div className="flex justify-center">
-                  <h2 className="text-2xl mb-2 uppercase">Daily image</h2>
+                  <h2 className="text-2xl mb-2 uppercase">Daily video</h2>
                </div>
                <VideoFeatured url={mediaData.url} />
                <div className="container mx-auto flex pr-48 py-10 text-left">

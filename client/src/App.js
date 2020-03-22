@@ -1,19 +1,23 @@
 import React from "react";
 import "./css/styles.css";
-import Header from "./components/Header";
-import MainContent from "./components/MainContent";
-import Footer from "./components/Footer";
+import { BrowserRouter, Route } from "react-router-dom";
+import Navigation from "./components/base/Navigation";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
-    return (
-        <div className="App">
-            <div className="">
-                <Header />
-                <MainContent />
-                <Footer />
-            </div>
-        </div>
-    );
+   return (
+      <BrowserRouter>
+         <div>
+            <Navigation />
+            <switch>
+               <Route path="/" component={Home} exact />
+               <Route path="/About" component={About} />
+               {/* <Route component={Error} /> */}
+            </switch>
+         </div>
+      </BrowserRouter>
+   );
 }
 
 export default App;

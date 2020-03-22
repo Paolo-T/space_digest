@@ -77,14 +77,12 @@ class RoverPhotos extends Component {
                   <div className="container grid gap-6 grid-cols-5">
                      {photos.map(photo => {
                         return (
-                           <a href={photo.img_src} data-attribute="SRL">
-                              <img
-                                 className="w-full rounded-md"
-                                 src={photo.img_src}
-                                 key={photo.id}
-                                 alt="Scene from Mars Rover"
-                              />
-                           </a>
+                           <img
+                              className="w-full rounded-md cursor-pointer"
+                              src={photo.img_src}
+                              key={photo.id}
+                              alt="Scene from Mars Rover"
+                           />
                         );
                      })}
                   </div>

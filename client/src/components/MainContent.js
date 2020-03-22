@@ -9,10 +9,13 @@ function MainContent() {
    return (
       <div>
          {/* <Asteroids /> */}
-         <SimpleReactLightbox>
+
+         {/* <SimpleReactLightbox>
             <Media />
-         </SimpleReactLightbox>
-         <MarsWeather />
+         </SimpleReactLightbox> */}
+
+         {/* <MarsWeather /> */}
+
          <SimpleReactLightbox>
             <RoverPhotos />
          </SimpleReactLightbox>
