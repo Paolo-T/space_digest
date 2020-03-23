@@ -1,6 +1,8 @@
 import React from "react";
 import bannerImg from "../img/main-banner.svg";
 import VideoFeatured from "./VideoFeatured";
+import { Link } from "react-router-dom";
+
 function Header() {
    return (
       <header className="container mx-auto text-center">
@@ -19,6 +21,13 @@ function Header() {
                alt="space-banner"
             /> */}
          </div>
+         <Link
+            className="text-teal-300 text-2xl hover:text-black"
+            to="/MarsRoverGallery"
+         >
+            Mars Rover
+         </Link>
+
          <VideoFeatured url="https://www.youtube.com/watch?v=Ilifg26TZrI" />
       </header>
    );

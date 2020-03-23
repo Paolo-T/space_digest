@@ -12,13 +12,14 @@ function Home() {
       <div>
          <div className="">
             <Header />
+
             {/* <Asteroids /> */}
 
             {/* <SimpleReactLightbox>
                <Media />
             </SimpleReactLightbox> */}
 
-            <MarsWeather />
+            {/* <MarsWeather /> */}
 
             {/* <SimpleReactLightbox>
                <RoverPhotos />

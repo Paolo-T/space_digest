@@ -8,13 +8,13 @@ import SimpleReactLightbox from "simple-react-lightbox";
 function MainContent() {
    return (
       <div>
-         {/* <Asteroids /> */}
+         <Asteroids />
 
-         {/* <SimpleReactLightbox>
+         <SimpleReactLightbox>
             <Media />
-         </SimpleReactLightbox> */}
+         </SimpleReactLightbox>
 
-         {/* <MarsWeather /> */}
+         <MarsWeather />
 
          <SimpleReactLightbox>
             <RoverPhotos />
