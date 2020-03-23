@@ -2,6 +2,7 @@ import React from "react";
 import "./css/styles.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navigation from "./components/base/Navigation";
+import Footer from "./components/base/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import RoverPhotos from "./components/RoverPhotos";
@@ -19,6 +20,7 @@ function App() {
                <Route path="/MarsRoverGallery" component={MarsRoverGallery} />
                {/* <Route component={Error} /> */}
             </switch>
+            <Footer />
          </div>
       </Router>
    );

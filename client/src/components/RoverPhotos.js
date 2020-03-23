@@ -48,27 +48,6 @@ class RoverPhotos extends Component {
       } else {
          return (
             <div className="container w-full mx-auto text-left my-8">
-               <div className="container mx-auto flex pr-30 py-10 text-left">
-                  <h2 className="w-1/3 inline-block flex-1 bg-teal-300 rounded-sm text-5xl font-bold pl-5 pt-5">
-                     Mars Rover
-                  </h2>
-
-                  <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5">
-                     Spirit and Opportunity landed on Mars January 3 and January
-                     24, 2004 PST (Jan. 4 and Jan. 25 UTC). Both rovers lived
-                     well beyond their planned 90-day missions. Opportunity
-                     worked nearly 15 years on Mars and broke the driving record
-                     for putting the most miles on the odometer. The twin
-                     geologists, Spirit and Opportunity, have both found
-                     dramatic evidence that: Long ago Mars was wetter Conditions
-                     at Mars could have sustained microbial life, if any existed
-                     With data from the rovers, mission scientists have
-                     reconstructed an ancient past when Mars was awash in water.
-                     Spirit and Opportunity each found evidence for past wet
-                     conditions that possibly could have supported microbial
-                     life.
-                  </p>
-               </div>
 
                <h2 className="w-2/3 mx-auto text-center mb-10 mt-20">
                   Shots from Curiosity Mars rover<br></br>(Mast camera)
