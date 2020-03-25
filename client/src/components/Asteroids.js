@@ -39,11 +39,34 @@ class Asteroids extends Component {
       } else {
          return (
             <div className="container w-full mx-auto text-left my-8">
-               <h2 className="w-2/3 mx-auto text-center mb-10 mt-20">
-                  Near Miss! Asteroids passing close to Earth this month
-               </h2>
-               <div className="container mx-auto flex pr-30 pb-10 mt-10 text-left">
-                  <div className="w-4/5 mx-auto">
+               <div className="container mx-auto flex pr-30 pt-5 text-left">
+                  <div className="container mx-auto flex pr-30 mt-10 text-left">
+
+
+                     <div className="w-9/12 mx-auto">
+                        <h2 className="w-2/3 inline-block flex-1 ">
+                           Asteroids passing close to Earth this month NeoWs
+                        </h2>
+                        <p className="w-4/5 text-2xl font-light">
+                           NeoWs (Near Earth Object Web Service) is a web
+                           service for near earth Asteroid information. With
+                           NeoWs we can display Asteroids based on their closest
+                           approach date to Earth.
+                           <span className="block pt-10">
+                              <a
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 href="https://cneos.jpl.nasa.gov/"
+                              >
+                                 CNEOS - Center for Near Earth Object Studies
+                              </a>
+                           </span>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div className="container mx-auto pr-30 pb-10 mt-10 text-left">
+                  <div className="w-9/12 mx-auto">
                      <div className="flex pt-4 pl-4">
                         <span className="w-1/4 font-bold">Name</span>
                         <span className="w-1/4 font-bold">Approach Date</span>
@@ -63,31 +86,31 @@ class Asteroids extends Component {
                            return (
                               <ul className="flex mb-3">
                                  <li
-                                    className="w-1/5 bg-gray-200 h-12 pl-4 pt-4"
+                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.name}
                                  </li>
                                  <li
-                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
+                                    className="w-1/5  h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.approach_date}
                                  </li>
                                  <li
-                                    className="w-1/5 bg-gray-200 h-12 pl-4 pt-4"
+                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.diameter}
                                  </li>
                                  <li
-                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
+                                    className="w-1/5  h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.speed}
                                  </li>
                                  <li
-                                    className="w-1/5 bg-gray-200 h-12 pl-4 pt-4"
+                                    className="w-1/5 bg-gray-100 h-12 pl-4 pt-4"
                                     key={response.id}
                                  >
                                     {response.miss_distance}
@@ -97,27 +120,6 @@ class Asteroids extends Component {
                         })}
                      </div>
                   </div>
-               </div>
-               <div className="container mx-auto flex pr-30 pt-5 text-left">
-                  <h2 className="w-1/3 inline-block flex-1 bg-teal-300 pl-5 py-5 rounded-sm">
-                     NeoWs
-                  </h2>
-                  <p className="p px-16 pt-0">
-                     NeoWs (Near Earth Object Web Service) is a web service for
-                     near earth Asteroid information.
-                     <br></br>
-                     With NeoWs we can display Asteroids based on their closest
-                     approach date to Earth.
-                     <span className="inline-block pt-12">
-                        <a
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           href="https://cneos.jpl.nasa.gov/"
-                        >
-                           CNEOS - Center for Near Earth Object Studies
-                        </a>
-                     </span>
-                  </p>
                </div>
             </div>
          );

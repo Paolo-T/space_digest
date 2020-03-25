@@ -7,14 +7,14 @@ function Footer() {
       <footer className="container w-full mx-auto h-40 bg-teal-300 flex items-center px-6">
          <div className="w-full flex items-center justify-between ">
             {/* <span className="text-2xl leading-snug mr-4">Powered by</span> */}
-            <div className="flex">
+            {/* <div className="flex">
                <img className="w-16 mr-4" src={nasaLogo} alt="nasa-logo" />
                <img
                   className="inline-block w-32 "
                   src={spaceXLogo}
                   alt="space-x-logo"
                />
-            </div>
+            </div> */}
 
             <span className="text-xl leading-snug align-baseline">
                hey@spacedigest.live

@@ -7,7 +7,7 @@ function Header() {
       <header className="container mx-auto text-center">
          <div className="mb-12 pt-16">
             <h1 className="bg-teal-300">Space digest.</h1>
-            <h3 className="w-3/4 mx-auto ">
+            <h3 className="w-3/4 mx-auto">
                "Space is for everybody. It's not just for a few people in
                science or math, or for a select group of astronauts.<br></br>
                That's our new frontier out there, and it's everybody's business

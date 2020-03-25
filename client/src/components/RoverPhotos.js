@@ -47,17 +47,13 @@ class RoverPhotos extends Component {
          );
       } else {
          return (
-            <div className="container w-full mx-auto text-left my-8">
-
-               <h2 className="w-2/3 mx-auto text-center mb-10 mt-20">
-                  Shots from Curiosity Mars rover<br></br>(Mast camera)
-               </h2>
+            <div className="container w-full">
                <SRLWrapper>
-                  <div className="container grid gap-6 grid-cols-5">
+                  <div className="grid gap-6 grid-cols-4">
                      {photos.map(photo => {
                         return (
                            <img
-                              className="w-full rounded-md cursor-pointer"
+                              className="w-full rounded-sm cursor-pointer"
                               src={photo.img_src}
                               key={photo.id}
                               alt="Scene from Mars Rover"
