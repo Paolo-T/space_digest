@@ -41,6 +41,9 @@ class MarsWeather extends Component {
       } else {
          return (
             <div className="mx-auto bg-grey-300 pr-30 py-12 text-left">
+               <div className="container mx-auto">
+                  <h2 className=" block w-9/12 mx-auto">Weather on Mars</h2>
+               </div>
                <div className="w-9/12 mx-auto bg-gray-100 my-30 py-8 pl-8">
                   <h3 className="mb-2">Latest Weather at Elysium Planitia</h3>
                   <p className="p inline-block">

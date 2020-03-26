@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function Home() {
    return (
       <div>
-         <div className="">
+         <div>
             <Header />
 
             <Asteroids />
@@ -47,7 +47,6 @@ function Home() {
                            Check Curiosity's Rover pictures from Mars
                         </Link>
                      </button>
-
                   </p>
                </div>
             </div>
