@@ -47,7 +47,7 @@ class RoverPhotos extends Component {
          );
       } else {
          return (
-            <div className="container w-full">
+            <div className="container mx-auto">
                <SRLWrapper>
                   <div className="grid gap-6 grid-cols-4">
                      {photos.map(photo => {

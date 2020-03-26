@@ -70,7 +70,7 @@ function processPhotos(body) {
                 landing_date: photo.rover.landing_date,
 			}
 		});
-	return photos;
+    return photos;
     }
 
 module.exports = roverImgs;
