@@ -5,6 +5,7 @@ router.use('/api/images', require('./images.js'));
 router.use('/api/marsWeather', require('./marsWeather.js'));
 router.use('/api/marsRover', require('./marsRoverPhotos.js'));
 router.use('/api/asteroids', require('./asteroids.js'));
+router.use('/api/photoCollection', require('./photoCollection.js'));
 
 router.get('/test', (req, res) => {
   res.send('Test route')

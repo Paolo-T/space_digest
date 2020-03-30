@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navigation from "./components/base/Navigation";
 import Footer from "./components/base/Footer";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import PhotosPage from "./pages/PhotosPage";
 import RoverPhotos from "./components/RoverPhotos";
 import Asteroids from "./components/Asteroids";
 import MarsRoverGallery from "./pages/MarsRoverGallery";
@@ -15,8 +15,8 @@ function App() {
          <div className="App">
             <Navigation />
             <switch>
-               <Route path="/" component={Home} exact />
-               <Route path="/About" component={About} exact />
+               <Route exact path="/" component={Home} />
+               <Route exact path="/PhotosPage" component={PhotosPage} />
                <Route path="/MarsRoverGallery" component={MarsRoverGallery} />
                {/* <Route component={Error} /> */}
             </switch>

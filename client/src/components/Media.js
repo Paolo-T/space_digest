@@ -46,7 +46,7 @@ class Media extends Component {
       } else if (mediaData.media_type !== "video") {
          return (
             // Media Image
-            <div className="container w-full mx-auto my-16">
+            <div className="container w-full mx-auto mb-16 mt-10">
                <div className="w-9/12 mx-auto">
                   <h2 className="">Astronomy picture of today</h2>
                   <h2 className="p">{mediaData.title}</h2>

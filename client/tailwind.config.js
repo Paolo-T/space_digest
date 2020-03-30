@@ -227,9 +227,11 @@ module.exports = {
          default: "1"
       },
       fontFamily: {
+         header: ["Archivo Black", "Montserrat", "Calibre", "Avenir"],
          sans: [
-            "Calibre",
             "Avenir",
+            "Helvetica Neue",
+            "Calibre",
             "system-ui",
             "-apple-system",
             "BlinkMacSystemFont",

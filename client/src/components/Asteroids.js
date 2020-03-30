@@ -39,7 +39,7 @@ class Asteroids extends Component {
       } else {
          return (
             // Asteroids
-            <div className="container mx-auto text-left my-24">
+            <div className="container mx-auto text-left mt-20 mb-10">
                <div className="w-9/12 mx-auto">
                   <h2 className="w-2/3 inline-block flex-1 ">
                      Asteroids passing close to Earth this month

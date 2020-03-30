@@ -13,9 +13,9 @@ function Navigation() {
             <nav className="w-1/6 flex justify-end ">
                <NavLink
                   className="text-teal-300 text-2xl hover:text-black"
-                  to="/About"
+                  to="/PhotosPage"
                >
-                  About
+                  Photos
                </NavLink>
             </nav>
          </div>
