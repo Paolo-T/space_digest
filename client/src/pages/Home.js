@@ -20,7 +20,7 @@ function Home() {
                <Media />
             </SimpleReactLightbox> */}
 
-            {/* <MarsWeather /> */}
+            <MarsWeather />
 
             <div className="container mx-auto pr-30 my-24 text-left">
                <div className="w-9/12 mx-auto">

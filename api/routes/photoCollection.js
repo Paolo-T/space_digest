@@ -8,11 +8,11 @@ const END_POINT    = '/search?q=space&media_type=image';
 
 router.get("/", (req, res, next) => {
     res.status(200).json({
-        message: "Handling Mars weather"
+        message: "Handling Photo collection"
     });
 });
 
-const photoCollection = router.get("/photoCollection", (req, res) => {
+const photoCollection = router.get("/photos", (req, res) => {
     request(
         `${API_BASE_URL}${END_POINT}`,
         { json: true },
@@ -22,48 +22,27 @@ const photoCollection = router.get("/photoCollection", (req, res) => {
             console.log("statusCode:", response && response.statusCode);
             console.log("Success!!");
             //  res.json(body);
-            res.json(body);
+            res.json(processPhotos(body));
 
         }
     );
 });
 
+function processPhotos(body) {
+	let photos = body.collection.items
+		.map(photo => {
+			return {
+                href: photo.href,
+                title: photo.data[0].title,
+                nasa_id: photo.data[0].nasa_id,
+                description: photo.data[0].description,
+                media_type: photo.data[0].media_type
 
-// function processWeatherData(body) {
-// 	let solData = body.sol_keys
-// 		.map(sol => {
-// 			return {
-// 				marsSol: sol,
-// 				earth_date: body[sol].First_UTC,
-// 				season: body[sol].Season,
-// 				temperature: {
-// 					max: body[sol].AT.mx,
-// 					min: body[sol].AT.mn,
-// 					average: body[sol].AT.av
-// 				},
-// 				pressure: {
-// 					max: body[sol].PRE.mx,
-// 					min: body[sol].PRE.mn,
-// 					average: body[sol].PRE.av,
-// 				}
-// 			};
-//         });
-// 	return solData
-// };
+			};
+        });
+	return photos
+};
 
-	// let solData = body.sol_keys
-	// 	.map(sol => body[sol].First_UTC)
-   // 	.map(item => {
-	// 		item.split('T')[0],toString();
-	// 		const d = new Date(item);
-	// 		const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
-	// 		const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
-	// 		const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
-	// 		const formattedDate = `${da} ${mo}`;
-
-	// 		return formattedDate;
-	// 		return "2020-03-03"
-   // })
 
 
 
