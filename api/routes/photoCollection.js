@@ -3,8 +3,7 @@ const router  = express.Router();
 const request = require("request");
 
 const API_BASE_URL = 'https://images-api.nasa.gov';
-const END_POINT    = '/search?q=space&media_type=image';
-// const API_DEMO     = 'api_key=DEMO_KEY&feedtype=json&ver=1.0'
+const END_POINT    = '/search?q=launch&media_type=image';
 
 router.get("/", (req, res, next) => {
     res.status(200).json({
@@ -32,9 +31,9 @@ function processPhotos(body) {
 	let photos = body.collection.items
 		.map(photo => {
 			return {
-                href: photo.href,
+                href: photo.links[0].href,
                 title: photo.data[0].title,
-                nasa_id: photo.data[0].nasa_id,
+                id: photo.data[0].nasa_id,
                 description: photo.data[0].description,
                 media_type: photo.data[0].media_type
 
@@ -42,8 +41,5 @@ function processPhotos(body) {
         });
 	return photos
 };
-
-
-
 
 module.exports = photoCollection;
