@@ -3,7 +3,7 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import RoverPhotos from "../components/RoverPhotos";
 import curiosityRover from "../img/curiosityRover.jpg";
 
-function MarsRoverGallery() {
+function page__marsRover() {
    return (
       <div className="container mx-auto pt-12">
          <div className="mb-12">
@@ -58,4 +58,4 @@ function MarsRoverGallery() {
    );
 }
 
-export default MarsRoverGallery;
+export default page__marsRover;

@@ -7,7 +7,7 @@ import { SRLWrapper } from "simple-react-lightbox";
 function PhotosPage() {
    // const [photos, setPhotos] = useState({});
 
-   const res = useFetch("/api/photoCollection/photos", {});
+   const res = useFetch("/api/photo-collection/photos", {});
 
    if (!res.response) {
       return <Loader />;
@@ -21,9 +21,6 @@ function PhotosPage() {
                   return (
                      <img
                         className="object-cover object-center h-64 w-full rounded-sm"
-                        // style={{
-                        //    backgroundImage: `url(${photo.href})`
-                        // }}
                         src={photo.href}
                         key={i}
                         alt={photo.title}

@@ -13,7 +13,7 @@ class MarsWeather extends Component {
    }
 
    async componentDidMount() {
-      await fetch("/api/marsWeather/weather")
+      await fetch("/api/mars-weather/weather")
          .then(res => res.json())
          .then(solData => {
             this.setState(

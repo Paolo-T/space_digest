@@ -1,14 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import SimpleReactLightbox from "simple-react-lightbox";
+
 import Header from "../components/Header";
 import Asteroids from "../components/Asteroids";
 import Media from "../components/Media";
 import MarsWeather from "../components/MarsWeather";
-import RoverPhotos from "../components/RoverPhotos";
-import SimpleReactLightbox from "simple-react-lightbox";
-import curiosityRoverColor from "../img/curiosityRoverColor.jpg";
-import { Link } from "react-router-dom";
 
-function Home() {
+function page__home() {
    return (
       <div>
          <div>
@@ -20,7 +19,7 @@ function Home() {
                <Media />
             </SimpleReactLightbox> */}
 
-            <MarsWeather />
+            {/* <MarsWeather /> */}
 
             <div className="container mx-auto pr-30 my-24 text-left">
                <div className="w-9/12 mx-auto">
@@ -47,7 +46,7 @@ function Home() {
                   <button class="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-12">
                      <Link
                         className="block text-black text-2xl"
-                        to="/MarsRoverGallery"
+                        to="/mars-rover"
                      >
                         Check Curiosity's Rover pictures from Mars
                      </Link>
@@ -59,4 +58,4 @@ function Home() {
    );
 }
 
-export default Home;
+export default page__home;
