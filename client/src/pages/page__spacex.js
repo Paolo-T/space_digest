@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 import SpacexLaunches from "../components/SpacexLaunches";
 import spaceXLaunch from "../img/spaceXLaunch.jpg";
-
 
 function page__articles() {
    return (
@@ -31,8 +30,8 @@ function page__articles() {
                alt="Moon Landing"
             />
          </div>
-         <div className="w-9/12 mx-auto">
-            <h2 className="w-3/4">Launches</h2>
+         <div className="w-9/12 mx-auto pb-24">
+            <h2 className="w-3/4">Launch missions</h2>
             <SpacexLaunches />
          </div>
       </div>

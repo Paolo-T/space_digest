@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from "react";
 import useFetch from "../components/hooks/useFetch";
-// import VideoFeatured from "./VideoFeatured";
 import Loader from "../components/Loader";
-import { SRLWrapper } from "simple-react-lightbox";
+import spacex from "../img/spacex.png";
 
 function PhotosPage() {
-   // const [photos, setPhotos] = useState({});
-
    const res = useFetch("/api/spacex/:launch", {});
 
    console.log("Launches fetched! --->>>", res);
 
    if (!res.response) {
       return (
-      <div className="mx-auto pt-12 pb-32" >
-         <Loader className="mx-auto" />
-      </div>
+         <div className="mx-auto pt-12 pb-32">
+            <Loader className="mx-auto" />
+         </div>
       );
    }
 
@@ -24,10 +21,13 @@ function PhotosPage() {
          <div className="grid gap-6 grid-cols-3 object-cover">
             {res.response.map((launch, i) => {
                return (
-                  <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div
+                     key={i}
+                     className="max-w-sm rounded overflow-hidden shadow-lg"
+                  >
                      <img
                         className="w-full py-8 px-8"
-                        src={launch.patch}
+                        src={launch.patch ? launch.patch : spacex}
                         alt="Sunset in the mountains"
                      />
                      <div className="px-6 py-4">
@@ -36,14 +36,14 @@ function PhotosPage() {
                         </div>
                         <p className="text-gray-700 text-base"></p>
                      </div>
-                     <div className="flex justify-between px-6 py-4">
-                        <span className="inline-block bg-gray-200 rounded-sm px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                     <div className="flex justify-between bg-gray-100 px-6 py-4">
+                        <span className="inline-block rounded-sm px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                            Launch {launch.flight_number}
                         </span>
-                        <span className="inline-block bg-gray-200 rounded-sm px-3 py-1 text-sm font-semibold text-gray-700">
+                        <span className="inline-block rounded-sm px-3 py-1 text-sm font-semibold text-gray-700">
                            {launch.rocket}
                         </span>
-                        <span className="inline-block bg-gray-200 rounded-sm px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                        <span className="inline-block rounded-sm px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                            {launch.year}
                         </span>
                      </div>

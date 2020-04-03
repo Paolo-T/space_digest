@@ -43,7 +43,7 @@ function page__home() {
                         that possibly could have supported microbial life.
                      </p>
                   </div>
-                  <button class="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-12">
+                  <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-12">
                      <Link
                         className="block text-black text-2xl"
                         to="/mars-rover"

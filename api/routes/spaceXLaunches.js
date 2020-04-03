@@ -27,7 +27,7 @@ const spaceXLaunches = router.get("/:launch", (req, res) => {
 });
 
 function processLaunches(body) {
-	let launches = body.reverse()
+	let launches = body
 	.map(launch => {
 			return {
 				name: launch.mission_name,
