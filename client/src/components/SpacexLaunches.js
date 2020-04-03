@@ -12,7 +12,11 @@ function PhotosPage() {
    console.log("Launches fetched! --->>>", res);
 
    if (!res.response) {
-      return <Loader />;
+      return (
+      <div className="mx-auto pt-12 pb-32" >
+         <Loader className="mx-auto" />
+      </div>
+      );
    }
 
    return (
@@ -20,31 +24,27 @@ function PhotosPage() {
          <div className="grid gap-6 grid-cols-3 object-cover">
             {res.response.map((launch, i) => {
                return (
-                  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg">
                      <img
-                        class="w-full py-8 px-8"
-                        src={launch.links.mission_patch}
+                        className="w-full py-8 px-8"
+                        src={launch.patch}
                         alt="Sunset in the mountains"
                      />
-                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">
-                           The Coldest Sunset
+                     <div className="px-6 py-4">
+                        <div className="font-bold text-xl mb-2">
+                           {launch.name}
                         </div>
-                        <p class="text-gray-700 text-base">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing
-                           elit. Voluptatibus quia, nulla! Maiores et
-                           perferendis eaque, exercitationem praesentium nihil.
-                        </p>
+                        <p className="text-gray-700 text-base"></p>
                      </div>
-                     <div class="px-6 py-4">
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                           #photography
+                     <div className="flex justify-between px-6 py-4">
+                        <span className="inline-block bg-gray-200 rounded-sm px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                           Launch {launch.flight_number}
                         </span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                           #travel
+                        <span className="inline-block bg-gray-200 rounded-sm px-3 py-1 text-sm font-semibold text-gray-700">
+                           {launch.rocket}
                         </span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                           #winter
+                        <span className="inline-block bg-gray-200 rounded-sm px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                           {launch.year}
                         </span>
                      </div>
                   </div>

@@ -19,26 +19,25 @@ const spaceXLaunches = router.get("/:launch", (req, res) => {
             console.log("error:", error);
             console.log("statusCode:", response && response.statusCode);
             console.log("Success!!");
-            res.json(body);
-            // res.json(processPhotos(body));
+            // res.json(body);
+            res.json(processLaunches(body));
 
         }
     );
 });
 
-// function processPhotos(body) {
-// 	let photos = body.collection.items
-// 		.map(photo => {
-// 			return {
-//                 href: photo.links[0].href,
-//                 title: photo.data[0].title,
-//                 id: photo.data[0].nasa_id,
-//                 description: photo.data[0].description,
-//                 media_type: photo.data[0].media_type
-
-// 			};
-//         });
-// 	return photos
-// };
+function processLaunches(body) {
+	let launches = body.reverse()
+	.map(launch => {
+			return {
+				name: launch.mission_name,
+				patch: launch.links.mission_patch,
+				flight_number: launch.flight_number,
+				rocket: launch.rocket.rocket_id,
+				year: launch.launch_year
+			};
+		});
+	return launches
+};
 
 module.exports = spaceXLaunches;
