@@ -6,21 +6,21 @@ import RoverPhotos from "./RoverPhotos";
 import SimpleReactLightbox from "simple-react-lightbox";
 
 function MainContent() {
-   return (
-      <div>
-         <Asteroids />
+    return (
+        <div>
+            <Asteroids />
 
-         <SimpleReactLightbox>
-            <Media />
-         </SimpleReactLightbox>
+            <SimpleReactLightbox>
+                <Media />
+            </SimpleReactLightbox>
 
-         <MarsWeather />
+            <MarsWeather />
 
-         <SimpleReactLightbox>
-            <RoverPhotos />
-         </SimpleReactLightbox>
-      </div>
-   );
+            <SimpleReactLightbox>
+                <RoverPhotos />
+            </SimpleReactLightbox>
+        </div>
+    );
 }
 
 export default MainContent;

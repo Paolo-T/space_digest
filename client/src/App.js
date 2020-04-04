@@ -7,27 +7,33 @@ import page__home from "./pages/page__home";
 import page__photosPage from "./pages/page__photosPage";
 import page__marsRover from "./pages/page__marsRover";
 import page__spacex from "./pages/page__spacex";
+import page__launch from "./pages/page__launch";
 
 function App() {
-   return (
-      <Router>
-         <div className="App">
-            <Navigation />
-            <switch>
-               <Route exact path="/" component={page__home} />
-               <Route
-                  exact
-                  path="/photos-collection"
-                  component={page__photosPage}
-               />
-               <Route path="/mars-rover" component={page__marsRover} />
-               <Route path="/space-x" component={page__spacex} />
-               {/* <Route component={Error} /> */}
-            </switch>
-            <Footer />
-         </div>
-      </Router>
-   );
+    return (
+        <Router>
+            <div className="App">
+                <Navigation />
+                <switch>
+                    <Route exact path="/" component={page__home} />
+                    <Route
+                        path="/photos-collection"
+                        component={page__photosPage}
+                        exact
+                    />
+                    <Route
+                        path="/mars-rover"
+                        component={page__marsRover}
+                        exact
+                    />
+                    <Route path="/space-x" component={page__spacex} exact />
+                    <Route path="/launch" component={page__launch} exact />
+                    {/* <Route component={Error} /> */}
+                </switch>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
 
 export default App;

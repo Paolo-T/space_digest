@@ -10,12 +10,12 @@ const spin = keyframes`
 `;
 
 export const Loader = styled.div`
-   border: 10px solid rgba(rgba(129, 230, 217, 1));
-   border-top: 3px solid #81e6d9;
-   border-radius: 50%;
-   width: 40px;
-   height: 40px;
-   animation: ${spin} 0.6s linear infinite;
+    border: 10px solid rgba(rgba(129, 230, 217, 1));
+    border-top: 3px solid #81e6d9;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: ${spin} 0.6s linear infinite;
 `;
 
 export default Loader;

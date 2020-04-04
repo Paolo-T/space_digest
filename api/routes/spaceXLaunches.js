@@ -34,7 +34,13 @@ function processLaunches(body) {
 				patch: launch.links.mission_patch,
 				flight_number: launch.flight_number,
 				rocket: launch.rocket.rocket_id,
-				year: launch.launch_year
+				year: launch.launch_year,
+				upcoming: launch.upcoming,
+				launch_date: launch.launch_date_local,
+				success: launch.launch_success,
+				failure_details: launch.launch_failure_details,
+				details: launch.details,
+				links: launch.links
 			};
 		});
 	return launches

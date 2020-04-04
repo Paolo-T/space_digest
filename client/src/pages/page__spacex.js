@@ -17,12 +17,14 @@ function page__articles() {
             </p>
 
             <div className="w-9/12 mx-auto mt-8 mb-12">
-               <span className="inline-block bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                  HQ City: Hawthorne - California
-               </span>
-               <span className="inline-block bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                  Address: Rocket Road
-               </span>
+               <div className="w-auto">
+                  <span className="inline-block pt-4 font-semibold text-gray-700 mr-2">
+                     Headquarters: Hawthorne - California
+                  </span>
+                  <span className="inline-block px-3 py-1 font-semibold text-gray-700 mr-2">
+                     Address: Rocket Road
+                  </span>
+               </div>
             </div>
             <img
                className="container mx-auto mb-16"
@@ -32,6 +34,7 @@ function page__articles() {
          </div>
          <div className="w-9/12 mx-auto pb-24">
             <h2 className="w-3/4">Launch missions</h2>
+
             <SpacexLaunches />
          </div>
       </div>
