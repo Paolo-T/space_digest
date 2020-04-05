@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import spacex from "../../img/spacex.png";
 
-function Card({ toLink, key, image, title, tag1, tag2, tag3 }) {
+function Card({ link, key, image, title, tag1, tag2, tag3 }) {
     return (
         <div key={key} className="max-w-sm rounded overflow-hidden shadow-lg">
-            <Link className="block text-black text-2xl" to={toLink}>
+            <Link className="block text-black text-2xl" to={link}>
                 <img
                     className="w-full py-8 px-8"
                     src={image ? image : spacex}

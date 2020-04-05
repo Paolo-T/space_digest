@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SpacexLaunchesContext } from "../../components/context/SpacexLaunchesContext";
+import Loader from "../../components/base/Loader";
 import spaceXLaunch from "../../img/spaceXLaunch.jpg";
-import { SpacexLaunchesProvider } from "../../components/context/SpacexLaunchesContext";
-import SpacexLaunches from "../../components/SpacexLaunches";
+import Card from "../../components/base/Card";
 
-function page__articles() {
+function Page__articles() {
+    const res = useContext(SpacexLaunchesContext);
+
+    console.log("Launches fetched! --->>>", res);
+
+    if (!res.response) {
+        return (
+            <div className="mx-auto pt-12 pb-32">
+                <Loader className="mx-auto" />
+            </div>
+        );
+    }
     return (
         <div className="container mx-auto pt-12">
             <div className="9/12 mx-auto">
@@ -34,13 +46,24 @@ function page__articles() {
                 />
             </div>
             <div className="w-9/12 mx-auto pb-24">
-                <h2 className="w-3/4">Launch missions</h2>
-                <SpacexLaunchesProvider>
-                    <SpacexLaunches />
-                </SpacexLaunchesProvider>
+                <div className="container mx-auto grid gap-6 grid-cols-3">
+                    {res.response.map((launch, i) => {
+                        return (
+                            <Card
+                                key={i}
+                                link={`/space-x/launch/${launch.name}`}
+                                image={launch.patch}
+                                title={launch.name}
+                                tag1={launch.flight_number}
+                                tag2={launch.rocket}
+                                tag3={launch.year}
+                            />
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
 }
 
-export default page__articles;
+export default Page__articles;
