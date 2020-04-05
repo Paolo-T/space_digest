@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useFetch from "../components/hooks/useFetch";
 // import VideoFeatured from "./VideoFeatured";
-import Loader from "../components/Loader";
+import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
 
 function PhotosPage() {

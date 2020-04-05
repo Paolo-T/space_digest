@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Loader from "./Loader";
+import Loader from "./base/Loader";
 
 class Asteroids extends Component {
     constructor(props) {

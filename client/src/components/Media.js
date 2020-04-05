@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import VideoFeatured from "./VideoFeatured";
-import Loader from "./Loader";
+import VideoFeatured from "./base/VideoFeatured";
+import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
 class Media extends Component {
     constructor(props) {

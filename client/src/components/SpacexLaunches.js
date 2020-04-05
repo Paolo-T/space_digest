@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import useFetch from "../components/hooks/useFetch";
-import Loader from "../components/Loader";
+import React, { useContext } from "react";
+import { SpacexLaunchesContext } from "./context/SpacexLaunchesContext";
+import Loader from "./base/Loader";
 import Card from "./base/Card";
 
 function SpacexLaunches() {
-    const res = useFetch("/api/spacex/:launch", {});
+    const res = useContext(SpacexLaunchesContext);
 
     console.log("Launches fetched! --->>>", res);
 
@@ -22,6 +22,7 @@ function SpacexLaunches() {
                 return (
                     <Card
                         key={i}
+                        toLink={"/launch"}
                         image={launch.patch}
                         title={launch.name}
                         tag1={launch.flight_number}

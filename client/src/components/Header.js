@@ -1,6 +1,6 @@
 import React from "react";
 import bannerImg from "../img/main-banner.svg";
-import VideoFeatured from "./VideoFeatured";
+import VideoFeatured from "./base/VideoFeatured";
 
 function Header() {
     return (

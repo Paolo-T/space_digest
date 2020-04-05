@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Loader from "./Loader";
+import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
 class RoverPhotos extends Component {
     constructor(props) {
