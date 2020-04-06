@@ -22,7 +22,7 @@ function Page__articles() {
                 <div className="w-9/12 mx-auto">
                     <h1 className="w-3/4">Space-X</h1>
                 </div>
-                <p className="p w-9/12 mx-auto block">
+                <p className="p w-3/4 mx-auto block">
                     SpaceX designs, manufactures and launches advanced rockets
                     and spacecraft. The company was founded in 2002 to
                     revolutionize space technology, with the ultimate goal of
@@ -31,12 +31,12 @@ function Page__articles() {
 
                 <div className="w-9/12 mx-auto mt-8 mb-12">
                     <div className="w-auto">
-                        <span className="inline-block pt-4 font-semibold text-gray-700 mr-2">
+                        <p className="p inline-block pt-4 text-gray-700 mr-2">
                             Headquarters: Hawthorne - California
-                        </span>
-                        <span className="inline-block px-3 py-1 font-semibold text-gray-700 mr-2">
+                        </p>
+                        <p className="p inline-block py-1 text-gray-700 mr-2">
                             Address: Rocket Road
-                        </span>
+                        </p>
                     </div>
                 </div>
                 <img

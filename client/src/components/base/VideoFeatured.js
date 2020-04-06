@@ -1,17 +1,17 @@
 import React from "react";
 import ReactPlayer from "react-player";
 
-function VideoFeatured({ url }) {
+function VideoFeatured({ url, width, height }) {
     return (
-        <div className="container mx-auto h-60">
+        <div className="container">
             <ReactPlayer
-                className="container mx-auto h-56"
+                className="container"
                 url={url}
                 playing
                 controls={true}
                 muted={true}
-                width="1280px"
-                height="720px"
+                width={width}
+                height={height}
             />
         </div>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SimpleReactLightbox from "simple-react-lightbox";
-
 import Header from "../components/Header";
 import Asteroids from "../components/Asteroids";
 import Media from "../components/Media";
@@ -11,13 +10,13 @@ function page__home() {
     return (
         <div>
             <div>
-                <Header />
+                {/* <Header /> */}
 
                 {/* <Asteroids /> */}
 
                 {/* <SimpleReactLightbox>
-               <Media />
-            </SimpleReactLightbox> */}
+                    <Media />
+                </SimpleReactLightbox> */}
 
                 {/* <MarsWeather /> */}
 

@@ -24,7 +24,11 @@ function Header() {
             /> */}
             </div>
 
-            <VideoFeatured url="https://www.youtube.com/watch?v=Ilifg26TZrI" />
+            <VideoFeatured
+                width={1280}
+                height={720}
+                url="https://www.youtube.com/watch?v=Ilifg26TZrI"
+            />
         </header>
     );
 }
