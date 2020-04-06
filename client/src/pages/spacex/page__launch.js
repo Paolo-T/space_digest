@@ -27,7 +27,7 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <div className="container mx-auto py-40">
+        <SRLWrapper className="container mx-auto py-40">
             <div className="flex justify-between align-bottom">
                 <h1 className="mt0 ">{props.match.params.id}</h1>
 
@@ -84,20 +84,22 @@ function Page__launch(props) {
                 </div>
             </div>
             {pageData[0].links.flickr_images ? (
-                <div className="grid gap-3 grid-cols-4 object-cover">
-                    {pageData[0].links.flickr_images.map((photo, i) => {
-                        return (
-                            <img
-                                className="object-cover object-center h-64 w-full rounded-sm"
-                                src={photo}
-                                key={i}
-                                // alt={photo.title}
-                            />
-                        );
-                    })}
-                </div>
+                <SRLWrapper>
+                    <div className="grid gap-3 grid-cols-4 object-cover">
+                        {pageData[0].links.flickr_images.map((photo, i) => {
+                            return (
+                                <img
+                                    className="object-cover object-center h-64 w-full rounded-sm"
+                                    src={photo}
+                                    key={i}
+                                    alt="Mission Launch"
+                                />
+                            );
+                        })}
+                    </div>
+                </SRLWrapper>
             ) : null}
-        </div>
+        </SRLWrapper>
     );
 }
 

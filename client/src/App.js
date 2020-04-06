@@ -29,11 +29,13 @@ function App() {
                     />
                     <SpacexLaunchesProvider>
                         <Route path="/space-x" component={page__spacex} exact />
-                        <Route
-                            path="/space-x/launch/:id"
-                            component={page__launch}
-                            exact
-                        />
+                        <SimpleReactLightbox>
+                            <Route
+                                path="/space-x/launch/:id"
+                                component={page__launch}
+                                exact
+                            />
+                        </SimpleReactLightbox>
                     </SpacexLaunchesProvider>
                     {/* <Route component={Error} /> */}
                 </Switch>
