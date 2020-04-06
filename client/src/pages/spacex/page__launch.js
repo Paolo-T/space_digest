@@ -27,7 +27,7 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <SRLWrapper className="container mx-auto py-40">
+        <div className="container mx-auto py-40">
             <div className="flex justify-between align-bottom">
                 <h1 className="mt0 ">{props.match.params.id}</h1>
 
@@ -97,7 +97,7 @@ function Page__launch(props) {
                     })}
                 </div>
             ) : null}
-        </SRLWrapper>
+        </div>
     );
 }
 
