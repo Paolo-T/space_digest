@@ -84,20 +84,18 @@ function Page__launch(props) {
                 </div>
             </div>
             {pageData[0].links.flickr_images ? (
-                <SRLWrapper>
-                    <div className="grid gap-3 grid-cols-4 object-cover">
-                        {pageData[0].links.flickr_images.map((photo, i) => {
-                            return (
-                                <img
-                                    className="object-cover object-center h-64 w-full rounded-sm"
-                                    src={photo}
-                                    key={i}
-                                    alt="Mission Launch"
-                                />
-                            );
-                        })}
-                    </div>
-                </SRLWrapper>
+                <div className="grid gap-3 grid-cols-4 object-cover">
+                    {pageData[0].links.flickr_images.map((photo, i) => {
+                        return (
+                            <img
+                                className="object-cover object-center h-64 w-full rounded-sm"
+                                src={photo}
+                                key={i}
+                                alt=""
+                            />
+                        );
+                    })}
+                </div>
             ) : null}
         </SRLWrapper>
     );

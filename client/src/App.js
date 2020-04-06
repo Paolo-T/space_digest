@@ -9,6 +9,7 @@ import page__marsRover from "./pages/page__marsRover";
 import page__spacex from "./pages/spacex/page__spacex";
 import page__launch from "./pages/spacex/page__launch";
 import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 function App() {
     return (
@@ -29,13 +30,12 @@ function App() {
                     />
                     <SpacexLaunchesProvider>
                         <Route path="/space-x" component={page__spacex} exact />
-                        <SimpleReactLightbox>
-                            <Route
-                                path="/space-x/launch/:id"
-                                component={page__launch}
-                                exact
-                            />
-                        </SimpleReactLightbox>
+
+                        <Route
+                            path="/space-x/launch/:id"
+                            component={page__launch}
+                            exact
+                        />
                     </SpacexLaunchesProvider>
                     {/* <Route component={Error} /> */}
                 </Switch>
