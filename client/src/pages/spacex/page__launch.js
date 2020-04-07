@@ -18,7 +18,6 @@ function Page__launch(props) {
             </div>
         );
     }
-
     console.log("Launch fetched! --->>>", res);
 
     const pageData = res.response

@@ -15,7 +15,7 @@ function Card({ imgage, link, key, image, title, tag1, tag2, tag3 }) {
                     <div className="font-bold text-xl mb-2">{title}</div>
                     <p className="text-gray-700 text-base"></p>
                 </div>
-                <div className="flex justify-between bg-gray-200 px-6 py-4">
+                <div className="flex h-16 justify-between bg-gray-200 px-6 py-4">
                     <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                         Launch {tag1}
                     </span>
