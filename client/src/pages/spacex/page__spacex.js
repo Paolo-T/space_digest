@@ -19,8 +19,8 @@ function Page__articles() {
     }
     return (
         <div className="container mx-auto pt-12">
-            <div className="9/12 mx-auto">
-                <h1 className="w-9/12 mx-auto w-3/4 block">Space-X</h1>
+            <div className="9/12">
+                <h1 className=" bg-teal-300 mx-auto">SpaceX</h1>
 
                 <p className="p w-3/4 mx-auto block">
                     SpaceX designs, manufactures and launches advanced rockets
@@ -29,7 +29,7 @@ function Page__articles() {
                     enabling people to live on other planets.
                 </p>
 
-                <div className="w-9/12 mx-auto mt-8 mb-12">
+                <div className="w-9/12 mx-auto mb-12">
                     <p className="p inline-block pt-4 mr-10">
                         HQ: Hawthorne - California
                     </p>

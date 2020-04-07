@@ -10,15 +10,15 @@ function page__home() {
     return (
         <div>
             <div>
-                {/* <Header /> */}
+                <Header />
 
-                {/* <Asteroids /> */}
+                <Asteroids />
 
-                {/* <SimpleReactLightbox>
+                <SimpleReactLightbox>
                     <Media />
-                </SimpleReactLightbox> */}
+                </SimpleReactLightbox>
 
-                {/* <MarsWeather /> */}
+                <MarsWeather />
 
                 <div className="container mx-auto pr-30 my-24 text-left">
                     <div className="w-9/12 mx-auto">

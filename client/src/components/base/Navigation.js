@@ -13,12 +13,12 @@ function Navigation() {
                     <img className="w-12 mr-4" src={logo} alt="nasa-logo" />
                 </NavLink>
 
-                <nav className="w-1/6 flex justify-between justify-end ">
+                <nav className="w-48 flex justify-between justify-end ">
                     <NavLink
                         className="text-teal-300 text-2xl hover:text-black"
                         to="/photos-collection"
                     >
-                        Photos
+                        Nasa
                     </NavLink>
                     <NavLink
                         className="text-teal-300 text-2xl hover:text-black"

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Card({ imgage, link, key, image, title, tag1, tag2, tag3 }) {
     return (
-        <div key={key} className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div key={key} className="max-w-sm rounded overflow-hidden shadow">
             <Link className="block text-black text-2xl" to={link}>
                 <img
                     className="w-full py-8 px-8"

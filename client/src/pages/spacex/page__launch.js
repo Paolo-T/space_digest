@@ -4,6 +4,7 @@ import { SpacexLaunchesContext } from "../../components/context/SpacexLaunchesCo
 import Loader from "../../components/base/Loader";
 import VideoFeatured from "../../components/base/VideoFeatured";
 import spacex from "../../img/spacex.png";
+import Moment from "react-moment";
 
 function Page__launch(props) {
     console.log(props.match);
@@ -57,26 +58,31 @@ function Page__launch(props) {
                     <div className="h-full flex flex-col justify-between">
                         <div>
                             <h2 className="">{props.match.params.id}</h2>
+
                             <p className="p inline-block">
                                 {pageData[0].details}
                             </p>
-                            <p className="p inline-block">
-                                Launch Date: {pageData[0].launch_date}
-                            </p>
                             {pageData[0].failure_details ? (
-                                <p className="p inline-block">
+                                <p className="p inline-block pb-8">
                                     Failure details:{" "}
                                     {pageData[0].failure_details.reason}
                                 </p>
                             ) : null}
+                            <p className="p inline-block text-bold">
+                                {" "}
+                                Launch Date:&nbsp;
+                                <Moment format="DD/MM/YYYY">
+                                    {pageData[0].launch_date}
+                                </Moment>
+                            </p>
                         </div>
 
                         <div>
                             {/* <h3>Links</h3> */}
                             <ul>
-                                <li className="flex justify-between">
+                                <li className="flex">
                                     <a
-                                        className="a inline-block"
+                                        className="a inline-block mr-16"
                                         href={pageData[0].links.article_link}
                                     >
                                         Article
