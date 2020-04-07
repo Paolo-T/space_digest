@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SpacexLaunchesContext } from "../../components/context/SpacexLaunchesContext";
 import Loader from "../../components/base/Loader";
 import VideoFeatured from "../../components/base/VideoFeatured";
-import { SRLWrapper } from "simple-react-lightbox";
+import spacex from "../../img/spacex.png";
 
 function Page__launch(props) {
     console.log(props.match);
@@ -27,71 +27,81 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <div className="container mx-auto py-40">
-            <div className="flex justify-between align-bottom">
-                <h1 className="mt0 ">{props.match.params.id}</h1>
-
-                <button className="h-10 block bg-transparent hover:bg-teal-300 text-black py-1 px-4 border border-black hover:border-transparent hover:border-black rounded ">
+        <div className="container mx-auto py-32">
+            <div className="flex  content-end">
+                <h1 className="flex-1 mt-0 mb-10">{props.match.params.id}</h1>
+                <button className="h-10 inline-block bg-transparent hover:bg-teal-300 text-black py-1 px-4 border border-black hover:border-transparent hover:border-black rounded content-end">
                     <Link className="block text-black text-lg" to="/space-x">
                         Back
                     </Link>
                 </button>
             </div>
-            <VideoFeatured
-                width={1280}
-                height={720}
-                url={pageData[0].links.video_link}
-            />
+
+            {!pageData[0].upcoming ? (
+                <VideoFeatured
+                    width={1280}
+                    height={720}
+                    url={pageData[0].links.video_link}
+                />
+            ) : null}
+
             <div className="flex my-20">
-                <div className="flex-1 bg-gray-100 mr-20">
+                <div className="flex-1 bg-gray-100 rounded-md mr-20">
                     <img
                         className=" py-20 px-20 inline-block bg-grey-300"
-                        src={pageData[0].patch}
+                        src={pageData[0].patch ? pageData[0].patch : spacex}
                         alt="spacex misson patch"
                     />
                 </div>
                 <div className="flex-1">
-                    <h2 className="">{props.match.params.id}</h2>
-                    <p className="p inline-block">{pageData[0].details}</p>
-                    <p className="p inline-block">
-                        Launch Date: {pageData[0].launch_date}
-                    </p>
-                    {pageData[0].failure_details ? (
-                        <p className="p inline-block">
-                            Failure details:{" "}
-                            {pageData[0].failure_details.reason}
-                        </p>
-                    ) : null}
-                    <div>
-                        <h3>Links</h3>
-                        <ul>
-                            <li>
-                                <a
-                                    className="block"
-                                    href={pageData[0].links.article_link}
-                                >
-                                    Article
-                                </a>
-                                <a
-                                    className="block"
-                                    href={pageData[0].links.wikipedia}
-                                >
-                                    Wikipedia
-                                </a>
-                            </li>
-                        </ul>
+                    <div className="h-full flex flex-col justify-between">
+                        <div>
+                            <h2 className="">{props.match.params.id}</h2>
+                            <p className="p inline-block">
+                                {pageData[0].details}
+                            </p>
+                            <p className="p inline-block">
+                                Launch Date: {pageData[0].launch_date}
+                            </p>
+                            {pageData[0].failure_details ? (
+                                <p className="p inline-block">
+                                    Failure details:{" "}
+                                    {pageData[0].failure_details.reason}
+                                </p>
+                            ) : null}
+                        </div>
+
+                        <div>
+                            {/* <h3>Links</h3> */}
+                            <ul>
+                                <li className="flex justify-between">
+                                    <a
+                                        className="a inline-block"
+                                        href={pageData[0].links.article_link}
+                                    >
+                                        Article
+                                    </a>
+                                    <a
+                                        className="a inline-block"
+                                        href={pageData[0].links.wikipedia}
+                                    >
+                                        Wikipedia
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             {pageData[0].links.flickr_images ? (
-                <div className="grid gap-3 grid-cols-4 object-cover">
+                <div className="w-full grid gap-3 grid-cols-3">
                     {pageData[0].links.flickr_images.map((photo, i) => {
                         return (
                             <img
                                 className="object-cover object-center h-64 w-full rounded-sm"
                                 src={photo}
                                 key={i}
-                                alt=""
+                                alt="Mission Launch"
                             />
                         );
                     })}
