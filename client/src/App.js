@@ -3,26 +3,30 @@ import "./css/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "./components/base/Navigation";
 import Footer from "./components/base/Footer";
+import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
 import page__home from "./pages/page__home";
 import page__photosPage from "./pages/page__photosPage";
 import page__nasa from "./pages/nasa/page__nasa";
 import page__spacex from "./pages/spacex/page__spacex";
 import page__launch from "./pages/spacex/page__launch";
-import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
+import page__asteroids from "./pages/page__asteroids";
 
 function App() {
     return (
         <Router>
             <Fragment>
                 <Navigation />
+
                 <Switch>
                     <Route exact path="/" component={page__home} />
+
                     <Route
                         path="/photos-collection"
                         component={page__photosPage}
                         exact
                     />
                     <Route path="/nasa" component={page__nasa} exact />
+
                     <SpacexLaunchesProvider>
                         <Route path="/space-x" component={page__spacex} exact />
 
@@ -32,8 +36,15 @@ function App() {
                             exact
                         />
                     </SpacexLaunchesProvider>
+
+                    <Route
+                        path="/asteroids"
+                        component={page__asteroids}
+                        exact
+                    />
                     {/* <Route component={Error} /> */}
                 </Switch>
+
                 <Footer />
             </Fragment>
         </Router>

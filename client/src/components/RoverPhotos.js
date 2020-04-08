@@ -11,7 +11,7 @@ class RoverPhotos extends Component {
         };
     }
     async componentDidMount() {
-        await fetch("api/marsRover/curiosity/manifest")
+        await fetch("api/mars-rover/curiosity/manifest")
             .then(res => res.json())
             .then(sols_with_photos => {
                 const random_index = Math.floor(
@@ -20,7 +20,7 @@ class RoverPhotos extends Component {
                 return sols_with_photos[random_index].sol;
             })
             .then(random_sol => {
-                fetch(`api/marsRover/curiosity/photos/${random_sol}`)
+                fetch(`api/mars-rover/curiosity/photos/${random_sol}`)
                     .then(res => res.json())
                     .then(photos => {
                         this.setState(
@@ -28,7 +28,11 @@ class RoverPhotos extends Component {
                                 isLoaded: true,
                                 photos
                             },
-                            () => console.log("Photos fetched! --->>>", photos)
+                            () =>
+                                console.log(
+                                    "Rover Photos fetched! --->>>",
+                                    photos
+                                )
                         );
                     });
             })

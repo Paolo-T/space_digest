@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Loader from "./base/Loader";
 import marsLandscape from "../img/marsLandscape.jpg";
+import Moment from "react-moment";
 
 class MarsWeather extends Component {
     constructor(props) {
@@ -87,7 +88,9 @@ class MarsWeather extends Component {
 
                                         <p>
                                             <strong>Earth date: </strong>
-                                            {data.earth_date}
+                                            <Moment format="DD/MM">
+                                                {data.earth_date}
+                                            </Moment>
                                         </p>
                                         <p>
                                             <strong>high: </strong>

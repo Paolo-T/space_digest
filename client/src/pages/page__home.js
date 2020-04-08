@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import Asteroids from "../components/Asteroids";
 import Media from "../components/Media";
 import MarsWeather from "../components/MarsWeather";
+import Card from "../components/base/Card";
+import spacex from "../img/spacex.png";
 
 function page__home() {
     return (
@@ -12,7 +14,10 @@ function page__home() {
             <div>
                 <Header />
 
-                <Asteroids />
+                {/* <div className="container w-9/12 mx-auto flex">
+                    <Card image={spacex} />
+                    <Card image={spacex} />
+                </div> */}
 
                 <SimpleReactLightbox>
                     <Media />
@@ -49,7 +54,7 @@ function page__home() {
                         <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-12">
                             <Link
                                 className="block text-black text-2xl"
-                                to="/mars-rover"
+                                to="/nasa"
                             >
                                 Check Curiosity's Rover pictures from Mars
                             </Link>
