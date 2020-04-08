@@ -21,27 +21,27 @@ function App() {
                     <Route exact path="/" component={page__home} />
 
                     <Route
+                        exact
                         path="/photos-collection"
                         component={page__photosPage}
-                        exact
                     />
                     <Route path="/nasa" component={page__nasa} exact />
+                    <Route
+                        exact
+                        path="/asteroids"
+                        component={page__asteroids}
+                    />
 
                     <SpacexLaunchesProvider>
-                        <Route path="/space-x" component={page__spacex} exact />
+                        <Route exact path="/space-x" component={page__spacex} />
 
                         <Route
+                            exact
                             path="/space-x/launch/:id"
                             component={page__launch}
-                            exact
                         />
                     </SpacexLaunchesProvider>
 
-                    <Route
-                        path="/asteroids"
-                        component={page__asteroids}
-                        exact
-                    />
                     {/* <Route component={Error} /> */}
                 </Switch>
 

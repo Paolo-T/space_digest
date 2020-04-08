@@ -19,6 +19,8 @@ function page__home() {
                     <Card image={spacex} />
                 </div> */}
 
+                <Asteroids />
+
                 <SimpleReactLightbox>
                     <Media />
                 </SimpleReactLightbox>

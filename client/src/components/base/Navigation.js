@@ -21,10 +21,22 @@ function Navigation() {
                         Nasa
                     </NavLink>
                     <NavLink
-                        className="text-teal-300 text-2xl hover:text-black"
+                        className="text-teal-300 text-2xl hover:text-black mr-10"
                         to="/space-x"
                     >
                         SpaceX
+                    </NavLink>
+                    <NavLink
+                        className="text-teal-300 text-2xl hover:text-black mr-10"
+                        to="/asteroids"
+                    >
+                        Asteroids
+                    </NavLink>
+                    <NavLink
+                        className="text-teal-300 text-2xl hover:text-black"
+                        to="/photos-collection"
+                    >
+                        Photos
                     </NavLink>
                 </nav>
             </div>

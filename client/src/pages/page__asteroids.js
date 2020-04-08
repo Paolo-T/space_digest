@@ -1,11 +1,15 @@
 import React from "react";
+import Asteroids from "../components/Asteroids";
 
-function Page__asteroids() {
+function page__asteroids() {
     return (
-        <div>
-            <Asteroids />
+        <div className="container mx-auto pr-30 py-24 text-left">
+            <div className="w-9/12 mx-auto">
+                <h1>Asteroids</h1>
+                <Asteroids />
+            </div>
         </div>
     );
 }
 
-export default Page__asteroids;
+export default page__asteroids;
