@@ -46,16 +46,19 @@ class Media extends Component {
         } else if (mediaData.media_type !== "video") {
             return (
                 // Media Image
-                <div className="container w-full mx-auto mb-16 mt-10">
-                    <div className="w-9/12 mx-auto">
-                        <h2 className="">Astronomy picture of today</h2>
-                        <h2 className="p">{mediaData.title}</h2>
+                <div className="container w-full mx-auto mb-16 mt-32">
+                    <div className="w-9/12 mx-auto relative">
+                        <div className="absolute -left-8 -top-2">
+                            <h2 className="w-56 bg-teal-300">
+                                ____Daily Astronomy Image
+                            </h2>
+                        </div>
                         <SRLWrapper>
                             <a href={mediaData.url} data-attribute="SRL">
                                 <img
                                     className="w-full mx-auto mb-12 rounded-sm cursor-pointer"
                                     src={mediaData.url}
-                                    alt="Astronomy picture of today"
+                                    alt={mediaData.title}
                                 />
                             </a>
                         </SRLWrapper>
@@ -63,9 +66,9 @@ class Media extends Component {
 
                     <div className="container mx-auto mb-10 mt-10 text-left">
                         <div className="w-9/12 mx-auto">
-                            <h2 className="w-2/3 inline-block flex-1 rounded-sm">
+                            <h3 className="w-2/3 inline-block flex-1 rounded-sm font-bold">
                                 {mediaData.title}
-                            </h2>
+                            </h3>
                             <p className="text-2xl font-light mx-auto pr-16">
                                 {mediaData.explanation}
                             </p>
@@ -78,14 +81,14 @@ class Media extends Component {
             return (
                 // Media Videos
                 <div className="container mx-auto text-center mt-10">
-                    <h2 className="text-2xl mb-3 ">Astronomy Video of today</h2>
+                    <h2 className="text-2xl mb-3 ">Daily Astronomy Video</h2>
                     <VideoFeatured url={mediaData.url} />
                     <div className="w-9/12">
                         <div className="container mx-auto flex pr-48 py-10 text-left">
-                            <p className="w-1/3 inline-block flex-1 bg-gray-100 rounded-md text-2xl font-bold pl-5 pr-5 pt-5">
+                            <h3 className="w-1/3 inline-block flex-1 bg-gray-100 rounded-md text-2xl font-bold pl-5 pr-5 pt-5">
                                 {mediaData.title}
-                            </p>
-                            <p className="w-2/3 text-2xl font-light mx-auto px-16 pt-5 ">
+                            </h3>
+                            <p className="p w-4/5 text-2xl font-light mx-auto px-16 pt-5">
                                 {mediaData.explanation}
                             </p>
                         </div>

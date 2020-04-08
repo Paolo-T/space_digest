@@ -294,6 +294,9 @@ module.exports = {
         }),
         inset: {
             "0": "0",
+            "-8": "-8rem",
+            "-5": "-5rem",
+            "-2": "-2rem",
             auto: "auto"
         },
         letterSpacing: {

@@ -26,12 +26,7 @@ function Navigation() {
                     >
                         SpaceX
                     </NavLink>
-                    <NavLink
-                        className="text-teal-300 text-2xl hover:text-black mr-10"
-                        to="/asteroids"
-                    >
-                        Asteroids
-                    </NavLink>
+
                     <NavLink
                         className="text-teal-300 text-2xl hover:text-black"
                         to="/photos-collection"

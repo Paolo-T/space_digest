@@ -55,8 +55,10 @@ function Page__launch(props) {
                 </div>
                 <div className="flex-1">
                     <div className="h-full flex flex-col justify-between">
-                        <div>
-                            <h2 className="">{props.match.params.id}</h2>
+                        <div className="">
+                            <h2 className="bg-teal-300 inline-block">
+                                {props.match.params.id}
+                            </h2>
 
                             <p className="p inline-block">
                                 {pageData[0].details}

@@ -13,7 +13,7 @@ function Header() {
                     our new frontier out there, and it's everybody's business to
                     know about space."
                 </h3>
-                <span className="span text-gray-600">
+                <span className="span text-gray-600 mt-0">
                     CHRISTA MCAULIFFE, 1985
                 </span>
                 {/* <img
