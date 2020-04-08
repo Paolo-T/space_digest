@@ -1,22 +1,8 @@
 import React, { useContext } from "react";
-import { SpacexLaunchesContext } from "../../components/context/SpacexLaunchesContext";
-import Loader from "../../components/base/Loader";
 import spaceXLaunch from "../../img/spaceXLaunch.jpg";
-import Card from "../../components/base/Card";
-import spacex from "../../img/spacex.png";
+import SpacexPatches from "../../components/SpacexPatches";
 
-function Page__articles() {
-    const res = useContext(SpacexLaunchesContext);
-
-    console.log("Launches fetched! --->>>", res);
-
-    if (!res.response) {
-        return (
-            <div className="mx-auto pt-12 pb-32">
-                <Loader className="mx-auto" />
-            </div>
-        );
-    }
+function Page__spacex() {
     return (
         <div className="container mx-auto pt-12">
             <div className="w-9/12 mx-auto pb-24">
@@ -42,24 +28,10 @@ function Page__articles() {
                 />
 
                 <h2 className="mx-auto block py-10">Mission Patches</h2>
-                <div className="container mx-auto grid gap-6 grid-cols-3">
-                    {res.response.map((launch, i) => {
-                        return (
-                            <Card
-                                key={i}
-                                link={`/space-x/launch/${launch.name}`}
-                                image={launch.patch ? launch.patch : spacex}
-                                title={launch.name}
-                                tag1={launch.flight_number}
-                                tag2={launch.rocket}
-                                tag3={launch.year}
-                            />
-                        );
-                    })}
-                </div>
+                <SpacexPatches />
             </div>
         </div>
     );
 }
 
-export default Page__articles;
+export default Page__spacex;

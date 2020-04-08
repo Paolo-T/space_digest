@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SimpleReactLightbox from "simple-react-lightbox";
 import Header from "../components/Header";
-import Asteroids from "../components/Asteroids";
 import Media from "../components/Media";
-import MarsWeather from "../components/MarsWeather";
 import Card from "../components/base/Card";
 import spacex from "../img/spacex.png";
 
@@ -19,13 +17,9 @@ function page__home() {
                     <Card image={spacex} />
                 </div> */}
 
-                <Asteroids />
-
                 <SimpleReactLightbox>
                     <Media />
                 </SimpleReactLightbox>
-
-                <MarsWeather />
 
                 <div className="container mx-auto pr-30 my-24 text-left">
                     <div className="w-9/12 mx-auto">

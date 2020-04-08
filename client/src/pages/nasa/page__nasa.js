@@ -2,6 +2,7 @@ import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import RoverPhotos from "../../components/RoverPhotos";
 import curiosityRover from "../../img/curiosityRover.jpg";
+import MarsWeather from "../../components/MarsWeather";
 
 function page__marsRover() {
     return (
@@ -37,6 +38,7 @@ function page__marsRover() {
 
             <div className="mb-10 mt-20">
                 <div className="w-9/12 mx-auto">
+                    <MarsWeather />
                     <h2 className="w-2/3 line-block flex-1 ">
                         Shots from Curiosity Mars rover (Mast camera)
                     </h2>
