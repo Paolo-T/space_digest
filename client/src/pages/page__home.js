@@ -17,6 +17,7 @@ function page__home() {
                     <Card image={spacex} />
                     <Card image={spacex} />
                 </div> */}
+
                 <div className="container mx-auto mt-32">
                     <div className="w-9/12 mx-auto mb-20">
                         <div className="">
@@ -29,7 +30,7 @@ function page__home() {
                             NeoWs we can display Asteroids based on their
                             closest approach date to Earth.
                         </p>
-                        <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-12">
+                        <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
                             <Link
                                 className="block text-black text-2xl"
                                 to="/nasa"
@@ -39,10 +40,35 @@ function page__home() {
                         </button>
                     </div>
                 </div>
-
+                {/* <div className="w-9/12 mx-auto relative">
+                    <div className="absolute -left-8 -top-2">
+                        <h2 className="w-56 bg-teal-300">
+                            ____Daily Astronomy Image
+                        </h2>
+                    </div>
+                </div> */}
                 <SimpleReactLightbox>
                     <Media />
                 </SimpleReactLightbox>
+
+                <div className="container mx-auto mt-20">
+                    <div className="w-9/12 mx-auto mb-32">
+                        <div className="">
+                            <h2 className="">Photo collection</h2>
+                        </div>
+                        <p className="w-4/5 text-2xl font-light pt-3">
+                            Collection of images from NASA's image library.
+                        </p>
+                        <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
+                            <Link
+                                className="block text-black text-2xl"
+                                to="/photos-collection"
+                            >
+                                Photos
+                            </Link>
+                        </button>
+                    </div>
+                </div>
 
                 <div className="container mx-auto pr-30 my-24 text-left">
                     <div className="w-9/12 mx-auto">
@@ -79,7 +105,7 @@ function page__home() {
                                 className="block text-black text-2xl"
                                 to="/nasa"
                             >
-                                Check Curiosity's Rover pictures from Mars
+                                Rover pictures from Mars
                             </Link>
                         </button>
                     </div>

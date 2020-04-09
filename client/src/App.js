@@ -10,6 +10,7 @@ import page__nasa from "./pages/nasa/page__nasa";
 import page__spacex from "./pages/spacex/page__spacex";
 import page__launch from "./pages/spacex/page__launch";
 import page__asteroids from "./pages/page__asteroids";
+import page__about from "./pages/page__about";
 
 function App() {
     return (
@@ -31,6 +32,8 @@ function App() {
                         path="/asteroids"
                         component={page__asteroids}
                     />
+
+                    <Route exact path="/about" component={page__about} />
 
                     <SpacexLaunchesProvider>
                         <Route exact path="/space-x" component={page__spacex} />
