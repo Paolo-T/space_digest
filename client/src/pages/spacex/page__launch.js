@@ -27,8 +27,8 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <div className="container mx-auto pt-24 pb-20 md:py-32">
-            <div className="flex flex-col content-end">
+        <div className="mx-auto pt-24 mb-16 md:mb-20 md:py-32">
+            <div className="container flex flex-col content-end">
                 <h1 className="flex-1 mt-0 mb-8">{props.match.params.id}</h1>
                 <button className="order-first w-10 underline md:w-20 h-10 inline-block bg-transparent hover:bg-teal-300 text-black py-1 md:px-4 md:border border-black hover:border-transparent hover:border-black rounded content-end mb-4 md:mb-10">
                     <Link
@@ -40,17 +40,17 @@ function Page__launch(props) {
                 </button>
             </div>
 
-            {/* {!pageData[0].upcoming ? (
+            {!pageData[0].upcoming ? (
                 <VideoFeatured
-                    className="w-full"
+                    className="w-screen mb-10"
                     width="100vw"
                     height="46vw"
                     url={pageData[0].links.video_link}
                 />
-            ) : null} */}
+            ) : null}
 
-            <div className="flex flex-col md:flex-row md:my-20">
-                <div className="flex-1 bg-gray-100 rounded-md md:mr-20">
+            <div className="container flex flex-col md:flex-row md:my-20">
+                <div className="flex-1 bg-gray-100 rounded-sm mt-10 md:mt-0 md:mr-20">
                     <img
                         className="py-10 px-10 md:py-20 md:px-20 inline-block bg-grey-300"
                         src={pageData[0].patch ? pageData[0].patch : spacex}
@@ -106,7 +106,7 @@ function Page__launch(props) {
                 </div>
             </div>
             {pageData[0].links.flickr_images ? (
-                <div className="w-full grid gap-3 grid-cols-3">
+                <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-3 mt-10 md:mt-10">
                     {pageData[0].links.flickr_images.map((photo, i) => {
                         return (
                             <img
