@@ -7,9 +7,9 @@ function Footer() {
             <Link className="block text-2xl mb-5underline" to="/about">
                 About
             </Link>
-            <span className="block text-2xl leading-snug">
-                hey@spacedigest.live
-            </span>
+            <div className="block text-2xl leading-snug">
+                <a href="mailto:webmaster@example.com">hey@spacedigest.live</a>
+            </div>
         </footer>
     );
 }

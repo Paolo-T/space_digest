@@ -14,9 +14,9 @@ function PhotosPage() {
     }
 
     return (
-        <div className="container mx-auto">
+        <div>
             <SRLWrapper>
-                <div className="grid gap-6 grid-cols-4 object-cover">
+                <div className="grid gap-6 grid-cols-1 md:grid-cols-4 object-cover">
                     {res.response.map((photo, i) => {
                         return (
                             <img

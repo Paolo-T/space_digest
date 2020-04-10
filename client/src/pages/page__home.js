@@ -40,7 +40,7 @@ function page__home() {
                     <Media />
                 </SimpleReactLightbox>
 
-                <div className="container sm:w-9/12 mx-auto py-10 md:pt-6 md:pb-4 border-t-2 border-b-2 md:border-none md:mt-20 md:mb-32">
+                <div className="container sm:w-9/12 mx-auto py-8 md:pt-6 md:pb-4 border-t-2 border-b-2 md:border-none md:mt-20 md:mb-32">
                     <div className="">
                         <h2 className="">Photo collection</h2>
                     </div>
@@ -49,7 +49,7 @@ function page__home() {
                     </p>
                     <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
                         <Link
-                            className="block text-black text-xl md:text-3xl"
+                            className="block text-black text-base md:text-2xl"
                             to="/photos-collection"
                         >
                             Photos
@@ -58,7 +58,7 @@ function page__home() {
                 </div>
 
                 <div className="container md:w-9/12 mx-auto mb-16 mt-16 md:mt-10 md:mt-32 md:pt-24 relative">
-                    <h2 className="md:w-56 mb-4 md:mb-0 bg-teal-300 md:absolute -left-8 -top-2 ">
+                    <h2 className="md:w-56 mb-4 md:mb-0 bg-teal-300 md:absolute -left-5 -top-2 ">
                         ____Mars Rover
                     </h2>
 

@@ -54,13 +54,13 @@ function page__marsRover() {
                 />
             </div>
 
-            <div className="mb-10 mt-20">
+            <div className="mb-10 md:mt-20">
                 <div className="md:w-9/12 mx-auto">
                     <MarsWeather />
-                    <h2 className="md:w-2/3 line-block flex-1 ">
+                    <h2 className="md:w-2/3 line-block flex-1 mt-20">
                         Shots from Curiosity Mars rover (Mast camera)
                     </h2>
-                    <p className="md:w-4/5 text-2xl font-light">
+                    <p className="md:w-4/5">
                         NeoWs (Near Earth Object Web Service) is a web service
                         for near earth Asteroid information. With NeoWs we can
                         display Asteroids based on their closest approach date
