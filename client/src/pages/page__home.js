@@ -49,7 +49,7 @@ function page__home() {
                     </p>
                     <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
                         <Link
-                            className="block text-black text-base md:text-2xl"
+                            className="block text-black text-xl md:text-3xl"
                             to="/photos-collection"
                         >
                             Photos
@@ -82,7 +82,7 @@ function page__home() {
 
                     <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
                         <Link
-                            className="block text-black text-base md:text-2xl"
+                            className="block text-black text-xl md:text-2xl"
                             to="/nasa"
                         >
                             Rover pictures from Mars

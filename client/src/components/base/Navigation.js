@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
     return (
-        <div className="w-full fixed">
-            <div className="w-11/12 sm:container mx-auto flex justify-between items-center pt-4 md:pt-6 static">
+        <div className="w-full fixed bg-gray-100 z-10">
+            <div className="container mx-auto flex justify-between py-2 md:pt-6 ">
                 <NavLink className="text-teal-300" to="/">
                     <img
-                        className="w-6 md:w-12 mr-4"
+                        className="w-8 md:w-12 mr-4"
                         src={logo}
                         alt="nasa-logo"
                     />
@@ -16,13 +16,13 @@ function Navigation() {
 
                 <nav className="md:w-48 flex content-end inline-block justify-between transform md:rotate-90 origin-top-left sm:absolute -right-5 pl-8">
                     <NavLink
-                        className="text-teal-300 text-xl md:text-3xl hover:text-black mr-10"
+                        className="text-teal-300 text-2xl md:text-3xl leading-normal hover:text-black mr-10 "
                         to="/nasa"
                     >
                         Nasa
                     </NavLink>
                     <NavLink
-                        className="text-teal-300 text-xl md:text-3xl hover:text-black mr-1 md:mr-10"
+                        className="text-teal-300 text-2xl md:text-3xl  leading-normal hover:text-black mr-1 md:mr-10"
                         to="/space-x"
                     >
                         SpaceX

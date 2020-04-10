@@ -4,6 +4,7 @@ import ReactPlayer from "react-player";
 function VideoFeatured({ url, width, height }) {
     return (
         <ReactPlayer
+            className="w-full md:container"
             url={url}
             playing
             controls={true}
