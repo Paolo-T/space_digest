@@ -69,7 +69,7 @@ function Page__launch(props) {
                                     {pageData[0].failure_details.reason}
                                 </p>
                             ) : null}
-                            <p className="p inline-block text-bold">
+                            <p className="p block text-bold mt-8">
                                 {" "}
                                 Launch Date:&nbsp;
                                 <Moment format="DD/MM/YYYY">

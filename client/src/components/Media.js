@@ -46,33 +46,29 @@ class Media extends Component {
         } else if (mediaData.media_type !== "video") {
             return (
                 // Media Image
-                <div className="container w-full mx-auto mb-16 mt-32">
-                    <div className="w-9/12 mx-auto relative">
-                        <div className="absolute -left-8 -top-2">
-                            <h2 className="w-56 bg-teal-300">
-                                ____Daily Astronomy Image
-                            </h2>
-                        </div>
-                        <SRLWrapper>
-                            <a href={mediaData.url} data-attribute="SRL">
-                                <img
-                                    className="w-full mx-auto mb-12 rounded-sm cursor-pointer"
-                                    src={mediaData.url}
-                                    alt={mediaData.title}
-                                />
-                            </a>
-                        </SRLWrapper>
+                <div className="container md:w-9/12 mx-auto mb-16 mt-10 md:mt-32 relative">
+                    <div className="md:absolute -left-8 -top-2">
+                        <h2 className="w-full md:w-56 mb-8 md:mb-0 bg-teal-300">
+                            ____Daily Astronomy Image
+                        </h2>
                     </div>
+                    <SRLWrapper>
+                        <a href={mediaData.url} data-attribute="SRL">
+                            <img
+                                className="w-full mx-auto mb-12 rounded-sm cursor-pointer"
+                                src={mediaData.url}
+                                alt={mediaData.title}
+                            />
+                        </a>
+                    </SRLWrapper>
 
-                    <div className="container mx-auto mb-10 mt-10 text-left">
-                        <div className="w-9/12 mx-auto">
-                            <h3 className="w-2/3 inline-block flex-1 rounded-sm font-bold">
-                                {mediaData.title}
-                            </h3>
-                            <p className="text-2xl font-light mx-auto pr-16">
-                                {mediaData.explanation}
-                            </p>
-                        </div>
+                    <div className=" mx-auto">
+                        <h3 className="w-full md:w-2/3 inline-block flex-1 font-bold">
+                            {mediaData.title}
+                        </h3>
+                        <p className=" mx-auto  md:pr-16">
+                            {mediaData.explanation}
+                        </p>
                     </div>
                 </div>
                 // !END of Media Image

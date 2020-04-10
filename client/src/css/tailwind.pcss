@@ -1,24 +1,45 @@
 /* purgecss start ignore */
 @tailwind base;
 
+@tailwind components;
+/* purgecss end ignore */
+
 body {
     @apply text-black;
 }
 
 h1 {
-    @apply font-header font-normal text-7xl inline-block leading-none tracking-tighter mt-10 mb-5;
+    @apply font-header font-normal text-4xl inline-block leading-none tracking-tighter mt-10 mb-5;
+}
+
+@screen sm {
+    h1 {
+        @apply text-7xl;
+    }
+    ,
+    h2 {
+        @apply text-5xl;
+    }
+    ,
+    h3 {
+        @apply text-3xl leading-none;
+    }
+    ,
+    p {
+        @apply text-2xl font-light;
+    }
 }
 
 h2 {
-    @apply text-5xl font-bold mb-2 leading-none tracking-normal;
+    @apply text-4xl font-bold mb-2 leading-none tracking-normal;
 }
 
 h3 {
-    @apply text-3xl leading-tight mb-4;
+    @apply text-xl leading-tight mb-4;
 }
 
-.p {
-    @apply text-2xl font-light;
+p {
+    @apply text-xl font-light;
 }
 
 .a {
@@ -28,8 +49,5 @@ h3 {
 .span {
     @apply text-base font-light leading-snug inline-block my-2;
 }
-
-@tailwind components;
-/* purgecss end ignore */
 
 @tailwind utilities;
