@@ -633,29 +633,6 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
-@media (min-width: 640px) {
-  h1 {
-    font-size: 4.5rem;
-  }
-
-  ,
-    h2 {
-    font-size: 3rem;
-  }
-
-  ,
-    h3 {
-    font-size: 1.875rem;
-    line-height: 1;
-  }
-
-  ,
-    p {
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
-}
-
 h2 {
   font-size: 2.25rem;
   font-weight: 700;
@@ -688,6 +665,32 @@ p {
   display: inline-block;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 640px) {
+  h3 {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
 }
 
 .sr-only {

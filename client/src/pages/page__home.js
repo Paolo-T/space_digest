@@ -9,8 +9,8 @@ import spacex from "../img/spacex.png";
 
 function page__home() {
     return (
-        <div>
-            <div>
+        <div className="container mx-auto pt-12">
+            <div className="mb-12">
                 <Header />
 
                 {/* <div className="container w-9/12 mx-auto flex">
@@ -40,7 +40,7 @@ function page__home() {
                     <Media />
                 </SimpleReactLightbox>
 
-                <div className="container sm:w-9/12 mx-auto py-10 border-t-2 border-b-2 md:order-none md:mt-20 md:mb-32">
+                <div className="container sm:w-9/12 mx-auto py-10 md:pt-6 md:pb-4 border-t-2 border-b-2 md:border-none md:mt-20 md:mb-32">
                     <div className="">
                         <h2 className="">Photo collection</h2>
                     </div>
@@ -57,7 +57,7 @@ function page__home() {
                     </button>
                 </div>
 
-                <div className="container md:w-9/12 mx-auto mb-16 mt-16 md:mt-10 md:mt-32 relative">
+                <div className="container md:w-9/12 mx-auto mb-16 mt-16 md:mt-10 md:mt-32 md:pt-24 relative">
                     <h2 className="md:w-56 mb-4 md:mb-0 bg-teal-300 md:absolute -left-8 -top-2 ">
                         ____Mars Rover
                     </h2>

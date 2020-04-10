@@ -53,7 +53,7 @@ class MarsWeather extends Component {
                             equator.
                         </p>
                     </div>
-                    <div className="md:w-9/12 mx-auto bg-gray-100 my-30 py-8 px-8">
+                    <div className="md:w-full mx-auto bg-gray-100 my-30 py-8 px-8">
                         {/* <div className="mt-4">
                      <p className="block">
                         <strong>Sol</strong>{" "}
@@ -74,32 +74,34 @@ class MarsWeather extends Component {
                         {solData[0].temperature.min}° F
                      </p>
                   </div> */}
-                        <div className="flex flex-col md:flex-row mx-auto">
+                        <div className="flex flex-col sm:flex-row mx-auto ">
                             {solData.map(data => {
                                 return (
                                     <div
                                         className="flex-1 text-sm"
                                         key={data.marsSol}
                                     >
-                                        <p>
+                                    <ul>
+                                        <li className="">
                                             <strong>Sol: </strong>
                                             {data.marsSol}
-                                        </p>
+                                        </li>
 
-                                        <p>
+                                        <li>
                                             <strong>Earth date: </strong>
                                             <Moment format="DD/MM">
                                                 {data.earth_date}
                                             </Moment>
-                                        </p>
-                                        <p>
+                                        </li>
+                                        <li>
                                             <strong>high: </strong>
                                             {data.temperature.max}° F
-                                        </p>
-                                        <p>
+                                        </li>
+                                        <li>
                                             <strong>low: </strong>
                                             {data.temperature.min}° F
-                                        </p>
+                                        </li>
+                                    </ul>
                                     </div>
                                 );
                             })}

@@ -12,24 +12,6 @@ h1 {
     @apply font-header font-normal text-4xl inline-block leading-none tracking-tighter mt-10 mb-5;
 }
 
-@screen sm {
-    h1 {
-        @apply text-7xl;
-    }
-    ,
-    h2 {
-        @apply text-5xl;
-    }
-    ,
-    h3 {
-        @apply text-3xl leading-none;
-    }
-    ,
-    p {
-        @apply text-2xl font-light;
-    }
-}
-
 h2 {
     @apply text-4xl font-bold mb-2 leading-none tracking-normal;
 }
@@ -48,6 +30,30 @@ p {
 
 .span {
     @apply text-base font-light text-black leading-snug inline-block my-2;
+}
+
+@screen sm {
+    h1 {
+        @apply text-7xl;
+    }
+}
+
+@screen sm {
+    h2 {
+        @apply text-5xl;
+    }
+}
+
+@screen sm {
+    h3 {
+        @apply text-3xl leading-none;
+    }
+}
+
+@screen sm {
+    p {
+        @apply text-2xl font-light;
+    }
 }
 
 @tailwind utilities;
