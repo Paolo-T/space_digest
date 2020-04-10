@@ -9,9 +9,9 @@ function page__marsRover() {
     return (
         <div className="container mx-auto pt-12">
             <div className="mb-12">
-                <div className="w-9/12 mx-auto max-auto">
+                <div className="md:w-9/12 mx-auto">
                     <h1 className="">NASA</h1>
-                    <p className="p w-3/4 block">
+                    <p className="md:w-3/4 block">
                         The National Aeronautics and Space Administration (NASA)
                         is an independent agency of the United States Federal
                         Government responsible for the civilian space program,
@@ -19,15 +19,16 @@ function page__marsRover() {
                     </p>
                 </div>
                 <img
-                    className="w-9/12 mx-auto bg-gray-200 mt-12 mb-32 py-12 px-12"
+                    className="w-full md:w-9/12 mx-auto bg-gray-200 mt-10 sm:mt-12 mb-16 md:mb-32 md:py-12 md:px-12"
                     src={nasa_logo}
                     alt="Mars Rover"
                 />
-                <div className="w-9/12 mx-auto relative pt-20">
-                    <div className="absolute -left-8 -top-2">
-                        <h2 className="w-56 bg-teal-300">____Mars Rover</h2>
-                    </div>
-                    <p className="p w-3/4 block">
+                <div className="md:w-9/12 mx-auto relative md:pt-20">
+                    <h2 className="md:w-56 bg-teal-300 md:absolute -left-8 -top-2 mb-8 md:mb-0">
+                        ____Mars Rover
+                    </h2>
+
+                    <p className="w-full md:w-3/4 block">
                         Spirit and Opportunity landed on Mars January 3 and
                         January 24, 2004 PST (Jan. 4 and Jan. 25 UTC). Both
                         rovers lived well beyond their planned 90-day missions.
@@ -36,7 +37,7 @@ function page__marsRover() {
                         odometer. The twin geologists, Spirit and Opportunity,
                         have both found dramatic evidence that:
                     </p>
-                    <p className="p w-3/4 block mt-6">
+                    <p className="md:w-3/4 block mt-6">
                         Long ago Mars was wetter Conditions at Mars could have
                         sustained microbial life, if any existed With data from
                         the rovers, mission scientists have reconstructed an
@@ -47,19 +48,19 @@ function page__marsRover() {
                 </div>
 
                 <img
-                    className="w-9/12 mx-auto my-16"
+                    className="md:w-9/12 mx-auto my-10 md:my-16"
                     src={curiosityRover}
                     alt="Mars Rover"
                 />
             </div>
 
             <div className="mb-10 mt-20">
-                <div className="w-9/12 mx-auto">
+                <div className="md:w-9/12 mx-auto">
                     <MarsWeather />
-                    <h2 className="w-2/3 line-block flex-1 ">
+                    <h2 className="md:w-2/3 line-block flex-1 ">
                         Shots from Curiosity Mars rover (Mast camera)
                     </h2>
-                    <p className="w-4/5 text-2xl font-light">
+                    <p className="md:w-4/5 text-2xl font-light">
                         NeoWs (Near Earth Object Web Service) is a web service
                         for near earth Asteroid information. With NeoWs we can
                         display Asteroids based on their closest approach date
@@ -68,9 +69,9 @@ function page__marsRover() {
                 </div>
                 <div className="flex pr-30 mb-10 mt-16 text-left">
                     <div className="w-9/12 mx-auto pt-6">
-                        <SimpleReactLightbox>
+                        {/* <SimpleReactLightbox>
                             <RoverPhotos />
-                        </SimpleReactLightbox>
+                        </SimpleReactLightbox> */}
                     </div>
                 </div>
             </div>

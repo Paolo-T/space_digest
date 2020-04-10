@@ -27,49 +27,54 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <div className="container mx-auto py-32">
-            <div className="flex  content-end">
-                <h1 className="flex-1 mt-0 mb-10">{props.match.params.id}</h1>
-                <button className="h-10 inline-block bg-transparent hover:bg-teal-300 text-black py-1 px-4 border border-black hover:border-transparent hover:border-black rounded content-end">
-                    <Link className="block text-black text-lg" to="/space-x">
+        <div className="container mx-auto pt-24 pb-20 md:py-32">
+            <div className="flex flex-col content-end">
+                <h1 className="flex-1 mt-0 mb-8">{props.match.params.id}</h1>
+                <button className="order-first w-10 underline md:w-20 h-10 inline-block bg-transparent hover:bg-teal-300 text-black py-1 md:px-4 md:border border-black hover:border-transparent hover:border-black rounded content-end mb-4 md:mb-10">
+                    <Link
+                        className="block text-black text-xl md:text-2x"
+                        to="/space-x"
+                    >
                         Back
                     </Link>
                 </button>
             </div>
 
-            {!pageData[0].upcoming ? (
+            {/* {!pageData[0].upcoming ? (
                 <VideoFeatured
-                    width={1280}
-                    height={720}
+                    className="w-full"
+                    width="100vw"
+                    height="46vw"
                     url={pageData[0].links.video_link}
                 />
-            ) : null}
+            ) : null} */}
 
-            <div className="flex my-20">
-                <div className="flex-1 bg-gray-100 rounded-md mr-20">
+            <div className="flex flex-col md:flex-row md:my-20">
+                <div className="flex-1 bg-gray-100 rounded-md md:mr-20">
                     <img
-                        className=" py-20 px-20 inline-block bg-grey-300"
+                        className="py-10 px-10 md:py-20 md:px-20 inline-block bg-grey-300"
                         src={pageData[0].patch ? pageData[0].patch : spacex}
                         alt="spacex misson patch"
                     />
                 </div>
                 <div className="flex-1">
-                    <div className="h-full flex flex-col justify-between">
+                    <div className="h-full md:flex flex-col justify-between">
                         <div className="">
-                            <h2 className="bg-teal-300 inline-block">
+                            <h2 className="hidden md:block bg-teal-300 inline-block mt-10 md:mt-0">
                                 {props.match.params.id}
                             </h2>
 
-                            <p className="p inline-block">
+                            <p className="inline-block">
                                 {pageData[0].details}
                             </p>
                             {pageData[0].failure_details ? (
-                                <p className="p inline-block pb-8">
+                                <p className="inline-block pb-8">
                                     Failure details:{" "}
                                     {pageData[0].failure_details.reason}
                                 </p>
                             ) : null}
-                            <p className="p block text-bold mt-8">
+
+                            <p className="block text-bold mb-10 md:mt-8 ">
                                 {" "}
                                 Launch Date:&nbsp;
                                 <Moment format="DD/MM/YYYY">
@@ -81,7 +86,7 @@ function Page__launch(props) {
                         <div>
                             {/* <h3>Links</h3> */}
                             <ul>
-                                <li className="flex">
+                                <li className="flex flex-col md:flex-row">
                                     <a
                                         className="a inline-block mr-16"
                                         href={pageData[0].links.article_link}

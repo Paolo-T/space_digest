@@ -41,19 +41,19 @@ class MarsWeather extends Component {
             );
         } else {
             return (
-                <div className="mx-auto bg-grey-300 pr-30 my-24 text-left">
-                    <div className="container mx-auto mb-6">
-                        <h2 className="block w-9/12 mx-auto">
+                <div className="mx-auto bg-grey-300 md:pr-30 md:my-24 text-left">
+                    <div className="mx-auto mb-6">
+                        <h2 className="block mb:w-9/12 mx-auto">
                             Weather on Mars equator
                         </h2>
-                        <p className="p block w-9/12 mx-auto">
+                        <p className="mx-auto">
                             InSight is taking daily weather measurements
                             (temperature, wind, pressure) on the surface of Mars
                             at Elysium Planitia, a flat, smooth plain near Mars’
                             equator.
                         </p>
                     </div>
-                    <div className="w-9/12 mx-auto bg-gray-100 my-30 py-8 px-8">
+                    <div className="md:w-9/12 mx-auto bg-gray-100 my-30 py-8 px-8">
                         {/* <div className="mt-4">
                      <p className="block">
                         <strong>Sol</strong>{" "}
@@ -74,7 +74,7 @@ class MarsWeather extends Component {
                         {solData[0].temperature.min}° F
                      </p>
                   </div> */}
-                        <div className="container w-full flex mx-auto">
+                        <div className="flex flex-col md:flex-row mx-auto">
                             {solData.map(data => {
                                 return (
                                     <div
