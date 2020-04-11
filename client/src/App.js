@@ -23,7 +23,7 @@ function App() {
 
                     <Route
                         exact
-                        path="/photos-collection"
+                        path="/photo-collection"
                         component={page__photosPage}
                     />
                     <Route path="/nasa" component={page__nasa} exact />

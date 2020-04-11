@@ -652,6 +652,10 @@ p {
   font-weight: 300;
 }
 
+li {
+  font-size: 1.25rem;
+}
+
 .a {
   font-size: 1.5rem;
   text-decoration: underline;
@@ -8645,6 +8649,10 @@ p {
 
 .focus\:text-pink-900:focus {
   color: #702459;
+}
+
+.text-xxs {
+  font-size: 0.50rem;
 }
 
 .text-xs {
@@ -19711,6 +19719,10 @@ p {
 
   .xs\:focus\:text-pink-900:focus {
     color: #702459;
+  }
+
+  .xs\:text-xxs {
+    font-size: 0.50rem;
   }
 
   .xs\:text-xs {
@@ -30780,6 +30792,10 @@ p {
     color: #702459;
   }
 
+  .sm\:text-xxs {
+    font-size: 0.50rem;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
   }
@@ -41845,6 +41861,10 @@ p {
 
   .md\:focus\:text-pink-900:focus {
     color: #702459;
+  }
+
+  .md\:text-xxs {
+    font-size: 0.50rem;
   }
 
   .md\:text-xs {
@@ -52914,6 +52934,10 @@ p {
     color: #702459;
   }
 
+  .lg\:text-xxs {
+    font-size: 0.50rem;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
   }
@@ -63979,6 +64003,10 @@ p {
 
   .xl\:focus\:text-pink-900:focus {
     color: #702459;
+  }
+
+  .xl\:text-xxs {
+    font-size: 0.50rem;
   }
 
   .xl\:text-xs {

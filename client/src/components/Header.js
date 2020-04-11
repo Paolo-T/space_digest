@@ -5,7 +5,7 @@ function Header() {
     return (
         <header className="mx-auto text-center mb-8 md:mb-12 pt-6 md:pt-16">
             <h1 className="tracking-tight bg-teal-300">Space digest</h1>
-            <h3 className="md:w-4/5 md:w-3/5 md:leading-tight mb-1 mx-auto">
+            <h3 className="md:w-3/5 md:leading-tight mb-1 mx-auto">
                 "Space is for everybody. It's not just for a few people in
                 science or math, or for a select group of astronauts. That's our
                 new frontier out there, and it's everybody's business to know
