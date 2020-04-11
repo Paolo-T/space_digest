@@ -15,7 +15,7 @@ router.get("/", (req, res, next) => {
 
 const marsWeather = router.get("/weather", (req, res) => {
     request(
-        `${API_BASE_URL}${API_DEMO}`,
+        `${API_BASE_URL}${API_KEY}`,
         { json: true },
         (error, response, body) => {
             // console.log(req);

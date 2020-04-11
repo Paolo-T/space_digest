@@ -69,9 +69,9 @@ function page__marsRover() {
                 </div>
                 <div className="flex pr-30 mb-10 mt-16 text-left">
                     <div className="w-9/12 mx-auto pt-6">
-                        <SimpleReactLightbox>
+                        {/* <SimpleReactLightbox>
                             <RoverPhotos />
-                        </SimpleReactLightbox>
+                        </SimpleReactLightbox> */}
                     </div>
                 </div>
             </div>
