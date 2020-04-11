@@ -43,27 +43,12 @@ class Asteroids extends Component {
         } else {
             return (
                 // Asteroids
-                <div className="container mx-auto text-left mb-12">
-                    <h2 className="w-2/3 inline-block flex-1 ">
-                        Passing close to Earth this month
+                <div className="container mx-auto text-left mb-12 relative">
+                    <h2 className="md:w-74 bg-teal-300 md:absolute -left-5 -top-2 mb-8 md:mb-0">
+                        __Passing close to Earth this month
                     </h2>
-                    <p className="w-4/5 text-2xl font-light">
-                        NeoWs (Near Earth Object Web Service) is a web service
-                        for near earth Asteroid information. With NeoWs we can
-                        display Asteroids based on their closest approach date
-                        to Earth.
-                        <span className="block pt-10">
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://cneos.jpl.nasa.gov/"
-                            >
-                                CNEOS - Center for Near Earth Object Studies
-                            </a>
-                        </span>
-                    </p>
 
-                    <div className="container mx-auto pr-30 pb-10 mt-10">
+                    <div className=" mx-auto pr-30 pb-10 pt-32 mt-10">
                         <div className="flex pt-4 pl-4">
                             <span className="w-1/4 font-bold">Name</span>
                             <span className="w-1/4 font-bold">

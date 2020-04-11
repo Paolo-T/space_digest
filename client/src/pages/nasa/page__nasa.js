@@ -24,7 +24,7 @@ function page__marsRover() {
                     alt="Mars Rover"
                 />
                 <div className="md:w-9/12 mx-auto relative md:pt-20">
-                    <h2 className="md:w-56 bg-teal-300 md:absolute -left-8 -top-2 mb-8 md:mb-0">
+                    <h2 className="md:w-56 bg-teal-300 md:absolute -left-5 -top-2 mb-8 md:mb-0">
                         ____Mars Rover
                     </h2>
 
@@ -69,9 +69,9 @@ function page__marsRover() {
                 </div>
                 <div className="flex pr-30 mb-10 mt-16 text-left">
                     <div className="w-9/12 mx-auto pt-6">
-                        {/* <SimpleReactLightbox>
+                        <SimpleReactLightbox>
                             <RoverPhotos />
-                        </SimpleReactLightbox> */}
+                        </SimpleReactLightbox>
                     </div>
                 </div>
             </div>
