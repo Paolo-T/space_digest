@@ -46,12 +46,11 @@ class Media extends Component {
         } else if (mediaData.media_type !== "video") {
             return (
                 // Media Image
-                <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-32 relative">
-                    <div className="md:absolute -left-5 -top-2">
-                        <h2 className="w-full md:w-56 mb-8 md:mb-0 bg-teal-300">
-                            ____Daily Astronomy Image
-                        </h2>
-                    </div>
+                <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-48 relative">
+                    <h2 className="w-60 md:absolute -left-5 -top-5 md:w-w-64 mb-8 md:mb-0 bg-teal-300">
+                        ____Daily Astronomy Image
+                    </h2>
+
                     <SRLWrapper>
                         <a href={mediaData.url} data-attribute="SRL">
                             <img

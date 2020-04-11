@@ -27,17 +27,16 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <div className="mx-auto pt-24 mb-16 md:mb-20 md:py-32">
+        <div className="mx-auto pt-24 mb-16 md:mb-12 md:pt-32 md:mb-10">
             <div className="container flex flex-col content-end">
                 <h1 className="flex-1 mt-0 mb-8">{props.match.params.id}</h1>
-                <button className="order-first w-10 underline md:w-20 h-10 inline-block bg-transparent hover:bg-teal-300 text-black py-1 md:px-4 md:border border-black hover:border-transparent hover:border-black rounded content-end mb-4 md:mb-10">
-                    <Link
-                        className="block text-black text-xl md:text-2x"
-                        to="/space-x"
-                    >
-                        Back
-                    </Link>
-                </button>
+
+                <Link
+                    className="order-first block text-black text-xl md:text-2x underline hover:color-teal-300 mb-4 md:mb-10"
+                    to="/space-x"
+                >
+                    Back
+                </Link>
             </div>
 
             {!pageData[0].upcoming ? (
@@ -50,7 +49,7 @@ function Page__launch(props) {
             ) : null}
 
             <div className="container flex flex-col md:flex-row md:my-20">
-                <div className="flex-1 bg-gray-100 rounded-sm mt-10 md:mt-0 md:mr-20">
+                <div className="flex-1 bg-gray-100  mt-10 md:mt-0 md:mr-20">
                     <img
                         className="py-10 px-10 md:py-20 md:px-20 inline-block bg-grey-300"
                         src={pageData[0].patch ? pageData[0].patch : spacex}
@@ -59,8 +58,8 @@ function Page__launch(props) {
                 </div>
                 <div className="flex-1">
                     <div className="h-full md:flex flex-col justify-between">
-                        <div className="">
-                            <h2 className="hidden md:block bg-teal-300 inline-block mt-10 md:mt-0">
+                        <div>
+                            <h2 className="hidden md:inline-block bg-teal-300 mt-10 md:mt-0">
                                 {props.match.params.id}
                             </h2>
 

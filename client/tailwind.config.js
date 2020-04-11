@@ -145,8 +145,11 @@ module.exports = {
             "32": "8rem",
             "40": "10rem",
             "48": "12rem",
+            "50": "13rem",
             "56": "14rem",
-            "64": "16rem"
+            "60": "15rem",
+            "64": "16rem",
+            "68": "17rem"
         },
         backgroundColor: theme => theme("colors"),
         backgroundPosition: {
