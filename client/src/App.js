@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./css/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./components/base/ScrollToTop";
 import Navigation from "./components/base/Navigation";
 import Footer from "./components/base/Footer";
 import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
@@ -16,6 +17,7 @@ import SimpleReactLightbox from "simple-react-lightbox";
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Fragment>
                 <Navigation />
 

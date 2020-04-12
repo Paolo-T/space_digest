@@ -104,21 +104,21 @@ function Page__launch(props) {
                     </div>
                 </div>
             </div>
-            {/* Load images if present */}
-            {pageData[0].links.flickr_images ? (
+            {/* Load Images if present */}
+            {pageData[0].links.flickr_images !== undefined &&
+            pageData[0].links.flickr_images.length > 0 ? (
                 <Fragment>
                     <div className="container mx-auto mt-20 md:mt-32">
                         <h2 className="md:inline-block bg-teal-300 mt-10 md:mt-0">
-                            ___Images
+                            ___Launch Images
                         </h2>
                     </div>
                     <SRLWrapper>
-                        <div className="container grid gap-6 grid-cols-1 md:grid-cols-2 mt-10 md:mt-10">
+                        <div className="container grid gap-6 grid-cols-1 md:grid-cols-3 mt-10 md:mt-10">
                             {pageData[0].links.flickr_images.map((photo, i) => {
                                 return (
                                     <img
                                         className="object-cover object-center h-74 w-full rounded-sm"
-                                        effect="blur"
                                         src={photo}
                                         key={i}
                                         alt="Mission Launch"

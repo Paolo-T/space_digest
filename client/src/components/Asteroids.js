@@ -8,31 +8,27 @@ class Asteroids extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            processedResponse: null
+            AsteroidData: null
         };
     }
     async componentDidMount() {
         await fetch("/api/asteroids/:id")
             .then(res => res.json())
-            .then(processedResponse => {
+            .then(AsteroidData => {
                 this.setState(
                     {
                         error: null,
                         isLoaded: true,
-                        processedResponse
+                        AsteroidData
                     },
-                    () =>
-                        console.log(
-                            "Asteroids fetched! --->>>",
-                            processedResponse
-                        )
+                    () => console.log("Asteroids fetched! --->>>", AsteroidData)
                 );
             })
             .catch(error => console.error("Error:", error));
     }
 
     render() {
-        const { error, isLoaded, processedResponse } = this.state;
+        const { error, isLoaded, AsteroidData } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -46,7 +42,7 @@ class Asteroids extends Component {
                 // Asteroids
                 <div className="container mx-auto text-left mb-12 md:pt-24 relative">
                     <h2 className="md:w-74 bg-teal-300 md:absolute -left-5 -top-2 mb-8 md:mb-0">
-                        __Passing close to Earth this month
+                        __Passing close to Earth
                     </h2>
 
                     <div className="mx-auto pr-30 pb-10 md:mt-10">
@@ -69,41 +65,41 @@ class Asteroids extends Component {
                         </div>
 
                         <div className="mx-auto pt-5 text-1xl font-light ">
-                            {processedResponse.map(response => {
+                            {AsteroidData.map(asteroid => {
                                 return (
                                     <ul className="flex mb-3">
                                         <li
                                             className="w-1/5 bg-gray-100 h-10 md:h-12 pl-2 sm:pl-4 pt-3 sm:pt-4 text-xxs md:text-sm"
-                                            key={response.id}
+                                            key={asteroid.id}
                                         >
-                                            {response.name}
+                                            {asteroid.name}
                                         </li>
                                         <li
                                             className="w-1/5 h-10 sm:h-12 pl-3 sm:pl-4 pt-3 sm:pt-4 text-xxs md:text-sm"
-                                            key={response.id}
+                                            key={asteroid.id}
                                         >
                                             {" "}
                                             <Moment format="DD/MM/YYYY">
-                                                {response.approach_date}
+                                                {asteroid.approach_date}
                                             </Moment>
                                         </li>
                                         <li
                                             className="w-1/5 bg-gray-100 h-10 sm:h-12 pl-2 sm:pl-4 pt-3 sm:pt-4 text-xxs md:text-sm"
-                                            key={response.id}
+                                            key={asteroid.id}
                                         >
-                                            {response.diameter}
+                                            {asteroid.diameter}
                                         </li>
                                         <li
                                             className="w-1/5 h-10 md:h-12 pl-2 md:pl-4 pt-3 md:pt-4 text-xxs md:text-sm"
-                                            key={response.id}
+                                            key={asteroid.id}
                                         >
-                                            {response.speed}
+                                            {asteroid.speed}
                                         </li>
                                         <li
                                             className="w-1/5 bg-gray-100 h-10 md:h-12 pl-2 md:pl-4 pt-2 md:pt-4 text-xxs md:text-sm"
-                                            key={response.id}
+                                            key={asteroid.id}
                                         >
-                                            {response.miss_distance}
+                                            {asteroid.miss_distance}
                                         </li>
                                     </ul>
                                 );

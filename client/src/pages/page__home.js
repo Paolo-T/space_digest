@@ -48,7 +48,7 @@ function page__home() {
                 <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
                     <Link
                         className="block text-black text-base md:text-2xl"
-                        to="/photos-collection"
+                        to="/photo-collection"
                     >
                         Photos
                     </Link>
