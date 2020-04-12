@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
+
 class RoverPhotos extends Component {
     constructor(props) {
         super(props);

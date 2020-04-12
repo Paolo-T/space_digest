@@ -5,15 +5,17 @@ import Loader from "../../components/base/Loader";
 import VideoFeatured from "../../components/base/VideoFeatured";
 import spacex from "../../img/spacex.png";
 import Moment from "react-moment";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Page__launch(props) {
-    console.log(props.match);
+    console.log("Match", props.match);
 
     const res = useContext(SpacexLaunchesContext);
 
     if (!res.response) {
         return (
-            <div className="mx-auto pt-12 pb-32">
+            <div className="mx-auto pt-20 pb-32">
                 <Loader className="mx-auto" />
             </div>
         );
@@ -83,7 +85,6 @@ function Page__launch(props) {
                         </div>
 
                         <div>
-                            {/* <h3>Links</h3> */}
                             <ul>
                                 <li className="flex flex-col md:flex-row">
                                     <a
@@ -104,19 +105,29 @@ function Page__launch(props) {
                     </div>
                 </div>
             </div>
+            {/* Load images if present */}
             {pageData[0].links.flickr_images ? (
-                <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-3 mt-10 md:mt-10">
-                    {pageData[0].links.flickr_images.map((photo, i) => {
-                        return (
-                            <img
-                                className="object-cover object-center h-64 w-full rounded-sm"
-                                src={photo}
-                                key={i}
-                                alt="Mission Launch"
-                            />
-                        );
-                    })}
-                </div>
+                <React.Fragment>
+                    <div className="container mx-auto mt-20 md:mt-32">
+                        <h2 className="md:inline-block bg-teal-300 mt-10 md:mt-0">
+                            ___Images
+                        </h2>
+                    </div>
+
+                    <div className="container grid gap-5 grid-cols-1 md:grid-cols-2 mt-10 md:mt-10">
+                        {pageData[0].links.flickr_images.map((photo, i) => {
+                            return (
+                                <LazyLoadImage
+                                    className="object-cover object-center h-74 w-full rounded-sm"
+                                    effect="blur"
+                                    src={photo}
+                                    key={i}
+                                    alt="Mission Launch"
+                                />
+                            );
+                        })}
+                    </div>
+                </React.Fragment>
             ) : null}
         </div>
     );

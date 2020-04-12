@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import VideoFeatured from "./base/VideoFeatured";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
+
 class Media extends Component {
     constructor(props) {
         super(props);

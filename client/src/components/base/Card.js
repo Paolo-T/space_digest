@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Card({ image, link, key, title, tag1, tag2, tag3 }) {
     return (
         <div key={key} className="max-w-sm rounded overflow-hidden shadow">
             <Link className="block text-black text-2xl" to={link}>
-                <img
+                <LazyLoadImage
                     className="w-full py-12 px-12"
+                    effect="blur"
                     src={image}
                     alt="Sunset in the mountains"
                 />

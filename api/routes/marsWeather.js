@@ -15,7 +15,7 @@ router.get("/", (req, res, next) => {
 
 const marsWeather = router.get("/weather", (req, res) => {
     request(
-        `${API_BASE_URL}${API_KEY}`,
+        `${API_BASE_URL}${API_DEMO}`,
         { json: true },
         (error, response, body) => {
             // console.log(req);
@@ -51,21 +51,5 @@ function processWeatherData(body) {
         });
 	return solData
 };
-
-	// let solData = body.sol_keys
-	// 	.map(sol => body[sol].First_UTC)
-   // 	.map(item => {
-	// 		item.split('T')[0],toString();
-	// 		const d = new Date(item);
-	// 		const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
-	// 		const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
-	// 		const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
-	// 		const formattedDate = `${da} ${mo}`;
-
-	// 		return formattedDate;
-	// 		return "2020-03-03"
-   // })
-
-
 
 module.exports = marsWeather;
