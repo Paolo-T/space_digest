@@ -24,6 +24,7 @@ function page__home() {
                     near earth Asteroid information. With NeoWs we can display
                     Asteroids based on their closest approach date to Earth.
                 </p>
+
                 <button className="bg-transparent hover:bg-teal-300 text-black py-2 px-4 border border-black hover:border-transparent hover:border-black rounded mt-8">
                     <Link
                         className="block text-black text-base md:text-2xl"
@@ -87,7 +88,7 @@ function page__home() {
                     </Link>
                 </button>
             </div>
-            <div className="container sm:w-9/12 mx-auto py-8 md:pt-6 md:pb-4 border-t-2 border-b-2 md:border-none md:mt-20 md:mb-32">
+            <div className="container sm:w-9/12 mx-auto py-8 md:pt-6 md:pb-0 border-t-2 border-b-2 md:border-none md:mt-20 md:mb-20">
                 <div className="">
                     <h2 className="">SpaceX</h2>
                 </div>
