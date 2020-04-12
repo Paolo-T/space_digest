@@ -14,23 +14,20 @@ function PhotosPage() {
     }
 
     return (
-        <div>
-            <SRLWrapper>
-                <div className="grid gap-6 grid-cols-1 md:grid-cols-4 object-cover">
-                    {res.response.map((photo, i) => {
-                        return (
-                            <img
-                                className="object-cover object-center h-64 w-full rounded-sm"
-                                effect="blur"
-                                src={photo.href}
-                                key={i}
-                                alt={photo.title}
-                            />
-                        );
-                    })}
-                </div>
-            </SRLWrapper>
-        </div>
+        <SRLWrapper>
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-4 object-cover">
+                {res.response.map((photo, i) => {
+                    return (
+                        <img
+                            className="object-cover object-center h-74 w-full rounded-sm col-span-1"
+                            src={photo.href}
+                            key={i}
+                            alt={photo.title}
+                        />
+                    );
+                })}
+            </div>
+        </SRLWrapper>
     );
 }
 

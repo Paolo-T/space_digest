@@ -16,7 +16,7 @@ function page__photosPage() {
                 alt="Moon Landing"
             />
             <div className="container">
-                <div className="md:w-9/12 mx-auto flex my-10 text-left">
+                <div className="md:w-9/12 mx-auto my-10">
                     <SimpleReactLightbox>
                         <PhotoCollection />
                     </SimpleReactLightbox>
