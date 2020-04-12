@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Loader from "./base/Loader";
-// import marsLandscape from "../img/marsLandscape.jpg";
 import Moment from "react-moment";
 
 class MarsWeather extends Component {
@@ -41,7 +40,7 @@ class MarsWeather extends Component {
             );
         } else {
             return (
-                <div className="mx-auto bg-grey-300 md:pr-30 text-left">
+                <div className="mx-auto md:pr-30 text-left">
                     <h2 className="block mb:w-9/12 mx-auto">
                         Weather on Mars equator
                     </h2>
@@ -53,27 +52,28 @@ class MarsWeather extends Component {
                     </p>
 
                     <div className="md:w-full mx-auto py-8">
-                        <div className="mt-4">
+                        <div className="my-8 bg-gray-100 py-4 px-4">
                             <p className="block">
                                 <strong>Sol</strong>{" "}
                                 {solData[solData.length - 1].marsSol}
                             </p>
-                            <p className="block">
+                            <p>
                                 <strong>Earth date:</strong>{" "}
                                 <Moment format="DD/MM">
-                                    {solData[0].earth_date}
+                                    {solData[solData.length - 1].earth_date}
                                 </Moment>
                             </p>
-                            <p className="block">
-                                <strong>Season:</strong> {solData[0].season}
+                            <p>
+                                <strong>Season:</strong>{" "}
+                                {solData[solData.length - 1].season}
                             </p>
                             <p>
                                 <strong>high: </strong>
-                                {solData[0].temperature.max}° F
+                                {solData[solData.length - 1].temperature.max}° F
                             </p>
                             <p>
                                 <strong>low: </strong>
-                                {solData[0].temperature.min}° F
+                                {solData[solData.length - 1].temperature.min}° F
                             </p>
                         </div>
 

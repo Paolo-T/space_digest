@@ -11,6 +11,7 @@ import page__spacex from "./pages/spacex/page__spacex";
 import page__launch from "./pages/spacex/page__launch";
 import page__asteroids from "./pages/page__asteroids";
 import page__about from "./pages/page__about";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 function App() {
     return (
@@ -37,12 +38,13 @@ function App() {
 
                     <SpacexLaunchesProvider>
                         <Route exact path="/space-x" component={page__spacex} />
-
-                        <Route
-                            exact
-                            path="/space-x/launch/:id"
-                            component={page__launch}
-                        />
+                        <SimpleReactLightbox>
+                            <Route
+                                exact
+                                path="/space-x/launch/:id"
+                                component={page__launch}
+                            />
+                        </SimpleReactLightbox>
                     </SpacexLaunchesProvider>
 
                     {/* <Route component={Error} /> */}

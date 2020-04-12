@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { SpacexLaunchesContext } from "../../components/context/SpacexLaunchesContext";
 import Loader from "../../components/base/Loader";
 import VideoFeatured from "../../components/base/VideoFeatured";
 import spacex from "../../img/spacex.png";
 import Moment from "react-moment";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-// import "react-lazy-load-image-component/src/effects/blur.css";
+import { SRLWrapper } from "simple-react-lightbox";
 
 function Page__launch(props) {
     console.log("Match", props.match);
@@ -61,7 +60,7 @@ function Page__launch(props) {
                 <div className="flex-1">
                     <div className="h-full md:flex flex-col justify-between">
                         <div>
-                            <h2 className="hidden md:inline-block bg-teal-300 mt-10 md:mt-0">
+                            <h2 className="hidden md:inline-block bg-teal-300 mt-10 md:mt-0 md:mb-10">
                                 {props.match.params.id}
                             </h2>
 
@@ -77,7 +76,7 @@ function Page__launch(props) {
 
                             <p className="block text-bold mb-10 md:mt-8 ">
                                 {" "}
-                                Launch Date:&nbsp;
+                                <strong>Launch Date:&nbsp;</strong>
                                 <Moment format="DD/MM/YYYY">
                                     {pageData[0].launch_date}
                                 </Moment>
@@ -107,27 +106,28 @@ function Page__launch(props) {
             </div>
             {/* Load images if present */}
             {pageData[0].links.flickr_images ? (
-                <React.Fragment>
+                <Fragment>
                     <div className="container mx-auto mt-20 md:mt-32">
                         <h2 className="md:inline-block bg-teal-300 mt-10 md:mt-0">
                             ___Images
                         </h2>
                     </div>
-
-                    <div className="container grid gap-5 grid-cols-1 md:grid-cols-2 mt-10 md:mt-10">
-                        {pageData[0].links.flickr_images.map((photo, i) => {
-                            return (
-                                <LazyLoadImage
-                                    className="object-cover object-center h-74 w-full rounded-sm"
-                                    effect="blur"
-                                    src={photo}
-                                    key={i}
-                                    alt="Mission Launch"
-                                />
-                            );
-                        })}
-                    </div>
-                </React.Fragment>
+                    <SRLWrapper>
+                        <div className="container grid gap-6 grid-cols-1 md:grid-cols-2 mt-10 md:mt-10">
+                            {pageData[0].links.flickr_images.map((photo, i) => {
+                                return (
+                                    <img
+                                        className="object-cover object-center h-74 w-full rounded-sm"
+                                        effect="blur"
+                                        src={photo}
+                                        key={i}
+                                        alt="Mission Launch"
+                                    />
+                                );
+                            })}
+                        </div>
+                    </SRLWrapper>
+                </Fragment>
             ) : null}
         </div>
     );
