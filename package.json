@@ -1,13 +1,12 @@
 {
-    "name": "react_app",
+    "name": "spacedigest.live",
     "version": "0.1.0",
     "private": true,
     "engines": {
         "node": "13.7.0",
         "npm": "6.14.3"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "scripts": {
         "server": "nodemon api/server.js",
         "client": "npm start --prefix client --open",
@@ -16,7 +15,5 @@
     "eslintConfig": {
         "extends": "react-app"
     },
-    "devDependencies": {
-
-    }
+    "devDependencies": {}
 }
