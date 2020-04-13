@@ -6,7 +6,9 @@
         "node": "13.7.0",
         "npm": "6.14.3"
     },
-    "dependencies": {},
+    "dependencies": {
+        "concurrently": "^5.1.0"
+    },
     "scripts": {
         "server": "nodemon api/server.js",
         "client": "npm start --prefix client --open",
