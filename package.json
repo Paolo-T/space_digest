@@ -6,9 +6,12 @@
         "concurrently": "^5.1.0"
     },
     "scripts": {
-        "server": "nodemon api/server.js",
-        "client": "npm start --prefix client --open",
-        "start": "concurrently \"npm run server\" \"npm run client\""
+        "client-install": "npm install --prefix client",
+        "start": "node server.js",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client        && npm run build --prefix client"
     },
     "eslintConfig": {
         "extends": "react-app"
