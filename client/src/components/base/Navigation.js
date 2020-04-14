@@ -14,21 +14,23 @@ function Navigation() {
                     />
                 </NavLink>
 
-                <nav className="w-2/3 md:w-74 flex justify-between transform md:rotate-90 origin-top-left md:absolute md:-right-5">
+                <nav className="w-2/3 md:w-1/4 flex justify-between">
+                    {/* transform md:rotate-90 origin-top-left md:absolute
+                    md:-right-5 */}
                     <NavLink
-                        className="inline-block text-teal-300 text-xl md:text-3xl leading-normal hover:text-black"
+                        className="inline-block text-teal-300 text-xl md:text-2xl leading-normal hover:text-black"
                         to="/nasa"
                     >
                         Nasa
                     </NavLink>
                     <NavLink
-                        className="inline-block text-teal-300 text-xl md:text-3xl  leading-normal hover:text-black"
+                        className="inline-block text-teal-300 text-xl md:text-2xl  leading-normal hover:text-black"
                         to="/space-x"
                     >
                         SpaceX
                     </NavLink>
                     <NavLink
-                        className="inline-block text-teal-300 text-xl md:text-3xl leading-normal hover:text-black mr-1"
+                        className="inline-block text-teal-300 text-xl md:text-2xl leading-normal hover:text-black"
                         to="/photo-collection"
                     >
                         Photos
