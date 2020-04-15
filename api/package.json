@@ -8,7 +8,7 @@
         "moment": "^2.24.0"
     },
     "scripts": {
-        "server": "nodemon api/server.js"
+        "server": "node api/server.js"
     },
     "devDependencies": {
         "morgan": "^1.9.1",
