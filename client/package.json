@@ -26,9 +26,8 @@
     "scripts": {
         "format": "prettier \"./src/**/*.{js, html}\" --write",
         "lint": "eslint \"./src/**/*.{js, jsx}\" --quiet",
-        "build:style": "postcss ./src/css/tailwind.pcss -o ./src/css/styles.css",
-        "start": "npm run build:style && react-scripts start",
-        "build": "react-scripts build",
+        "start": "react-scripts start",
+        "build": "react-scripts build && postcss ./src/css/tailwind.pcss -o ./src/css/styles.css",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
