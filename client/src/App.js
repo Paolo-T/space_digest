@@ -1,5 +1,4 @@
 import React, { useEffect, Fragment } from "react";
-//Google analitycs
 import ReactGa from "react-ga";
 import "./css/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
