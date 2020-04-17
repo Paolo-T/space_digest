@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from "react";
-import ReactGa from "react-ga";
+import ReactGA from "react-ga";
 import "./css/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/base/ScrollToTop";
@@ -17,10 +17,10 @@ import SimpleReactLightbox from "simple-react-lightbox";
 
 function App() {
     useEffect(() => {
-        ReactGa.initialize("UA-80068675-2");
+        ReactGA.initialize("UA-80068675-2");
         return () => {
             // to report page view
-            ReactGa.pageview(window.location.pathname + window.location.search);
+            ReactGA.pageview(window.location.pathname + window.location.search);
         };
     }, []);
 
