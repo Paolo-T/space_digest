@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import useFetch from "../components/hooks/useFetch";
-// import VideoFeatured from "./VideoFeatured";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
 
 function PhotosPage() {
-    // const [photos, setPhotos] = useState({});
-
     const res = useFetch("/api/photo-collection/photos", {});
+
+    console.log("Photos fetched! --->>>", res);
 
     if (!res.response) {
         return <Loader />;
@@ -30,6 +29,4 @@ function PhotosPage() {
         </SRLWrapper>
     );
 }
-
-// backgroundImage: `url(${Background})`;
 export default PhotosPage;
