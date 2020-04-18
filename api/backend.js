@@ -5,8 +5,6 @@ const morgan  = require('morgan');
 
 var indexRouter = require('./routes');
 
-
-
 app.use(morgan('dev')); // Log request info in the console
 
 app.use(express.json()); // Built in middleware. It parses incoming requests with JSON payloads.
