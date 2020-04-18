@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import VideoFeatured from "./base/VideoFeatured";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";

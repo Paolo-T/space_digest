@@ -23,7 +23,7 @@ function Page__launch(props) {
 
     const pageData = res.response
         .map(res => res)
-        .filter(res => res.name == props.match.params.id);
+        .filter(res => res.name === props.match.params.id);
 
     console.log({ pageData });
 
