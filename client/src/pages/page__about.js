@@ -2,12 +2,12 @@ import React from "react";
 
 function page__about() {
     return (
-        <div className="container md:w-3/4 mx-auto pt-20 md:pt-32 md:mb-12 ">
-            <h1 className="w-2/4">About Space Digest</h1>
+        <div className="container md:w-3/4 mx-auto pt-20 md:pt-30 md:mb-12 ">
+            <h1 className="w-2/4">About</h1>
             <p className="md:w-2/4 block">
-                This is an informational website created as a personal project,
-                for fans of Nasa, SpaceX and space in general. Here you will
-                find data and media,past and future space missions.
+                Space Digest is an informational website created as a personal
+                project for fans of Nasa, SpaceX and space in general. Here you
+                will find data, media, past and future space missions.
             </p>
             <p className="md:w-2/4 block mt-6">
                 Special thanks to the teams at NASA and SpaceX for providing and
