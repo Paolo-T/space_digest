@@ -48,18 +48,20 @@ function Media() {
         return (
             // Media Videos
             <div className="container mx-auto text-center mt-10">
-                <h2 className="md:w-9/12 mx-auto bg-teal-300">Daily Astronomy Video</h2>
+                <h2 className="md:w-9/12 mx-auto mb-12">
+                    Daily Astronomy Video
+                </h2>
                 <VideoFeatured
                     width="100vw"
                     height="46vw"
                     url={mediaData.url}
                 />
-                <div className="container md:w-9/12 mx-auto mt-12 md:mt-32 mb-16 md:mb-20">
-                    <div className="container mx-auto flex py-10 text-left">
-                        <h3 className="w-1/3 inline-block flex-1 bg-gray-100 rounded-md text-2xl font-bold pl-5 pr-5 pt-5">
+                <div className="container md:w-9/12 mx-auto mt-12 md:mt-16 mb-16 md:mb-20">
+                    <div className="flex pt-10 pb-16 px-16 text-left bg-gray-100">
+                        <h2 className="w-1/3 inline-block flex-1 pl-5 pr-5 pt-5">
                             {mediaData.title}
-                        </h3>
-                        <p className="p w-4/5 text-2xl font-light mx-auto px-16 pt-5">
+                        </h2>
+                        <p className="w-4/5 mx-auto pl-16 pt-5">
                             {mediaData.explanation}
                         </p>
                     </div>
