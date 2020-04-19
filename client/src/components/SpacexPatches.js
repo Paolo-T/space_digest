@@ -17,7 +17,7 @@ function SpacexPatches() {
         );
     }
     return (
-        <div className="container mx-auto grid gap-6 md:grid-cols-3">
+        <div className="container mx-auto grid gap-6 md:grid-cols-3 cursor-pointer">
             {res.response.map((launch, i) => {
                 return (
                     <Card

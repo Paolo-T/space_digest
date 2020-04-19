@@ -20,7 +20,7 @@ function Media() {
             // Media Image
             <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-48 relative">
                 <h2 className="w-60 md:absolute -left-5 -top-5 md:w-w-64 mb-8 md:mb-0 bg-teal-300">
-                    ____Daily Astronomy Image
+                    Daily Astronomy Image
                 </h2>
 
                 <SRLWrapper>
@@ -48,7 +48,7 @@ function Media() {
         return (
             // Media Videos
             <div className="container mx-auto text-center mt-10">
-                <h2 className="text-2xl mb-3 ">Daily Astronomy Video</h2>
+                <h2 className="md:w-9/12 mx-auto bg-teal-300">Daily Astronomy Video</h2>
                 <VideoFeatured
                     width="100vw"
                     height="46vw"
