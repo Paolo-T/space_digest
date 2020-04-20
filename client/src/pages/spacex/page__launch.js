@@ -114,7 +114,7 @@ function Page__launch(props) {
                         </h2>
                     </div>
                     <SRLWrapper>
-                        <div className="container grid gap-6 grid-cols-1 md:grid-cols-3 mt-10 md:mt-10 cursor-pointer">
+                        <div className="container grid gap-6 grid-cols-1 md:grid-cols-3 mt-10 md:mt-10">
                             {pageData[0].links.flickr_images.map((photo, i) => {
                                 return (
                                     <img
