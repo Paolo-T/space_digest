@@ -18,8 +18,8 @@ function Media() {
     if (mediaData.media_type !== "video") {
         return (
             // Media Image
-            <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-48 relative">
-                <h2 className="w-60 md:absolute -left-5 -top-5 md:w-w-64 mb-8 md:mb-0 bg-teal-300">
+            <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-40 text-center">
+                <h2 className="inline-block md:w-w-64 mb-2 md:mb-10 bg-teal-300">
                     Daily Astronomy Image
                 </h2>
 
@@ -33,13 +33,15 @@ function Media() {
                     </a>
                 </SRLWrapper>
 
-                <div className=" mx-auto">
-                    <h3 className="w-full md:w-2/3 inline-block flex-1 font-bold">
-                        {mediaData.title}
-                    </h3>
-                    <p className=" mx-auto  md:pr-16">
-                        {mediaData.explanation}
-                    </p>
+                <div className="container mx-auto mt-12 md:mt-16 mb-16 md:mb-20">
+                    <div className="flex pt-10 pb-16 px-16 text-left bg-gray-100">
+                        <h2 className="w-1/3 inline-block flex-1 pl-5 pr-5 pt-5">
+                            {mediaData.title}
+                        </h2>
+                        <p className="w-4/5 mx-auto pl-16 pt-5">
+                            {mediaData.explanation}
+                        </p>
+                    </div>
                 </div>
             </div>
             // !END of Media Image

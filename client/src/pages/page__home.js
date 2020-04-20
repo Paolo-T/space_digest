@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Media from "../components/Media";
 import FiftyFifty from "../components/base/FiftyFifty";
 import nasa_logo from "../img/nasa_logo.svg";
+import img_tile_1 from "../img/img_tile_1.svg";
+import img_tile_2 from "../img/img_tile_2.svg";
 
 function page__home() {
     return (
@@ -11,14 +13,13 @@ function page__home() {
             <Header />
 
             <FiftyFifty
-                image="https://images2.imgbox.com/89/bc/JcbcvuBI_o.png"
+                image={img_tile_1}
                 title="Asteroids"
                 text=" NeoWs (Near Earth Object Web Service) is a web service for
                     near earth Asteroid information. With NeoWs we can display
                     Asteroids based on their closest approach date to Earth."
                 btn_text="Asteroids nearby"
                 link="/asteroids"
-                padding="pb-10 px-10"
             />
 
             <SimpleReactLightbox>
@@ -26,12 +27,11 @@ function page__home() {
             </SimpleReactLightbox>
 
             <FiftyFifty
-                image="https://images2.imgbox.com/89/bc/JcbcvuBI_o.png"
+                image={img_tile_2}
                 title="Photo collection"
                 text="NASA.gov brings you the latest images, videos and news from America's space agency. Get the latest updates on NASA missions, and learn about the quest to reveal the unknown and benefit all humankind."
                 btn_text=" Photos"
                 link="/photo-collection"
-                padding="py-10 px-10"
             />
 
             <FiftyFifty
@@ -42,7 +42,7 @@ function page__home() {
                 Both rovers lived well beyond their planned 90-day missions. Spirit and Opportunity each found evidence for past wet conditions that possibly could have supported microbial life."
                 btn_text="Rover pictures from Mars"
                 link="/nasa"
-                padding="py-10 pl-12"
+                padding_img="py-10 pl-12"
             />
 
             <FiftyFifty
@@ -51,7 +51,7 @@ function page__home() {
                 text="SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to liv on other planets.."
                 btn_text="More about SpaceX"
                 link="/space-x"
-                padding="py-10 px-10"
+                padding_img="py-10 px-10"
             />
         </div>
     );

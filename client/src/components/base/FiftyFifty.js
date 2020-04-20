@@ -1,21 +1,32 @@
 import React from "react";
 import Button from "./Button";
 
-function FiftyFifty({ image, title, text, btn_text, link, padding, reverse }) {
+function FiftyFifty({
+    image,
+    title,
+    text,
+    btn_text,
+    link,
+    padding,
+    padding_img,
+    reverse
+}) {
     return (
         <React.Fragment>
             <div
                 className={`container md:w-9/12 mx-auto flex flex-col md:flex-row md:mt-24 md:mb-40
+                ${padding ? padding : ""}
                 ${reverse && "md:flex-row-reverse"}`}
             >
                 <div
-                    className={`flex-1 bg-gray-100 mt-10 md:mt-0
-                ${reverse ? "md:mr-0 md:ml-20" : "md:mr-20"}`}
+                    className={`flex-1 bg-gray-100 mt-10 md:mt-0 rounded-md ${
+                        reverse ? "md:mr-0 md:ml-20" : "md:mr-20"
+                    }`}
                 >
                     <img
                         className={`${
-                            padding ? padding : ""
-                        } w-full h-full inline-block bg-grey-300`}
+                            padding_img ? padding_img : ""
+                        } w-full h-full inline-block`}
                         src={image}
                         alt="spacex misson patch"
                     />
