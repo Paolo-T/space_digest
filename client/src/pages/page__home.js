@@ -30,7 +30,7 @@ function page__home() {
                 image={img_tile_2}
                 title="Photo collection"
                 text="NASA.gov brings you the latest images, videos and news from America's space agency. Get the latest updates on NASA missions, and learn about the quest to reveal the unknown and benefit all humankind."
-                btn_text=" Photos"
+                btn_text="Photos"
                 link="/photo-collection"
             />
 
@@ -42,7 +42,7 @@ function page__home() {
                 Both rovers lived well beyond their planned 90-day missions. Spirit and Opportunity each found evidence for past wet conditions that possibly could have supported microbial life."
                 btn_text="Rover pictures from Mars"
                 link="/nasa"
-                padding_img="py-10 pl-12"
+                padding_img="px-8"
             />
 
             <FiftyFifty
