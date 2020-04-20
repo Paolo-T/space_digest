@@ -38,7 +38,7 @@ function Media() {
                         <h2 className="inline-block flex-1 pt-5">
                             {mediaData.title}
                         </h2>
-                        <p className="md:w-4/5 mx-auto md:pl-16 pt-5 rounded-lg">
+                        <p className="md:w-3/5 mx-auto md:pl-16 pt-5 rounded-lg">
                             {mediaData.explanation}
                         </p>
                     </div>

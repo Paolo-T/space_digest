@@ -39,10 +39,11 @@ function page__home() {
                 image={nasa_logo}
                 title="Mars Rover"
                 text="Spirit and Opportunity landed on Mars January 3 and January 24, 2004 PST (Jan. 4 and Jan. 25 UTC).
-                Both rovers lived well beyond their planned 90-day missions. Spirit and Opportunity each found evidence for past wet conditions that possibly could have supported microbial life."
+                Both rovers lived well beyond their planned 90-day missions. Spirit and Opportunity found evidence for past wet conditions that possibly could have supported microbial life."
                 btn_text="Rover pictures from Mars"
                 link="/nasa"
-                padding_img="px-8"
+                padding_img="pl-8 pr-4"
+                background={true}
             />
 
             <FiftyFifty
@@ -52,6 +53,7 @@ function page__home() {
                 btn_text="More about SpaceX"
                 link="/space-x"
                 padding_img="py-10 px-10"
+                background={true}
             />
         </div>
     );
