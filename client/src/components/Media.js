@@ -18,7 +18,7 @@ function Media() {
     if (mediaData.media_type !== "video") {
         return (
             // Media Image
-            <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-40 text-center">
+            <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-32 text-center">
                 <h2 className="inline-block md:w-w-64 mb-2 md:mb-10 bg-teal-300">
                     Daily Astronomy Image
                 </h2>
