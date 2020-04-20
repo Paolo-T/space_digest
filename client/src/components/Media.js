@@ -26,19 +26,19 @@ function Media() {
                 <SRLWrapper>
                     <a href={mediaData.url} data-attribute="SRL">
                         <img
-                            className="w-full mx-auto mb-12 rounded-sm cursor-pointer"
+                            className="w-full mx-auto md:mb-12 rounded-sm cursor-pointer rounded-sm"
                             src={mediaData.url}
                             alt={mediaData.title}
                         />
                     </a>
                 </SRLWrapper>
 
-                <div className="container mx-auto mt-12 md:mt-16 mb-16 md:mb-20">
-                    <div className="flex pt-10 pb-16 px-16 text-left bg-gray-100">
-                        <h2 className="w-1/3 inline-block flex-1 pl-5 pr-5 pt-5">
+                <div className="container mx-auto mt-4 md:mt-12 md:mt-16 md:mb-16 md:mb-20">
+                    <div className="md:flex pt-8 md:pt-10 pb-10 md:pb-16 px-4 md:px-12 text-left bg-gray-100">
+                        <h2 className="inline-block flex-1 pt-5">
                             {mediaData.title}
                         </h2>
-                        <p className="w-4/5 mx-auto pl-16 pt-5">
+                        <p className="md:w-4/5 mx-auto md:pl-16 pt-5 rounded-lg">
                             {mediaData.explanation}
                         </p>
                     </div>
