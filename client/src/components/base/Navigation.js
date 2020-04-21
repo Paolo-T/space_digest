@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
     return (
         <div className="w-full fixed bg-gray-100 md:bg-transparent z-10">
-            <div className="container md:w-9/12 mx-auto flex justify-between py-2 md:pt-6 ">
+            <div className="container mx-auto flex justify-between py-2 md:pt-6 ">
                 <NavLink className="text-teal-300" to="/">
                     <img
                         className="w-8 md:w-12 mr-4"

@@ -110,7 +110,7 @@ function Page__launch(props) {
                 <Fragment>
                     <div className="container mx-auto mt-20 md:mt-32">
                         <h2 className="md:inline-block bg-teal-300 mt-10 md:mt-0">
-                            ___Launch Images
+                            Launch Images
                         </h2>
                     </div>
                     <SRLWrapper>

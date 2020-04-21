@@ -5,7 +5,7 @@ import moonlanding from "../img/moonlanding.jpg";
 
 function page__photosPage() {
     return (
-        <div className="mx-auto pt-12 mb-12">
+        <div className="mx-auto pt-24 mb-12">
             <h1 className="container mx-auto block w-3/4 md:w-9/12 mx-auto max-auto">
                 Photo Collection
             </h1>
