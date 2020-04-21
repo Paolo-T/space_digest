@@ -1,10 +1,9 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import RoverPhotos from "../../components/RoverPhotos";
-import curiosityRover from "../../img/curiosityRover.jpg";
+// import curiosityRover from "../../img/curiosityRover.jpg";
 import MarsWeather from "../../components/MarsWeather";
 import nasa_logo from "../../img/nasa_logo.svg";
-import FiftyFifty from "../../components/base/FiftyFifty";
 
 function page__marsRover() {
     return (
@@ -22,7 +21,7 @@ function page__marsRover() {
 
                 <img
                     className="w-full md:w-9/12 mx-auto bg-gray-200 mt-10 sm:mt-12 mb-16 md:mb-20 rounded-md"
-                    src={curiosityRover}
+                    src={nasa_logo}
                     alt="Mars Rover"
                 />
             </div>

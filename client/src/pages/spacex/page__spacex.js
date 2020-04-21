@@ -1,5 +1,4 @@
 import React from "react";
-// import spaceXLaunch from "../../img/spaceXLaunch.jpg";
 import SpacexPatches from "../../components/SpacexPatches";
 import spacex_logo from "../../img/spacex_logo.svg";
 

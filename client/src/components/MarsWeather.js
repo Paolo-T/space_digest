@@ -2,6 +2,9 @@ import React from "react";
 import useFetch from "../components/hooks/useFetch";
 import Loader from "./base/Loader";
 import Moment from "react-moment";
+// import nasa_logo from "../img/nasa_logo.svg";
+// import curiosityRover from "../img/curiosityRover.jpg";
+import marsLandscape from "../img/mars-landscape.svg";
 
 function MarsWeather() {
     const res = useFetch("/api/mars-weather/weather", {});
@@ -20,14 +23,17 @@ function MarsWeather() {
     return (
         <div className="mx-auto md:pr-30 text-left">
             <h2 className="block mb:w-9/12 mx-auto">Weather on Mars equator</h2>
-            <p className="mx-auto">
+            <p className="w-3/4">
                 InSight is taking daily weather measurements (temperature, wind,
                 pressure) on the surface of Mars at Elysium Planitia, a flat,
                 smooth plain near Mars’ equator.
             </p>
 
-            <div className="md:w-full mx-auto py-8">
-                <div className="my-8 bg-gray-100 py-4 px-4">
+            <div className="md:w-full mx-auto">
+                <div
+                    className="w-full my-8 bg-gray-100 py-6 px-4"
+                    style={{ backgroundImage: `url("${marsLandscape}")` }}
+                >
                     <p className="block">
                         <strong>Sol</strong>{" "}
                         {solData[solData.length - 1].marsSol}
@@ -56,7 +62,7 @@ function MarsWeather() {
                     {solData.map(data => {
                         return (
                             <div
-                                className="flex-1 text-xs bg-gray-100 py-5"
+                                className="flex-1 text-xs bg-orange-100 py-5"
                                 key={data.marsSol}
                             >
                                 <ul>
