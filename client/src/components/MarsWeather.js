@@ -21,7 +21,7 @@ function MarsWeather() {
 
     const solData = res.response;
     return (
-        <div className="mx-auto md:pr-30 text-left">
+        <div className="mx-auto md:pr-30">
             <h2 className="block mb:w-9/12 mx-auto">Weather on Mars equator</h2>
             <p className="w-3/4">
                 InSight is taking daily weather measurements (temperature, wind,
@@ -29,9 +29,9 @@ function MarsWeather() {
                 smooth plain near Mars’ equator.
             </p>
 
-            <div className="md:w-full mx-auto">
+            <div className="md:w-full mx-auto text-orange-900 text-center">
                 <div
-                    className="w-full my-8 bg-gray-100 py-6 px-4"
+                    className="w-full my-8 bg-gray-100 py-6 px-4 text-left"
                     style={{ backgroundImage: `url("${marsLandscape}")` }}
                 >
                     <p className="block">
@@ -58,7 +58,7 @@ function MarsWeather() {
                     </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row mx-auto">
+                <div className="flex flex-col sm:flex-row mx-auto text-center">
                     {solData.map(data => {
                         return (
                             <div

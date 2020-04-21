@@ -18,7 +18,7 @@ function PhotosPage() {
 
     return (
         <SRLWrapper>
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-4 object-cover">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-3 object-cover">
                 {res.response.map((photo, i) => {
                     return (
                         <img
