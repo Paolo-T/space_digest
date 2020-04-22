@@ -54,7 +54,7 @@ class RoverPhotos extends Component {
             return (
                 <div className="container mx-auto">
                     <SRLWrapper>
-                        <div className="grid gap-6 grid-cols-4">
+                        <div className="grid gap-6 grid-cols-3">
                             {photos.map(photo => {
                                 return (
                                     <img

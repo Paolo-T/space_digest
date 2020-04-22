@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 
 function FiftyFifty({
+    width,
     background,
     image,
     title,
@@ -14,7 +15,8 @@ function FiftyFifty({
 }) {
     return (
         <div
-            className={`container md:w-9/12 mx-auto flex flex-col md:flex-row md:mt-24 md:mb-32
+            className={`container mx-auto flex flex-col md:flex-row md:mt-24 md:mb-32
+                ${width ? width : "w-9/12"}
                 ${padding ? padding : " "}
                 ${reverse && "md:flex-row-reverse"}`}
         >
@@ -25,8 +27,8 @@ function FiftyFifty({
             >
                 <img
                     className={`w-full h-full
-                        ${padding_img && padding_img} `}
-                    src={image}
+                    ${padding_img && padding_img} `}
+                    src={image ? image : ""}
                     alt="spacex misson patch"
                 />
             </div>

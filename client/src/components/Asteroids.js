@@ -9,7 +9,11 @@ function Asteroids() {
     console.log("Asteroids fetched! --->>>", res);
 
     if (!res.response) {
-        return <Loader />;
+        return (
+            <div className="container mx-auto text-center">
+                <Loader className="inline-block" />
+            </div>
+        );
     }
 
     const AsteroidData = res.response;

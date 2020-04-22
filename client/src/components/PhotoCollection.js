@@ -9,12 +9,16 @@ function PhotosPage() {
     console.log("Photos fetched! --->>>", res);
 
     if (!res.response) {
-        return <Loader />;
+        return (
+            <div className="container mx-auto text-center">
+                <Loader className="inline-block" />
+            </div>
+        );
     }
 
     return (
         <SRLWrapper>
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-4 object-cover">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-3 object-cover">
                 {res.response.map((photo, i) => {
                     return (
                         <img
