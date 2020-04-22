@@ -35,7 +35,7 @@ function MarsWeather() {
 
             <div className="md:w-full mx-auto text-center">
                 <div className="w-full my-8 py-6 px-4 text-left">
-                    <p className="block">
+                    <p className="inline-block">
                         <strong>Sol</strong>{" "}
                         {solData[solData.length - 1].marsSol}
                     </p>

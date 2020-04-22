@@ -20,7 +20,7 @@ function page__marsRover() {
                 </div>
 
                 <img
-                    className="w-full md:w-9/12 mx-auto bg-gray-200 mt-10 sm:mt-12 mb-16 md:mb-20 rounded-md py-20 px-20"
+                    className="w-full md:w-9/12 mx-auto bg-gray-200 mt-10 sm:mt-12 mb-16 md:mb-20 rounded-md py-10 px-10 md:py-20 md:px-20"
                     src={nasa_logo}
                     alt="Mars Rover"
                 />
