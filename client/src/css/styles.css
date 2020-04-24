@@ -416,7 +416,7 @@ ul {
  */
 
 html {
-  font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -634,6 +634,8 @@ h1 {
 }
 
 h2 {
+  font-family: Archivo, Montserrat, Calibre, Avenir;
+  font-weight: 700;
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -3771,8 +3773,12 @@ li {
   font-family: Archivo Black, Montserrat, Calibre, Avenir;
 }
 
+.font-title {
+  font-family: Archivo, Montserrat, Calibre, Avenir;
+}
+
 .font-sans {
-  font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
@@ -14841,8 +14847,12 @@ li {
     font-family: Archivo Black, Montserrat, Calibre, Avenir;
   }
 
+  .xs\:font-title {
+    font-family: Archivo, Montserrat, Calibre, Avenir;
+  }
+
   .xs\:font-sans {
-    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xs\:font-serif {
@@ -25912,8 +25922,12 @@ li {
     font-family: Archivo Black, Montserrat, Calibre, Avenir;
   }
 
+  .sm\:font-title {
+    font-family: Archivo, Montserrat, Calibre, Avenir;
+  }
+
   .sm\:font-sans {
-    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
@@ -36983,8 +36997,12 @@ li {
     font-family: Archivo Black, Montserrat, Calibre, Avenir;
   }
 
+  .md\:font-title {
+    font-family: Archivo, Montserrat, Calibre, Avenir;
+  }
+
   .md\:font-sans {
-    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
@@ -48054,8 +48072,12 @@ li {
     font-family: Archivo Black, Montserrat, Calibre, Avenir;
   }
 
+  .lg\:font-title {
+    font-family: Archivo, Montserrat, Calibre, Avenir;
+  }
+
   .lg\:font-sans {
-    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
@@ -59125,8 +59147,12 @@ li {
     font-family: Archivo Black, Montserrat, Calibre, Avenir;
   }
 
+  .xl\:font-title {
+    font-family: Archivo, Montserrat, Calibre, Avenir;
+  }
+
   .xl\:font-sans {
-    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Avenir, Helvetica Neue, Calibre, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {

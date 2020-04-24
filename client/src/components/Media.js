@@ -23,7 +23,7 @@ function Media() {
         return (
             // Media Image
             <div className="container md:w-9/12 mx-auto mb-12 md:mb-16 mt-10 md:mt-32 text-center">
-                <h2 className="inline-block md:w-w-64 mb-2 md:mb-10 bg-teal-300">
+                <h2 className="inline-block md:w-w-64 mb-2 md:mb-10">
                     Daily Astronomy Image
                 </h2>
 
@@ -42,7 +42,7 @@ function Media() {
                         <h2 className="inline-block flex-1 pt-5">
                             {mediaData.title}
                         </h2>
-                        <p className="md:w-3/5 mx-auto md:pl-16 pt-5 rounded-lg">
+                        <p className="md:w-3/5 mx-auto md:pl-16 pt-5 rounded-md">
                             {mediaData.explanation}
                         </p>
                     </div>
@@ -63,7 +63,7 @@ function Media() {
                     url={mediaData.url}
                 />
                 <div className="container md:w-9/12 mx-auto mt-12 md:mt-16 mb-16 md:mb-20">
-                    <div className="flex pt-10 pb-16 px-16 text-left bg-gray-100">
+                    <div className="flex pt-10 pb-16 px-16 text-left bg-gray-100 rounded-md">
                         <h2 className="w-1/3 inline-block flex-1 pl-5 pr-5 pt-5">
                             {mediaData.title}
                         </h2>

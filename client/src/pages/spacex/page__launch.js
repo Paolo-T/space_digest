@@ -29,15 +29,16 @@ function Page__launch(props) {
 
     return (
         <div className="mx-auto pt-24 mb-16 md:mb-12 md:pt-32 md:mb-10">
-            <div className="container flex flex-col content-end">
-                <h1 className="flex-1 mt-0 mb-8">{props.match.params.id}</h1>
-
+            <div className="container md:flex md:flex-row-reverse items-end">
                 <Link
-                    className="order-first block text-black text-xl md:text-2x underline hover:color-teal-300 mb-4 md:mb-10"
+                    className="order-first block text-black text-xl md:text-2xl underline hover:color-teal-300 mb-4 md:mb-10"
                     to="/space-x"
                 >
                     Back
                 </Link>
+                <h1 className="inline-block flex-1 mt-0 mb-8">
+                    {props.match.params.id}
+                </h1>
             </div>
 
             {!pageData[0].upcoming ? (
@@ -60,7 +61,7 @@ function Page__launch(props) {
                 <div className="flex-1">
                     <div className="h-full md:flex flex-col justify-between">
                         <div>
-                            <h2 className="hidden md:inline-block bg-teal-300 mt-10 md:mt-0 md:mb-10">
+                            <h2 className="hidden md:inline-block bg-teal-300 mt-10 md:mt-0 md:mb-8">
                                 {props.match.params.id}
                             </h2>
 

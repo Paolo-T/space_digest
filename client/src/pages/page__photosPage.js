@@ -8,12 +8,12 @@ function page__photosPage() {
         <div className="mx-auto pt-24 mb-12">
             <div className="w-9/12 mx-auto text-center mb-12">
                 <h1 className="mb-3">Photo collection</h1>
-                <p className="md:w-3/4 mx-auto">
+                <h3 className="md:w-3/5 mx-auto md:leading-tight mb-1">
                     NASA.gov brings you the latest images, videos and news from
                     America's space agency. Get the latest updates on NASA
                     missions, and learn about the quest to reveal the unknown
                     and benefit all humankind.
-                </p>
+                </h3>
             </div>
 
             {/* <img

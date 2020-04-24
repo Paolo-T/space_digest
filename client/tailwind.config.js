@@ -235,6 +235,7 @@ module.exports = {
         },
         fontFamily: {
             header: ["Archivo Black", "Montserrat", "Calibre", "Avenir"],
+            title: ["Archivo", "Montserrat", "Calibre", "Avenir"],
             sans: [
                 "Avenir",
                 "Helvetica Neue",
@@ -243,8 +244,6 @@ module.exports = {
                 "-apple-system",
                 "BlinkMacSystemFont",
                 '"Segoe UI"',
-                "Roboto",
-                '"Helvetica Neue"',
                 "Arial",
                 '"Noto Sans"',
                 "sans-serif",

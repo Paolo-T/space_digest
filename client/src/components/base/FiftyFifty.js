@@ -35,10 +35,12 @@ function FiftyFifty({
             <div className="flex-1 mb-12 md:my-0">
                 <div className="h-full md:flex flex-col justify-between">
                     <div>
-                        <h2 className="hidden md:inline-block bg-teal-300">
+                        <h2 className="font-title font-bold md:inline-block bg-teal-300">
                             {title}
                         </h2>
-                        <p className="block text-bold pt-6 md:mt-4">{text}</p>
+                        <p className="block text-bold pt-6 md:pt-0  md:mt-4">
+                            {text}
+                        </p>
                     </div>
 
                     <Button btn_text={btn_text} link={link} />

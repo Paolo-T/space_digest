@@ -4,11 +4,11 @@ import asteroid from "../img/asteroid.jpg";
 
 function page__asteroids() {
     return (
-        <div className="container mx-auto pt-12 mb-12">
-            <div className="md:w-9/12 mx-auto">
-                <h1 className="">Asteroids</h1>
+        <div className="container mx-auto pt-24">
+            <div className="md:w-9/12 mx-auto text-center">
+                <h1 className="mb-3">Asteroids</h1>
 
-                <h3 className="md:w-3/5 md:leading-tight mb-1">
+                <h3 className="md:w-3/5 mx-auto md:leading-tight mb-1">
                     NeoWs (Near Earth Object Web Service) is a web service for
                     near earth Asteroid information. With NeoWs we can display
                     Asteroids based on their closest approach date to Earth.

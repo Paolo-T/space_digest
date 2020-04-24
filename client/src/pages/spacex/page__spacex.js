@@ -8,12 +8,12 @@ function Page__spacex() {
             <div className="mb-6 md:mb-12">
                 <div className="md:w-9/12 mx-auto text-center">
                     <h1 className="mb-3">SpaceX</h1>
-                    <p className="md:w-3/4 mx-auto">
+                    <h3 className="md:w-3/5 mx-auto md:leading-tight mb-1">
                         SpaceX designs, manufactures and launches advanced
                         rockets and spacecraft. The company was founded in 2002
                         to revolutionize space technology, with the ultimate
                         goal of enabling people to live on other planets.
-                    </p>
+                    </h3>
                     <p className="inline-block pt-4 mr-10">
                         HQ: Hawthorne - California
                     </p>
