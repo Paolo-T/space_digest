@@ -17,7 +17,7 @@ const roverManifests = router.get("/:roverName/manifest/", (req, res) => {
 			console.log("error:", error);
 			console.log("statusCode:", response && response.statusCode);
 			if (error) { return console.log(error); }
-			console.log("Success!!");
+			console.log("---->>> Fetched!!");
 			res.json(processManifest(body));
 			// res.json(body);
 		}

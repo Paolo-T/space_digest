@@ -3,8 +3,14 @@ module.exports = function(app) {
     app.use(
         "/api",
         createProxyMiddleware({
-            target: "http://localhost:5000",
-            changeOrigin: true
+            target: "http://[::1]:2020",
+            secure: true,
+            logLevel: "debug",
+            changeOrigin: true,
+            headers: {
+                Connection: "keep-alive"
+            }
+            // pathRewrite: { "^/*": "" }
         })
     );
 };

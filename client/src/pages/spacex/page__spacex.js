@@ -26,10 +26,6 @@ function Page__spacex() {
                 alt="Mars Rover"
             />
 
-            <h2 className="container md:w-9/12 w-40 mx-auto bg-teal-300 mb-10 md:mb-20">
-                Mission Patches
-            </h2>
-
             <SpacexPatches />
         </div>
     );

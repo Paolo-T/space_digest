@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const useFetch = (url, options) => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
@@ -18,8 +19,14 @@ const useFetch = (url, options) => {
             }
         };
         fetchData();
+        // eslint-disable-next-line
     }, []);
-    return { response, error, isLoading };
+
+    return {
+        response,
+        error,
+        isLoading
+    };
 };
 
 export default useFetch;

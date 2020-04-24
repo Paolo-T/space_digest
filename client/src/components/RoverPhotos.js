@@ -53,8 +53,16 @@ class RoverPhotos extends Component {
         } else {
             return (
                 <div className="container mx-auto">
+                    <div class="inline-flex">
+                        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+                            Prev
+                        </button>
+                        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+                            Next
+                        </button>
+                    </div>
                     <SRLWrapper>
-                        <div className="md:grid gap-6 md:grid-cols-3">
+                        <div className="md:grid gap-6 md:grid-cols-3 rounded-md">
                             {photos.map(photo => {
                                 return (
                                     <img

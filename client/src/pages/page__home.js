@@ -6,6 +6,7 @@ import FiftyFifty from "../components/base/FiftyFifty";
 import nasa_logo from "../img/nasa_logo.svg";
 import img_tile_1 from "../img/img_tile_1.svg";
 import img_tile_2 from "../img/img_tile_2.svg";
+// import { Tween, Timeline } from "react-gsap";
 
 function page__home() {
     return (
@@ -22,17 +23,18 @@ function page__home() {
                 link="/asteroids"
             />
 
-            <SimpleReactLightbox>
-                <Media />
-            </SimpleReactLightbox>
-
             <FiftyFifty
                 image={img_tile_2}
                 title="Photo collection"
                 text="NASA.gov brings you the latest images, videos and news from America's space agency. Get the latest updates on NASA missions, and learn about the quest to reveal the unknown and benefit all humankind."
                 btn_text="Photos"
                 link="/photo-collection"
+                reverse={true}
             />
+
+            <SimpleReactLightbox>
+                <Media />
+            </SimpleReactLightbox>
 
             <FiftyFifty
                 reverse={true}

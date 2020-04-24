@@ -30,7 +30,7 @@ const mediaRequest = router.get("/:id", (req, res) => {
 			// console.log(req);
 			console.log("error:", error);
 			console.log("statusCode:", response && response.statusCode);
-			console.log("Success!!");
+			console.log("---->>> Fetched!!");
 			// res.json(body);
 			res.json(processedResponse(body));
 		}

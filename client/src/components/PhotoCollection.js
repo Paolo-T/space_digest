@@ -10,7 +10,7 @@ function PhotosPage() {
 
     if (!res.response) {
         return (
-            <div className="container mx-auto text-center">
+            <div className="container mx-auto h-screen text-center">
                 <Loader className="inline-block" />
             </div>
         );

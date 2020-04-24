@@ -1,7 +1,7 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import PhotoCollection from "../components/PhotoCollection";
-import moonlanding from "../img/moonlanding.jpg";
+// import moonlanding from "../img/moonlanding.jpg";
 
 function page__photosPage() {
     return (
