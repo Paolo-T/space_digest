@@ -19,7 +19,7 @@ const photoCollection = router.get("/photos", (req, res) => {
             // console.log(req);
             console.log("error:", error);
             console.log("statusCode:", response && response.statusCode);
-            console.log("Success!!");
+            console.log("---->>> Fetched!!");
             //  res.json(body);
             res.json(processPhotos(body));
 
