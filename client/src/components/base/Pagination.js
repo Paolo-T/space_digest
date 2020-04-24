@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const Pagination = ({ postsPerPage, totalPosts, paginate, align }) => {
     const pageNumbers = [];
