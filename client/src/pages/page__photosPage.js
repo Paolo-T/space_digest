@@ -6,7 +6,7 @@ import PhotoCollection from "../components/PhotoCollection";
 function page__photosPage() {
     return (
         <div className="mx-auto pt-24 mb-12">
-            <div className="md:w-9/12 mx-auto text-center mb-12">
+            <div className="w-9/12 mx-auto text-center mb-12">
                 <h1 className="mb-3">Photo collection</h1>
                 <p className="md:w-3/4 mx-auto">
                     NASA.gov brings you the latest images, videos and news from

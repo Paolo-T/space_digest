@@ -5,7 +5,7 @@ import spacex_logo from "../../img/spacex_logo.svg";
 function Page__spacex() {
     return (
         <div className="container mx-auto pt-24">
-            <div className="mb-12">
+            <div className="mb-6 md:mb-12">
                 <div className="md:w-9/12 mx-auto text-center">
                     <h1 className="mb-3">SpaceX</h1>
                     <p className="md:w-3/4 mx-auto">
@@ -21,7 +21,7 @@ function Page__spacex() {
                 </div>
             </div>
             <img
-                className="md:w-9/12 mx-auto bg-gray-200 mt-10 md:mt-12 md:mb-32 mb-16 py-16 pl-8 md:py-48 md:pr-20 md:pl-32"
+                className="md:w-9/12 mx-auto bg-gray-200 mt-6 md:mt-12 md:mb-32 mb-16 py-16 pl-8 md:py-48 md:pr-20 md:pl-32 rounded-md"
                 src={spacex_logo}
                 alt="Mars Rover"
             />

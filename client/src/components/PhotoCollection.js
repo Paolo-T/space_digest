@@ -40,7 +40,7 @@ function PhotosPage() {
                     {responsePage.map((photo, i) => {
                         return (
                             <img
-                                className="object-cover object-center h-74 w-full rounded-sm col-span-1"
+                                className="object-cover object-center h-74 w-full rounded-md col-span-1"
                                 src={photo.href}
                                 key={i}
                                 alt={photo.title}
