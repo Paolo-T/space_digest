@@ -33,7 +33,7 @@ function PhotosPage() {
                 postsPerPage={postsPerPage}
                 totalPosts={res.response.length}
                 paginate={paginate}
-                align="end"
+                align="center"
             />
             <SRLWrapper>
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-3 object-cover mt-10">
