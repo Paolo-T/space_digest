@@ -17,7 +17,7 @@ function page__about() {
                 The plan for the future includes further development for to
                 improve the experience. Feel free to say hey at:
             </p>
-            <p className="md:w-2/4 block mt-6">hey@spacedigest.live</p>
+            <p className="md:w-2/4 block mt-6">hi@spacedigest.live</p>
             <p className="md:w-2/4 block mt-6">
                 Thanks for visiting
                 <span role="img" aria-label="horns up emoji">

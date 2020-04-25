@@ -6,4 +6,4 @@ const PORT = 2020;
 const server = http.createServer(app);
 
 // Starting server
-server.listen(PORT, () => console.log(`==========>>> Server started on port:${PORT} ===========>>`));
+server.listen(PORT, () => console.log(`================>>> Server started on port:${PORT} ===================>>`));

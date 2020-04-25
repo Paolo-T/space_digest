@@ -13,9 +13,9 @@ router.get("/", (req, res, next) => {
     });
 });
 
-const marsWeather = router.get("/weather", (req, res) => {
+const marsWeather = router.get("/:weather", (req, res) => {
     request(
-        `${API_BASE_URL}${API_DEMO}`,
+        "https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0",
         { json: true },
         (error, response, body) => {
             // console.log(req);
@@ -42,11 +42,6 @@ function processWeatherData(body) {
 					min: body[sol].AT.mn,
 					average: body[sol].AT.av
 				},
-				pressure: {
-					max: body[sol].PRE.mx,
-					min: body[sol].PRE.mn,
-					average: body[sol].PRE.av,
-				}
 			};
         });
 	return solData

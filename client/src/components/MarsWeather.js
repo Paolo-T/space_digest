@@ -7,7 +7,7 @@ import Moment from "react-moment";
 import marsLandscape from "../img/mars-landscape.svg";
 
 function MarsWeather() {
-    const res = useFetch("/api/mars-weather", {});
+    const res = useFetch("/api/mars-weather/:weather", {});
 
     console.log("Weather fetched! --->>>", res);
 

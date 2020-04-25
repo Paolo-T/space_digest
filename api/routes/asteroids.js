@@ -8,14 +8,6 @@ router.get("/", (req, res, next) => {
 	});
 });
 
-// let current_datetime = new Date();
-// let formatted_date =
-// 	`${current_datetime.getFullYear()}-${(current_datetime.getMonth() + 1)}-${current_datetime.getDate()}`;
-
-
-// let startDate = formatted_date;
-// let endDate   = formatted_date;
-
 let startDate = '2020-03-01';
 let endDate   = '2020-03-01';
 

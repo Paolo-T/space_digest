@@ -30,14 +30,16 @@ function page__marsRover() {
 
                 <div className="rounded-md mt-20">
                     <div className="mb-10 text-left">
-                        <h2 className="md:w-3/5 line-block flex-1 mb-8 bg-teal-300">
-                            Shots from Curiosity Mars rover (Mast camera)
+                        <h2 className="md:w-4/5 line-block flex-1 mb-8 bg-teal-300">
+                            Curiosity Mars rover photos (Mast camera)
                         </h2>
                         <p className="md:w-4/5 mb-12">
-                            NeoWs (Near Earth Object Web Service) is a web
-                            service for near earth Asteroid information. With
-                            NeoWs we can display Asteroids based on their
-                            closest approach date to Earth.
+                            Spirit and Opportunity landed on Mars January 3 and
+                            January 24, 2004 PST (Jan. 4 and Jan. 25 UTC). Both
+                            rovers lived well beyond their planned 90-day
+                            missions. Spirit and Opportunity found evidence for
+                            past wet conditions that possibly could have
+                            supported microbial life.
                         </p>
                     </div>
 

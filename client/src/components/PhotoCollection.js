@@ -28,12 +28,11 @@ function PhotosPage() {
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return (
-        <div>
+        <div className="text-center">
             <Pagination
                 postsPerPage={postsPerPage}
                 totalPosts={res.response.length}
                 paginate={paginate}
-                align="center"
             />
             <SRLWrapper>
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-3 object-cover mt-10">

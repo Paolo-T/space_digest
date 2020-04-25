@@ -624,7 +624,6 @@ body {
 
 h1 {
   font-family: Archivo Black, Montserrat, Calibre, Avenir;
-  font-weight: 400;
   font-size: 2.25rem;
   display: inline-block;
   line-height: 1;
@@ -636,7 +635,7 @@ h1 {
 h2 {
   font-family: Archivo, Montserrat, Calibre, Avenir;
   font-weight: 700;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1;

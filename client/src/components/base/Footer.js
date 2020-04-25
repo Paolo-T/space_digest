@@ -8,7 +8,7 @@ function Footer() {
                 About
             </Link>
             <div className="block text-2xl leading-snug">
-                <a href="mailto:webmaster@example.com">hey@spacedigest.live</a>
+                <a href="mailto:webmaster@example.com">hi@spacedigest.live</a>
             </div>
         </footer>
     );
