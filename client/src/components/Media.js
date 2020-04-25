@@ -38,11 +38,11 @@ function Media() {
                 </SRLWrapper>
 
                 <div className="container mx-auto mt-4 md:mt-12 md:mt-16 md:mb-16 md:mb-20">
-                    <div className="md:flex pt-8 md:pt-10 pb-10 md:pb-16 px-4 md:px-12 text-left bg-gray-100">
+                    <div className="md:flex pt-8 md:pt-10 pb-10 md:pb-16 px-4 md:px-12 text-left bg-gray-100 rounded-md">
                         <h2 className="inline-block flex-1 pt-5">
                             {mediaData.title}
                         </h2>
-                        <p className="md:w-3/5 mx-auto md:pl-16 pt-5 rounded-md">
+                        <p className="md:w-3/5 mx-auto md:pl-16 pt-5">
                             {mediaData.explanation}
                         </p>
                     </div>
