@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import "./css/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
+import "./css/styles.css";
+import { useSpring, animated } from "react-spring";
+import ReactGA from "react-ga";
 import ScrollToTop from "./components/base/ScrollToTop";
 import Navigation from "./components/base/Navigation";
 import Footer from "./components/base/Footer";
-import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
-import page__home from "./pages/page__home";
-import page__photosPage from "./pages/page__photosPage";
 import Page__nasa from "./pages/nasa/Page__nasa";
-import page__spacex from "./pages/spacex/page__spacex";
-import page__launch from "./pages/spacex/page__launch";
-import page__asteroids from "./pages/page__asteroids";
-import page__about from "./pages/page__about";
+import Page__launch from "./pages/spacex/Page__launch";
+import Page__home from "./pages/Page__home";
+import Page__photosPage from "./pages/Page__photosPage";
+import Page__spacex from "./pages/spacex/Page__spacex";
+import Page__asteroids from "./pages/Page__asteroids";
+import Page__about from "./pages/Page__about";
 import SimpleReactLightbox from "simple-react-lightbox";
-import { useSpring, animated } from "react-spring";
 
 function App() {
     useEffect(() => {
@@ -35,33 +35,33 @@ function App() {
                     <Navigation />
 
                     <Switch>
-                        <Route exact path="/" component={page__home} />
+                        <Route exact path="/" component={Page__home} />
 
                         <Route
                             exact
                             path="/photo-collection"
-                            component={page__photosPage}
+                            component={Page__photosPage}
                         />
                         <Route path="/nasa" component={Page__nasa} exact />
                         <Route
                             exact
                             path="/asteroids"
-                            component={page__asteroids}
+                            component={Page__asteroids}
                         />
 
-                        <Route exact path="/about" component={page__about} />
+                        <Route exact path="/about" component={Page__about} />
 
                         <SpacexLaunchesProvider>
                             <Route
                                 exact
                                 path="/space-x"
-                                component={page__spacex}
+                                component={Page__spacex}
                             />
                             <SimpleReactLightbox>
                                 <Route
                                     exact
                                     path="/space-x/launch/:id"
-                                    component={page__launch}
+                                    component={Page__launch}
                                 />
                             </SimpleReactLightbox>
                         </SpacexLaunchesProvider>

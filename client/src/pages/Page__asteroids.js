@@ -1,10 +1,14 @@
 import React from "react";
 import Asteroids from "../components/Asteroids";
 import asteroid from "../img/asteroid.jpg";
+import { useSpring, animated } from "react-spring";
 
-function page__asteroids() {
+function Page__asteroids() {
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
     return (
-        <div className="container mx-auto pt-24">
+        <animated.div style={fade} className="container mx-auto pt-24">
             <div className="md:w-9/12 mx-auto text-center">
                 <h1 className="mb-3">Asteroids</h1>
 
@@ -29,8 +33,8 @@ function page__asteroids() {
 
                 <Asteroids />
             </div>
-        </div>
+        </animated.div>
     );
 }
 
-export default page__asteroids;
+export default Page__asteroids;

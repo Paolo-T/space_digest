@@ -1,10 +1,14 @@
 import React from "react";
 import SpacexPatches from "../../components/SpacexPatches";
 import spacex_logo from "../../img/spacex_logo.svg";
+import { useSpring, animated } from "react-spring";
 
 function Page__spacex() {
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
     return (
-        <div className="container mx-auto pt-24">
+        <animated.div style={fade} className="container mx-auto pt-24">
             <div className="mb-6 md:mb-12">
                 <div className="md:w-9/12 mx-auto text-center">
                     <h1 className="mb-3">SpaceX</h1>
@@ -27,7 +31,7 @@ function Page__spacex() {
             />
 
             <SpacexPatches />
-        </div>
+        </animated.div>
     );
 }
 

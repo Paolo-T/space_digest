@@ -1,8 +1,15 @@
 import React from "react";
+import { useSpring, animated } from "react-spring";
 
-function page__about() {
+function Page__about() {
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
     return (
-        <div className="container md:w-3/4 mx-auto pt-20 md:pt-30 md:mb-12 ">
+        <animated.div
+            style={fade}
+            className="container md:w-3/4 mx-auto pt-20 md:pt-30 md:mb-12 "
+        >
             <h1 className="w-2/4">About</h1>
             <p className="md:w-2/4 block">
                 Space Digest is an informational website created as a personal
@@ -25,8 +32,8 @@ function page__about() {
                 </span>{" "}
             </p>
             <p className="md:w-2/4 block mt-6">P.</p>
-        </div>
+        </animated.div>
     );
 }
 
-export default page__about;
+export default Page__about;

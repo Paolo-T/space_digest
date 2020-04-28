@@ -1,11 +1,15 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import PhotoCollection from "../components/PhotoCollection";
+import { useSpring, animated } from "react-spring";
 // import moonlanding from "../img/moonlanding.jpg";
 
-function page__photosPage() {
+function Page__photosPage() {
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
     return (
-        <div className="mx-auto pt-24 mb-12">
+        <animated.div style={fade} className="mx-auto pt-24 mb-12">
             <div className="w-9/12 mx-auto text-center mb-12">
                 <h1 className="mb-3">Photo collection</h1>
                 <h3 className="md:w-3/5 mx-auto md:leading-tight mb-1">
@@ -28,8 +32,8 @@ function page__photosPage() {
                     </SimpleReactLightbox>
                 </div>
             </div>
-        </div>
+        </animated.div>
     );
 }
 
-export default page__photosPage;
+export default Page__photosPage;

@@ -6,9 +6,13 @@ import VideoFeatured from "../../components/base/VideoFeatured";
 import spacex from "../../img/spacex.png";
 import Moment from "react-moment";
 import { SRLWrapper } from "simple-react-lightbox";
+import { useSpring, animated } from "react-spring";
 
 function Page__launch(props) {
-    console.log("Match", props.match);
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
+    // console.log("Match", props.match);
 
     const res = useContext(SpacexLaunchesContext);
 
@@ -28,7 +32,10 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <div className="mx-auto pt-24 mb-16 md:mb-12 md:pt-32 md:mb-10">
+        <animated.div
+            style={fade}
+            className="mx-auto pt-24 mb-16 md:mb-12 md:pt-32 md:mb-10"
+        >
             <div className="container md:flex md:flex-row-reverse items-end">
                 <Link
                     className="order-first block text-black text-xl md:text-2xl underline hover:color-teal-300 mb-4 md:mb-10"
@@ -130,7 +137,7 @@ function Page__launch(props) {
                     </SRLWrapper>
                 </Fragment>
             ) : null}
-        </div>
+        </animated.div>
     );
 }
 

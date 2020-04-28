@@ -7,10 +7,14 @@ import nasa_logo from "../img/nasa_logo.svg";
 import img_tile_1 from "../img/img_tile_1.svg";
 import img_tile_2 from "../img/img_tile_2.svg";
 // import { Tween, Timeline } from "react-gsap";
+import { useSpring, animated } from "react-spring";
 
-function page__home() {
+function Page__home() {
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
     return (
-        <div className="container mx-auto pt-12">
+        <animated.div className="container mx-auto pt-12">
             <Header />
 
             <FiftyFifty
@@ -57,8 +61,8 @@ function page__home() {
                 padding_img="py-10 px-10"
                 background={true}
             />
-        </div>
+        </animated.div>
     );
 }
 
-export default page__home;
+export default Page__home;
