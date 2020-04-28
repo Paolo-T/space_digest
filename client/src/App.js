@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect } from "react";
 import ReactGA from "react-ga";
 import "./css/styles.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -8,7 +8,7 @@ import Footer from "./components/base/Footer";
 import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
 import page__home from "./pages/page__home";
 import page__photosPage from "./pages/page__photosPage";
-import page__nasa from "./pages/nasa/page__nasa";
+import Page__nasa from "./pages/nasa/Page__nasa";
 import page__spacex from "./pages/spacex/page__spacex";
 import page__launch from "./pages/spacex/page__launch";
 import page__asteroids from "./pages/page__asteroids";
@@ -24,7 +24,7 @@ function App() {
             ReactGA.pageview(window.location.pathname + window.location.search);
         };
     }, []);
-
+    // Fade animation
     const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
 
     return (
@@ -42,7 +42,7 @@ function App() {
                             path="/photo-collection"
                             component={page__photosPage}
                         />
-                        <Route path="/nasa" component={page__nasa} exact />
+                        <Route path="/nasa" component={Page__nasa} exact />
                         <Route
                             exact
                             path="/asteroids"

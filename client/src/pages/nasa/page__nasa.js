@@ -1,12 +1,16 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import RoverPhotos from "../../components/RoverPhotos";
-import MarsWeather from "../../components/MarsWeather";
+// import MarsWeather from "../../components/MarsWeather";
 import nasa_logo from "../../img/nasa_logo.svg";
+import { useSpring, animated } from "react-spring";
 
-function page__marsRover() {
+function Page__marsRover() {
+    //Fade animation
+    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+
     return (
-        <div className="container mx-auto pt-24">
+        <animated.div style={fade} className="container mx-auto pt-24">
             <div className="mb-12">
                 <div className="md:w-9/12 mx-auto text-center">
                     <h1 className="mb-3">NASA</h1>
@@ -48,8 +52,8 @@ function page__marsRover() {
                     </SimpleReactLightbox>
                 </div>
             </div>
-        </div>
+        </animated.div>
     );
 }
 
-export default page__marsRover;
+export default Page__marsRover;
