@@ -6,6 +6,7 @@ import { useSpring, animated } from "react-spring";
 function Page__spacex() {
     //Fade animation
     const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+    const props = useSpring({ number: 2002, from: { number: 0 } });
 
     return (
         <animated.div style={fade} className="container mx-auto pt-24">
@@ -14,9 +15,10 @@ function Page__spacex() {
                     <h1 className="mb-3">SpaceX</h1>
                     <h3 className="md:w-3/5 mx-auto md:leading-tight mb-1">
                         SpaceX designs, manufactures and launches advanced
-                        rockets and spacecraft. The company was founded in 2002
-                        to revolutionize space technology, with the ultimate
-                        goal of enabling people to live on other planets.
+                        rockets and spacecraft. The company was founded in
+                        <animated.span>{props.number}</animated.span> to
+                        revolutionize space technology, with the ultimate goal
+                        of enabling people to live on other planets.
                     </h3>
                     <p className="inline-block pt-4 mr-10">
                         HQ: Hawthorne - California

@@ -21,13 +21,13 @@ function Page__about() {
                 maintaining all the data this website is built upon.
             </p>
             <p className="md:w-2/4 block mt-6">
-                The plan for the future includes further development for to
-                improve the experience. Feel free to say hey at:
+                The plan for the future includes further development for a
+                better experience. Feel free to say hey at:
             </p>
             <p className="md:w-2/4 block mt-6">hi@spacedigest.live</p>
             <p className="md:w-2/4 block mt-6">
                 Thanks for visiting
-                <span role="img" aria-label="horns up emoji">
+                <span className="ml-3" role="img" aria-label="horns up emoji">
                     🤘🏻
                 </span>{" "}
             </p>

@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { SpacexLaunchesProvider } from "./components/context/SpacexLaunchesContext";
 import "./css/styles.css";
-import { useSpring, animated } from "react-spring";
 import ReactGA from "react-ga";
-import ScrollToTop from "./components/base/ScrollToTop";
-import Navigation from "./components/base/Navigation";
-import Footer from "./components/base/Footer";
-import Page__nasa from "./pages/nasa/Page__nasa";
-import Page__launch from "./pages/spacex/Page__launch";
-import Page__home from "./pages/Page__home";
-import Page__photosPage from "./pages/Page__photosPage";
-import Page__spacex from "./pages/spacex/Page__spacex";
-import Page__asteroids from "./pages/Page__asteroids";
-import Page__about from "./pages/Page__about";
 import SimpleReactLightbox from "simple-react-lightbox";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { SpacexLaunchesProvider } from "./context/SpacexLaunchesContext";
+import { useSpring, animated } from "react-spring";
+import { ScrollToTop, Navigation, Footer } from "./components";
+import {
+    Page__home,
+    Page__about,
+    Page__photosPage,
+    Page__asteroids,
+    Page__nasa,
+    Page__launch,
+    Page__spacex
+} from "./pages";
 
 function App() {
     useEffect(() => {
@@ -24,6 +24,7 @@ function App() {
             ReactGA.pageview(window.location.pathname + window.location.search);
         };
     }, []);
+
     // Fade animation
     const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
 

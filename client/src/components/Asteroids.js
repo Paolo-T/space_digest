@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../components/hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import Loader from "./base/Loader";
 import Moment from "react-moment";
 

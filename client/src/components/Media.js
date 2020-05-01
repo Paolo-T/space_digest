@@ -2,7 +2,7 @@ import React from "react";
 import VideoFeatured from "./base/VideoFeatured";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
-import useFetch from "../components/hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 
 function Media() {
     const res = useFetch("/api/images/image", {});

@@ -1,11 +1,10 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { SpacexLaunchesContext } from "../../components/context/SpacexLaunchesContext";
-import Loader from "../../components/base/Loader";
-import VideoFeatured from "../../components/base/VideoFeatured";
-import spacex from "../../img/spacex.png";
-import Moment from "react-moment";
 import { SRLWrapper } from "simple-react-lightbox";
+import { SpacexLaunchesContext } from "../../context/SpacexLaunchesContext";
+import { Loader, VideoFeatured } from "../../components";
+import Moment from "react-moment";
+import spacex from "../../img/spacex.png";
 import { useSpring, animated } from "react-spring";
 
 function Page__launch(props) {
@@ -115,7 +114,7 @@ function Page__launch(props) {
             {/* Load Images if present */}
             {pageData[0].links.flickr_images !== undefined &&
             pageData[0].links.flickr_images.length > 0 ? (
-                <Fragment>
+                <>
                     <div className="container mx-auto mt-20 md:mt-32">
                         <h2 className="md:inline-block bg-teal-300 mt-10 md:mt-0">
                             Launch Images
@@ -135,7 +134,7 @@ function Page__launch(props) {
                             })}
                         </div>
                     </SRLWrapper>
-                </Fragment>
+                </>
             ) : null}
         </animated.div>
     );

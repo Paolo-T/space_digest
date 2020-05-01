@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useFetch from "../components/hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
 import Pagination from "./base/Pagination";

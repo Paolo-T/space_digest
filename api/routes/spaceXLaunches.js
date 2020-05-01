@@ -18,7 +18,7 @@ const spaceXLaunches = router.get("/:launch", (req, res) => {
             // console.log(req);
             console.log("error:", error);
             console.log("statusCode:", response && response.statusCode);
-            console.log("Success!!");
+            console.log("***** Success!! *****");
             // res.json(body);
             res.json(processLaunches(body));
 
