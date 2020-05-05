@@ -4,7 +4,6 @@ import ReactGA from "react-ga";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { SpacexLaunchesProvider } from "./context/SpacexLaunchesContext";
-import { useSpring, animated } from "react-spring";
 import { ScrollToTop, Navigation, Footer } from "./components";
 import {
     Page__home,
@@ -25,55 +24,46 @@ function App() {
         };
     }, []);
 
-    // Fade animation
-    const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
-
     return (
-        <animated.div style={fade} div>
-            <Router>
-                <ScrollToTop />
-                <div>
-                    <Navigation />
+        <Router>
+            <ScrollToTop />
+            <div>
+                <Navigation />
 
-                    <Switch>
-                        <Route exact path="/" component={Page__home} />
+                <Switch>
+                    <Route exact path="/" component={Page__home} />
 
-                        <Route
-                            exact
-                            path="/photo-collection"
-                            component={Page__photosPage}
-                        />
-                        <Route path="/nasa" component={Page__nasa} exact />
-                        <Route
-                            exact
-                            path="/asteroids"
-                            component={Page__asteroids}
-                        />
+                    <Route
+                        exact
+                        path="/photo-collection"
+                        component={Page__photosPage}
+                    />
+                    <Route path="/nasa" component={Page__nasa} exact />
+                    <Route
+                        exact
+                        path="/asteroids"
+                        component={Page__asteroids}
+                    />
 
-                        <Route exact path="/about" component={Page__about} />
+                    <Route exact path="/about" component={Page__about} />
 
-                        <SpacexLaunchesProvider>
+                    <SpacexLaunchesProvider>
+                        <Route exact path="/space-x" component={Page__spacex} />
+                        <SimpleReactLightbox>
                             <Route
                                 exact
-                                path="/space-x"
-                                component={Page__spacex}
+                                path="/space-x/launch/:id"
+                                component={Page__launch}
                             />
-                            <SimpleReactLightbox>
-                                <Route
-                                    exact
-                                    path="/space-x/launch/:id"
-                                    component={Page__launch}
-                                />
-                            </SimpleReactLightbox>
-                        </SpacexLaunchesProvider>
+                        </SimpleReactLightbox>
+                    </SpacexLaunchesProvider>
 
-                        {/* <Route component={Error} /> */}
-                    </Switch>
+                    {/* <Route component={Error} /> */}
+                </Switch>
 
-                    <Footer />
-                </div>
-            </Router>
-        </animated.div>
+                <Footer />
+            </div>
+        </Router>
     );
 }
 
