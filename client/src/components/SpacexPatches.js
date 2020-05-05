@@ -43,21 +43,22 @@ function SpacexPatches() {
                     align="end"
                 />
             </div>
-            <div className="container mx-auto grid gap-6 md:grid-cols-4 mb-12 cursor-pointer">
+            <ul className="container mx-auto grid gap-6 md:grid-cols-4 mb-12 cursor-pointer">
                 {responsePage.map((launch, i) => {
                     return (
-                        <Card
-                            key={i}
-                            link={`/space-x/launch/${launch.name}`}
-                            image={launch.patch ? launch.patch : spacex}
-                            title={launch.name}
-                            tag1={launch.flight_number}
-                            tag2={launch.rocket}
-                            tag3={launch.year}
-                        />
+                        <li key={i}>
+                            <Card
+                                link={`/space-x/launch/${launch.name}`}
+                                image={launch.patch ? launch.patch : spacex}
+                                title={launch.name}
+                                tag1={launch.flight_number}
+                                tag2={launch.rocket}
+                                tag3={launch.year}
+                            />
+                        </li>
                     );
                 })}
-            </div>
+            </ul>
         </div>
     );
 }

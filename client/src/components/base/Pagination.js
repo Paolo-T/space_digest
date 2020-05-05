@@ -11,10 +11,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         <nav className="inline-block h-auto mt-6 md:mt-0">
             <ul className="md:flex flex-row">
                 {pageNumbers.map(number => (
-                    <li className="inline-block ml-1">
+                    <li className="inline-block ml-1" key={number}>
                         <button
                             className="inline-block py-1 px-3 border border-black-500 hover:border-teal-300 focus:bg-teal-300 focus:outline-none rounded-sm text-sm"
-                            key={number}
                             onClick={() => paginate(number)}
                             href="#"
                         >
