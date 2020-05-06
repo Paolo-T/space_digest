@@ -1,21 +1,16 @@
-import React, { useState, useContext, useEffect } from "react";
+import React from "react";
 import Card from "./base/Card";
 import spacex from "../img/spacex.png";
 import { useTrail, animated } from "react-spring";
 
 function Patches({ items }) {
-    const springConfig = { mass: 5, tension: 2000, friction: 200 };
-    const [animationReset, setAnimationReset] = useState(false);
+    const springConfig = { mass: 3, tension: 3000, friction: 100 };
 
     const trail = useTrail(items.length, {
         springConfig,
-        from: { opacity: 0, y: 150 },
+        from: { opacity: 0, y: 200 },
         to: { opacity: 1, y: 0 },
-        reset: animationReset
-    });
-
-    useEffect(() => {
-        setAnimationReset(true);
+        reset: true
     });
 
     return (
