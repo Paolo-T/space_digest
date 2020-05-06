@@ -1,6 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+function CardImage({ src, alt }) {
+    return (
+        <div className="py-12 px-12">
+            <div style={{ paddingTop: "100%" }} className="relative">
+                <img
+                    className="w-full absolute top-0 left-0"
+                    effect="blur"
+                    src={src}
+                    alt={alt}
+                />
+            </div>
+        </div>
+    );
+}
+
 function Card({ image, link, key, title, tag1, tag2, tag3 }) {
     return (
         <div
@@ -9,12 +24,7 @@ function Card({ image, link, key, title, tag1, tag2, tag3 }) {
         >
             <Link to={link}>
                 <div>
-                    <img
-                        className="w-full py-12 px-12"
-                        effect="blur"
-                        src={image}
-                        alt="Sunset in the mountains"
-                    />
+                    <CardImage src={image} alt={title} />
 
                     <p className="font-bold text-2xl mb-2 text-gray-700 pb-4">
                         {title}

@@ -5,8 +5,6 @@ import { useSpring, animated } from "react-spring";
 import Page from "../../components/Page";
 
 function Page__spacex() {
-    const props = useSpring({ number: 2002, from: { number: 0 } });
-
     return (
         <Page>
             <div className="container mx-auto pt-24">
@@ -16,9 +14,9 @@ function Page__spacex() {
                         <h3 className="md:w-3/5 mx-auto md:leading-tight mb-1">
                             SpaceX designs, manufactures and launches advanced
                             rockets and spacecraft. The company was founded in
-                            <animated.span>{props.number}</animated.span> to
-                            revolutionize space technology, with the ultimate
-                            goal of enabling people to live on other planets.
+                            2002 to revolutionize space technology, with the
+                            ultimate goal of enabling people to live on other
+                            planets.
                         </h3>
                         <p className="inline-block pt-4 mr-10">
                             HQ: Hawthorne - California
