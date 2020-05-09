@@ -1,21 +1,24 @@
 import React from "react";
 import Card from "./base/Card";
 import spacex from "../img/spacex.png";
-import { useTrail, animated } from "react-spring";
+import { animated, useSprings } from "react-spring";
 
 function Patches({ items }) {
     const springConfig = { mass: 3, tension: 3000, friction: 100 };
 
-    const trail = useTrail(items.length, {
-        springConfig,
-        from: { opacity: 0, y: 200 },
-        to: { opacity: 1, y: 0 },
-        reset: true
-    });
+    const springs = useSprings(
+        items.length,
+        items.map((item, i) => ({
+            springConfig,
+            from: { opacity: 0, y: 100 },
+            to: { opacity: 1, y: 0 },
+            delay: i * 50
+        }))
+    );
 
     return (
         <ul className="container mx-auto grid gap-6 md:grid-cols-4 mb-12 cursor-pointer">
-            {trail.map(({ y, opacity }, i) => {
+            {springs.map(({ y, opacity }, i) => {
                 const item = items[i];
 
                 return (

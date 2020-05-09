@@ -1,54 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import Loader from "./base/Loader";
 import { SRLWrapper } from "simple-react-lightbox";
 import Pagination from "./base/Pagination";
+import chunkArray from "../utils/chunkArray";
+import Photos from "./Photos";
+
+const PHOTOS_PER_PAGE = 15;
+const START_ON_PAGE_NUMBER = 1;
 
 function PhotosPage() {
     const res = useFetch("/api/photo-collection/photos", {});
-    // Pagination
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(15);
+    const [currentPage, setCurrentPage] = useState(START_ON_PAGE_NUMBER);
+    const [photosToDisplay, setPhotosToDisplay] = useState();
 
     console.log("Photos fetched! --->>>", res);
 
-    if (!res.response) {
-        return (
-            <div className="container mx-auto h-screen text-center">
-                <Loader className="inline-block" />
-            </div>
-        );
+    useEffect(() => {
+        if (res.response) {
+            setPhotosToDisplay(chunkArray(res.response, PHOTOS_PER_PAGE));
+            console.log(currentPage);
+            console.log(
+                res.response,
+                chunkArray(res.response, PHOTOS_PER_PAGE)
+            );
+        }
+    }, [res.response, currentPage]);
+
+    function renderPhotoPage(pageIndex) {
+        return <Photos items={photosToDisplay[pageIndex]} key={pageIndex} />;
     }
 
-    // Pagination - Get current posts
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    let responsePage = res.response.slice(indexOfFirstPost, indexOfLastPost);
-    // Pagination - Change page
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const changePage = pageNumber => setCurrentPage(pageNumber);
 
     return (
-        <div className="text-center">
-            <Pagination
-                postsPerPage={postsPerPage}
-                totalPosts={res.response.length}
-                paginate={paginate}
-            />
-            <SRLWrapper>
-                <div className="grid gap-4 grid-cols-1 md:grid-cols-3 object-cover mt-10">
-                    {responsePage.map((photo, i) => {
-                        return (
-                            <img
-                                className="object-cover object-center h-74 w-full rounded-md col-span-1"
-                                src={photo.href}
-                                key={i}
-                                alt={photo.title}
-                            />
-                        );
-                    })}
+        <>
+            {photosToDisplay ? (
+                <div className="text-center">
+                    <Pagination
+                        numberOfPages={photosToDisplay.length}
+                        onPageChange={changePage}
+                    />
+                    <SRLWrapper>{renderPhotoPage(currentPage - 1)}</SRLWrapper>
                 </div>
-            </SRLWrapper>
-        </div>
+            ) : (
+                <div className="container mx-auto h-screen text-center">
+                    <Loader className="inline-block" />
+                </div>
+            )}
+        </>
     );
 }
 export default PhotosPage;

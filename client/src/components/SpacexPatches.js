@@ -1,33 +1,31 @@
 import React, { useState, useContext, useEffect } from "react";
 import { SpacexLaunchesContext } from "../context/SpacexLaunchesContext";
 import Loader from "./base/Loader";
-import spacex from "../img/spacex.png";
 import Pagination from "./base/Pagination";
-import { useTrail } from "react-spring";
 import Patches from "./Patches";
+import chunkArray from "../utils/chunkArray";
+
+const PATCHES_PER_PAGE = 16;
+const START_ON_PAGE_NUMBER = 1;
 
 function SpacexPatches() {
     const res = useContext(SpacexLaunchesContext);
-    // Pagination
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(START_ON_PAGE_NUMBER);
     const [patchesToDisplay, setPatchesToDisplay] = useState();
-    const [postsPerPage] = useState(16);
 
     console.log("Launches fetched! --->>>", res);
 
-    // Pagination - Change page
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const changePage = pageNumber => setCurrentPage(pageNumber);
 
     useEffect(() => {
-        const indexOfLastPost = currentPage * postsPerPage;
-        const indexOfFirstPost = indexOfLastPost - postsPerPage;
-
         if (res.response) {
-            setPatchesToDisplay(
-                res.response.slice(indexOfFirstPost, indexOfLastPost)
-            );
+            setPatchesToDisplay(chunkArray(res.response, PATCHES_PER_PAGE));
         }
     }, [res.response, currentPage]);
+
+    function renderPatchPage(pageIndex) {
+        return <Patches items={patchesToDisplay[pageIndex]} key={pageIndex} />;
+    }
 
     return (
         <>
@@ -39,14 +37,14 @@ function SpacexPatches() {
                                 Mission Patches
                             </h2>
                         </div>
+
                         <Pagination
-                            postsPerPage={postsPerPage}
-                            totalPosts={res.response.length}
-                            paginate={paginate}
-                            align="end"
+                            numberOfPages={patchesToDisplay.length}
+                            onPageChange={changePage}
                         />
                     </div>
-                    <Patches items={patchesToDisplay} />
+
+                    {renderPatchPage(currentPage - 1)}
                 </div>
             ) : (
                 <div className="mx-auto pt-12 pb-32">
