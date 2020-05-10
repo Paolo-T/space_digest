@@ -18,10 +18,6 @@ function PhotosPage() {
     useEffect(() => {
         if (res.response) {
             setPhotosToDisplay(chunkArray(res.response, PHOTOS_PER_PAGE));
-            console.log(
-                res.response,
-                chunkArray(res.response, PHOTOS_PER_PAGE)
-            );
         }
     }, [res.response]);
 
