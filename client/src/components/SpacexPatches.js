@@ -41,6 +41,7 @@ function SpacexPatches() {
                         <Pagination
                             numberOfPages={patchesToDisplay.length}
                             onPageChange={changePage}
+                            activePageNumber={currentPage}
                         />
                     </div>
 

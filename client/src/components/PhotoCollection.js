@@ -18,13 +18,12 @@ function PhotosPage() {
     useEffect(() => {
         if (res.response) {
             setPhotosToDisplay(chunkArray(res.response, PHOTOS_PER_PAGE));
-            console.log(currentPage);
             console.log(
                 res.response,
                 chunkArray(res.response, PHOTOS_PER_PAGE)
             );
         }
-    }, [res.response, currentPage]);
+    }, [res.response]);
 
     function renderPhotoPage(pageIndex) {
         return <Photos items={photosToDisplay[pageIndex]} key={pageIndex} />;
@@ -39,6 +38,7 @@ function PhotosPage() {
                     <Pagination
                         numberOfPages={photosToDisplay.length}
                         onPageChange={changePage}
+                        activePageNumber={currentPage}
                     />
                     {renderPhotoPage(currentPage - 1)}
                 </div>
