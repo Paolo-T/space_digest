@@ -2,11 +2,11 @@ import React from "react";
 import SpacexPatches from "../../components/SpacexPatches";
 import spacex_logo from "../../img/spacex_logo.svg";
 import { useSpring, animated } from "react-spring";
-import Page from "../../components/Page";
+import TransitionPageIn from "../../components/TransitionPageIn";
 
 function Page__spacex() {
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="container mx-auto pt-24">
                 <div className="mb-6 md:mb-12">
                     <div className="md:w-9/12 mx-auto text-center">
@@ -34,7 +34,7 @@ function Page__spacex() {
 
                 <SpacexPatches />
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 

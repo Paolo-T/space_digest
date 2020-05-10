@@ -1,12 +1,12 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import PhotoCollection from "../components/PhotoCollection";
-import Page from "../components/Page";
+import TransitionPageIn from "../components/TransitionPageIn";
 // import moonlanding from "../img/moonlanding.jpg";
 
 function Page__photosPage() {
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="mx-auto pt-24 mb-12">
                 <div className="w-9/12 mx-auto text-center mb-12">
                     <h1 className="mb-3">Photo collection</h1>
@@ -31,7 +31,7 @@ function Page__photosPage() {
                     </div>
                 </div>
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 

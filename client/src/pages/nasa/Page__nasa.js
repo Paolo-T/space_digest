@@ -1,13 +1,13 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import RoverPhotos from "../../components/RoverPhotos";
-import Page from "../../components/Page";
+import TransitionPageIn from "../../components/TransitionPageIn";
 // import MarsWeather from "../../components/MarsWeather";
 import nasa_logo from "../../img/nasa_logo.svg";
 
 function Page__nasa() {
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="container mx-auto pt-24">
                 <div className="mb-12">
                     <div className="md:w-9/12 mx-auto text-center">
@@ -52,7 +52,7 @@ function Page__nasa() {
                     </div>
                 </div>
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 

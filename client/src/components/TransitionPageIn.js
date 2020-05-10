@@ -1,7 +1,7 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 
-function Page({ children }) {
+function TransitionPageIn({ children }) {
     const fadeIn = useSpring({
         from: {
             opacity: 0,
@@ -17,4 +17,4 @@ function Page({ children }) {
     return <animated.div style={fadeIn}>{children}</animated.div>;
 }
 
-export default Page;
+export default TransitionPageIn;

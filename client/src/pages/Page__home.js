@@ -4,11 +4,11 @@ import { Header, Media, FiftyFifty } from "../components";
 import nasa_logo from "../img/nasa_logo.svg";
 import img_tile_1 from "../img/img_tile_1.svg";
 import img_tile_2 from "../img/img_tile_2.svg";
-import Page from "../components/Page";
+import TransitionPageIn from "../components/TransitionPageIn";
 
 function Page__home() {
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="container mx-auto pt-12">
                 <Header />
 
@@ -57,7 +57,7 @@ function Page__home() {
                     background={true}
                 />
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 

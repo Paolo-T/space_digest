@@ -5,7 +5,7 @@ import { SpacexLaunchesContext } from "../../context/SpacexLaunchesContext";
 import { Loader, VideoFeatured } from "../../components";
 import Moment from "react-moment";
 import spacex from "../../img/spacex.png";
-import Page from "../../components/Page";
+import TransitionPageIn from "../../components/TransitionPageIn";
 
 function Page__launch(props) {
     // console.log("Match", props.match);
@@ -28,7 +28,7 @@ function Page__launch(props) {
     console.log({ pageData });
 
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="mx-auto pt-24 mb-16 md:mb-12 md:pt-32 md:mb-10">
                 <div className="container md:flex md:flex-row-reverse items-end">
                     <Link
@@ -136,7 +136,7 @@ function Page__launch(props) {
                     </>
                 ) : null}
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 

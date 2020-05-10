@@ -1,9 +1,9 @@
 import React from "react";
-import Page from "../components/Page";
+import TransitionPageIn from "../components/TransitionPageIn";
 
 function Page__about() {
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="container md:w-3/4 mx-auto pt-20 md:pt-30 md:mb-12 ">
                 <h1 className="w-2/4">About</h1>
                 <p className="md:w-2/4 block">
@@ -33,7 +33,7 @@ function Page__about() {
                 </p>
                 <p className="md:w-2/4 block mt-6">P.</p>
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 

@@ -1,11 +1,11 @@
 import React from "react";
 import Asteroids from "../components/Asteroids";
 import asteroid from "../img/asteroid.jpg";
-import Page from "../components/Page";
+import TransitionPageIn from "../components/TransitionPageIn";
 
 function Page__asteroids() {
     return (
-        <Page>
+        <TransitionPageIn>
             <div className="container mx-auto pt-24">
                 <div className="md:w-9/12 mx-auto text-center">
                     <h1 className="mb-3">Asteroids</h1>
@@ -33,7 +33,7 @@ function Page__asteroids() {
                     <Asteroids />
                 </div>
             </div>
-        </Page>
+        </TransitionPageIn>
     );
 }
 
