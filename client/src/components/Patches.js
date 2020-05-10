@@ -4,7 +4,7 @@ import spacex from "../img/spacex.png";
 import { animated, useSprings } from "react-spring";
 
 function Patches({ items }) {
-    const spring = { mass: 3, tension: 700, friction: 50 };
+    const spring = { mass: 3, tension: 700, friction: 70 };
 
     const springs = useSprings(
         items.length,
