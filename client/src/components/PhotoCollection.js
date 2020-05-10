@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import Loader from "./base/Loader";
-import { SRLWrapper } from "simple-react-lightbox";
 import Pagination from "./base/Pagination";
 import chunkArray from "../utils/chunkArray";
 import Photos from "./Photos";
@@ -41,7 +40,7 @@ function PhotosPage() {
                         numberOfPages={photosToDisplay.length}
                         onPageChange={changePage}
                     />
-                    <SRLWrapper>{renderPhotoPage(currentPage - 1)}</SRLWrapper>
+                    {renderPhotoPage(currentPage - 1)}
                 </div>
             ) : (
                 <div className="container mx-auto h-screen text-center">

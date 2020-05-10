@@ -4,12 +4,12 @@ import spacex from "../img/spacex.png";
 import { animated, useSprings } from "react-spring";
 
 function Patches({ items }) {
-    const springConfig = { mass: 3, tension: 3000, friction: 100 };
+    const spring = { mass: 3, tension: 700, friction: 50 };
 
     const springs = useSprings(
         items.length,
         items.map((item, i) => ({
-            springConfig,
+            config: spring,
             from: { opacity: 0, y: 100 },
             to: { opacity: 1, y: 0 },
             delay: i * 50
