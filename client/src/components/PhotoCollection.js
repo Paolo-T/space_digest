@@ -13,7 +13,7 @@ function PhotosPage() {
     const [currentPage, setCurrentPage] = useState(START_ON_PAGE_NUMBER);
     const [photosToDisplay, setPhotosToDisplay] = useState();
 
-    console.log("Photos fetched! --->>>", res);
+    console.log("Photos fetched! --->>>", JSON.stringify(res));
 
     useEffect(() => {
         if (res.response) {

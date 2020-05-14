@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./css/styles.css";
-import ReactGA from "react-ga";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { SpacexLaunchesProvider } from "./context/SpacexLaunchesContext";
@@ -16,14 +15,6 @@ import {
 } from "./pages";
 
 function App() {
-    useEffect(() => {
-        ReactGA.initialize("UA-80068675-2");
-        return () => {
-            // to report page view
-            ReactGA.pageview(window.location.pathname + window.location.search);
-        };
-    }, []);
-
     return (
         <Router>
             <ScrollToTop />

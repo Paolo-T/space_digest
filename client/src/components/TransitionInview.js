@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { animated, useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";
 
-function TransitionPageIn({ children }) {
+function TransitionInView({ children }) {
     const [visible, setVisible] = useState(false);
     const [inviewRef, inView] = useInView({
         rootMargin: "-100px 0px"
@@ -29,4 +29,4 @@ function TransitionPageIn({ children }) {
     );
 }
 
-export default TransitionPageIn;
+export default TransitionInView;
